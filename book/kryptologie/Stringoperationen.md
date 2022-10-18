@@ -4,9 +4,7 @@ index: 0
 toc: show
 ---
 
-# Kryptologische Verfahren
-
-1\. Exkurs: Die Klasse String und String Operationen in Java
+# Exkurs: Die Klasse String und String Operationen in Java
 
 In den Vorgaben für das Zentralabitur werden explizit Operationen und
 Methoden für Datentypen und Klassen
@@ -14,8 +12,7 @@ angeben[\[1\]](https://www.standardsicherung.schulministerium.nrw.de/cms/zentral
 Für Strings wird der sichere Umgang mit rechts stehenden Methoden
 erwartet.
 
-![/var/folders/g7/yyzsg921699gy7qjvy8q7t340000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/String%202017-09-10%20um%2014.49.37.png](./Bilder/stringoperationen/image1.png){width="3.486111111111111in"
-height="1.2638888888888888in"} 
+![Stringoperationen](./Bilder/stringoperationen/image1.png)
 
 ## Was muss man sich unter einem String vorstellen?
 
@@ -27,7 +24,7 @@ Zahl) auf jedes Zeichen direkt zugreifen kann: 
 **(Achtung: Die Indizierung beginnt bei 0!)**
 
 
-|  Index  |   0   | 1 |   2   |   3   |   4   |   5   | 6 |   7   |   8   |   9   |   10  |   11  |       |
+|  Index  |   0   | 1 |   2   |   3   |   4   |   5   | 6 |   7   |   8   |   9   |   10  |   11  |  12   |
 |:-------:|:-----:|:-:|:-----:|:-----:|:-----:|:-----:|:-:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | Zeichen | **a** |   | **l** | **o** | **n** | **g** |   | **s** | **t** | **r** | **i** | **n** | **g** |
 
@@ -54,9 +51,9 @@ enthalten, eine sogenannte Nullreferenz.
 
 ## Erzeugen von Zeichenketten
 
-| Zeichenketten-Objekte können in Java auf verschiedene Arten erzeugt werden: |       String sName = “Kolmer“;       |
+| Zeichenketten-Objekte können in Java auf verschiedene Arten erzeugt werden: Einfache Variante mit Initialisierung wie wir sie verwenden  |       String sName = “Kolmer“;       |
 |-----------------------------------------------------------------------------|:------------------------------------:|
-| Einfache Variante mit Initialisierung wie wir sie verwenden                 |                                      |
+                |                                      |
 | Erzeugen eines Objekts mit dem Konstruktor                                  | String sName = new String(“Kolmer“); |
 
 ## Vergleich von Zeichenketten**
@@ -95,42 +92,6 @@ public boolean pruefeUser(String pUsername)
 }
 ´´´ 
 
-+---+--------------------------------------------------------------------+
-| 1 | public boolean pruefeUser(String pUsername)                        |
-|   |                                                                    |
-| 2 | {                                                                  |
-|   |                                                                    |
-| 3 |   String sName = \"Kolmer\";                                       |
-|   |                                                                    |
-| 4 |   boolean bErIstEs = false;                                        |
-|   |                                                                    |
-| 5 |   if (pUsername.equals(sName))                                     |
-|   |                                                                    |
-| 6 |   {                                                                |
-|   |                                                                    |
-| 7 |   bErIstEs = true;                                                 |
-|   |                                                                    |
-| 8 |   }                                                                |
-|   |                                                                    |
-| 9 |   return bErIstEs;                                                 |
-|   |                                                                    |
-| 1 | }                                                                  |
-| 0 |                                                                    |
-|   | // Anmerkung: Statt der Verzweigung ginge auch kürzer:             |
-| 1 |                                                                    |
-| 1 | // bErIstEs = pUsername.equals(sName);                             |
-|   |                                                                    |
-| 1 | // Selbstverständlich ginge auch:                                  |
-| 2 |                                                                    |
-|   | // bErIstEs = sName.equals(pUsername);                             |
-| 1 |                                                                    |
-| 3 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 4 |                                                                    |
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
-
 ## Weitere Stringoperationen 
 
 Mit Hilfe verschiedener Methoden der String-Bibliothek können Anfragen
@@ -138,53 +99,17 @@ an einen String gestellt werden. Für die folgenden Beschreibungen dieser
 Methoden sei angenommen, dass die folgenden Variablen deklariert seien
 (siehe Kasten rechts). Die Operation ...
 
-+----------------------------+-----------------------------------------+
-| i = s.length();            | liefert die Anzahl der Zeichen im       |
-|                            | String s.                               |
-|                            |                                         |
-|                            | [Achtung:]{.underline} Hat ein String   |
-|                            | die Länge 5, so ist er von 0 bis 4      |
-|                            | indiziert!                              |
-+============================+=========================================+
-| ch = s.charAt(3);          | liefert das Zeichen mit dem Index 3 aus |
-|                            | dem String s, also hier ein "o". Die    |
-|                            | Indizierung beginnt bei 0.              |
-+----------------------------+-----------------------------------------+
-| i = s.compareTo(\"also a   | liefert -1, weil s vor dem angegebenen  |
-| long string\");            | String in der lexikographischen Ordnung |
-|                            | liegt. Der Wert 0 ergibt sich bei       |
-|                            | Gleichheit und der Wert +1, wenn der    |
-|                            | angegebene String hinter dem String s   |
-|                            | steht.                                  |
-+----------------------------+-----------------------------------------+
-| i = s.indexOf(\"ng\") +    | liefert die Position des ersten         |
-| s.indexOf('a');            | Vorkommens von „ng" in s oder -1, falls |
-|                            | „ng" nicht gefunden                     |
-|                            |                                         |
-|                            | wurde. Hier erhält man also 4 + 1. Man  |
-|                            | sieht, dass man auch eine               |
-|                            | char-Konstante als Parameter übergeben  |
-|                            | kann.                                   |
-+----------------------------+-----------------------------------------+
-| i = s.indexOf(\"ng\",5);   | liefert die Position des ersten         |
-|                            | Vorkommens von „ng" in s, beginnt die   |
-|                            | Suche aber erst ab Position 5. Im       |
-|                            | Beispiel wird also 11 zurück geliefert  |
-+----------------------------+-----------------------------------------+
-| s2 = s.substring(2);       | liefert den Teilstring von s ab der     |
-|                            | Position 2, hier „long string".         |
-+----------------------------+-----------------------------------------+
-| s2 = s.substring(2,6);     | liefert den Teilstring von s ab der     |
-|                            | Position 2 und bis ausschließlich 6,    |
-|                            | hier „long"                             |
-+----------------------------+-----------------------------------------+
-| s2 = s+"!!!";              | Liefert „a long string!!!". Mit „+"     |
-|                            | kann man zwei Strings verbinden.        |
-+----------------------------+-----------------------------------------+
+| i = s.length();                        | liefert die Anzahl der Zeichen im String s.  **Achtung:** Hat ein String die Länge 5, so ist er von 0 bis 4 indiziert!                                                                                    |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ch = s.charAt(3);                      | liefert das Zeichen mit dem Index 3 aus dem String s, also hier ein ”o“. Die Indizierung beginnt bei 0.                                                                                                   |
+| i = s.compareTo("also a long string"); | liefert -1, weil s vor dem angegebenen String in der lexikographischen Ordnung liegt. Der Wert 0 ergibt sich bei Gleichheit und der Wert +1, wenn der angegebene String hinter dem String s steht.        |
+| i = s.indexOf("ng") + s.indexOf(’a’);  | liefert die Position des ersten Vorkommens von „ng“ in s oder -1, falls „ng“ nicht gefunden wurde. Hier erhält man also 4 + 1. Man sieht, dass man auch eine char-Konstante als Parameter übergeben kann. |
+| i = s.indexOf("ng",5);                 | liefert die Position des ersten Vorkommens von „ng“ in s, beginnt die Suche aber erst ab Position 5. Im Beispiel wird also 11 zurück geliefert                                                            |
+| s2 = s.substring(2);                   | liefert den Teilstring von s ab der Position 2, hier „long string“.                                                                                                                                       |
+| s2 = s.substring(2,6);                 | liefert den Teilstring von s ab der Position 2 und bis ausschließlich 6, hier „long“                                                                                                                      |
+| s2 = s+“!!!“;                          | Liefert „a long string!!!”. Mit „+“ kann man zwei Strings verbinden.                                                                                                                                      |
 
-Alle Methoden findet man in der vollständigen Klassendokumentation.[\
-
-](https://kurse.moodleschule.de/mod/book/view.php?id=8116#_ftn2)
+Alle Methoden findet man in der vollständigen Klassendokumentation.
 
 **Aufgabe:**
 
@@ -196,8 +121,7 @@ hierfür den Java Editor!
 Teste anschließend die
 Methoden *palindromTest()* und *ZeichenkettenUmkehren().*
 
-![Klasse Tester](./Bilder/stringoperationen/image2.png){width="6.295833333333333in"
-height="5.415972222222222in"}
+![Klasse Tester](./Bilder/stringoperationen/image2.png)
 
 ## Klassendokumentation Tester
 
