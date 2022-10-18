@@ -51,12 +51,12 @@ enthalten, eine sogenannte Nullreferenz.
 
 ## Erzeugen von Zeichenketten
 
-| Zeichenketten-Objekte können in Java auf verschiedene Arten erzeugt werden: Einfache Variante mit Initialisierung wie wir sie verwenden  |       String sName = “Kolmer“;       |
+|    Erklärung     |         Java Synthax    |
 |-----------------------------------------------------------------------------|:------------------------------------:|
-                |                                      |
+|    Zeichenketten-Objekte können in Java auf verschiedene Arten erzeugt werden: Einfache Variante mit Initialisierung wie wir sie verwenden                                  | String sName = “Kolmer“; |
 | Erzeugen eines Objekts mit dem Konstruktor                                  | String sName = new String(“Kolmer“); |
 
-## Vergleich von Zeichenketten**
+## Vergleich von Zeichenketten
 
 Da Zeichenketten Objekte sind, ist ein simpler Vergleich wie  if (sName
 == "Kolmer")  nicht möglich, da so nur die Adressen der Objekte
@@ -66,14 +66,14 @@ und compareTo. Hier soll die Methode equals genügen.
 In der Klassendokumentation der Klasse java.lang.String kann folgender
 Eintrag entnommen werden:
 
-| boolean | equals(Object anObject)  Compares this string to the specified object. |
+| Datentyp | Erläuterung |
 |:-------:|:----------------------------------------------------------------------:|
-
+|boolean| equals(Object anObject)  Compares this string to the specified object.
 Als kleines Beispiel soll die folgende Methode dienen, die als
 Parameterwert einen Usernamen erhält und testen soll, ob es "Kolmer"
 ist. 
 
-´´´md
+```md
 public boolean pruefeUser(String pUsername)
 {
   String sName = "Kolmer";
@@ -90,7 +90,7 @@ public boolean pruefeUser(String pUsername)
     // Selbstverständlich ginge auch:
     // bErIstEs = sName.equals(pUsername);
 }
-´´´ 
+``` 
 
 ## Weitere Stringoperationen 
 
@@ -99,15 +99,16 @@ an einen String gestellt werden. Für die folgenden Beschreibungen dieser
 Methoden sei angenommen, dass die folgenden Variablen deklariert seien
 (siehe Kasten rechts). Die Operation ...
 
-| i = s.length();                        | liefert die Anzahl der Zeichen im String s.  **Achtung:** Hat ein String die Länge 5, so ist er von 0 bis 4 indiziert!                                                                                    |
-|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ch = s.charAt(3);                      | liefert das Zeichen mit dem Index 3 aus dem String s, also hier ein ”o“. Die Indizierung beginnt bei 0.                                                                                                   |
-| i = s.compareTo("also a long string"); | liefert -1, weil s vor dem angegebenen String in der lexikographischen Ordnung liegt. Der Wert 0 ergibt sich bei Gleichheit und der Wert +1, wenn der angegebene String hinter dem String s steht.        |
+| Java Synthax                           |           Erläuterung                                                           |
+|--------------------------------------------------------------------------------------------------------------------------|
+|i = s.length();                         | liefert die Anzahl der Zeichen im String s.  **Achtung:** Hat ein String die Länge 5, so ist er von 0 bis 4 indiziert
+| ch = s.charAt(3);                      | liefert das Zeichen mit dem Index 3 aus dem String s, also hier ein ”o“. Die Indizierung beginnt bei 0. |
+| i = s.compareTo("also a long string"); | liefert -1, weil s vor dem angegebenen String in der lexikographischen Ordnung liegt. Der Wert 0 ergibt sich bei Gleichheit und der Wert +1, wenn der angegebene String hinter dem String s steht.    |
 | i = s.indexOf("ng") + s.indexOf(’a’);  | liefert die Position des ersten Vorkommens von „ng“ in s oder -1, falls „ng“ nicht gefunden wurde. Hier erhält man also 4 + 1. Man sieht, dass man auch eine char-Konstante als Parameter übergeben kann. |
-| i = s.indexOf("ng",5);                 | liefert die Position des ersten Vorkommens von „ng“ in s, beginnt die Suche aber erst ab Position 5. Im Beispiel wird also 11 zurück geliefert                                                            |
-| s2 = s.substring(2);                   | liefert den Teilstring von s ab der Position 2, hier „long string“.                                                                                                                                       |
-| s2 = s.substring(2,6);                 | liefert den Teilstring von s ab der Position 2 und bis ausschließlich 6, hier „long“                                                                                                                      |
-| s2 = s+“!!!“;                          | Liefert „a long string!!!”. Mit „+“ kann man zwei Strings verbinden.                                                                                                                                      |
+| i = s.indexOf("ng",5);                 | liefert die Position des ersten Vorkommens von „ng“ in s, beginnt die Suche aber erst ab Position 5. Im Beispiel wird also 11 zurück geliefert |
+| s2 = s.substring(2);                   | liefert den Teilstring von s ab der Position 2, hier „long string“.   |
+| s2 = s.substring(2,6);                 | liefert den Teilstring von s ab der Position 2 und bis ausschließlich 6, hier „long“ |
+| s2 = s+“!!!“;                          | Liefert „a long string!!!”. Mit „+“ kann man zwei Strings verbinden. |
 
 Alle Methoden findet man in der vollständigen Klassendokumentation.
 
