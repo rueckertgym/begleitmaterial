@@ -1,0 +1,248 @@
+---
+name: Vorbereitung Kryptologie
+index: 0
+toc: show
+---
+
+# Kryptologische Verfahren
+
+1\. Exkurs: Die Klasse String und String Operationen in Java
+
+In den Vorgaben für das Zentralabitur werden explizit Operationen und
+Methoden für Datentypen und Klassen
+angeben[\[1\]](https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/faecher/getfile.php?file=5438).
+Für Strings wird der sichere Umgang mit rechts stehenden Methoden
+erwartet.
+
+![/var/folders/g7/yyzsg921699gy7qjvy8q7t340000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/String%202017-09-10%20um%2014.49.37.png](./Bilder/stringoperationen/image1.png){width="3.486111111111111in"
+height="1.2638888888888888in"} 
+
+## Was muss man sich unter einem String vorstellen?
+
+Ein Array ist im Prinzip eine Aneinanderreihung von Zeichen (Charakter =
+char; char ist ein in Java eingebauter Datentyp, mit dem man genau ein
+Zeichen („Charakter") speichern kann), wobei man über einen Index (eine
+Zahl) auf jedes Zeichen direkt zugreifen kann: 
+
+**(Achtung: Die Indizierung beginnt bei 0!)**
+
+
+|  Index  |   0   | 1 |   2   |   3   |   4   |   5   | 6 |   7   |   8   |   9   |   10  |   11  |       |
+|:-------:|:-----:|:-:|:-----:|:-----:|:-----:|:-----:|:-:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Zeichen | **a** |   | **l** | **o** | **n** | **g** |   | **s** | **t** | **r** | **i** | **n** | **g** |
+
+## String ist Klasse!
+
+Uns war bei der Programmierung schon immer aufgefallen, dass der String
+der zunächst einzige Datentyp ist, der groß geschrieben wird (String
+antwort = „Hallo"). Dies ist schon ein erster Hinweis darauf, dass es
+sich bei Strings nicht(!) um einen so genannten *einfachen
+Datentyp* sondern um eine eigene *Klasse* handelt.
+
+In Java werden Datentypen in zwei Kategorien unterteilt, in
+die **einfachen Datentypen** und in die Referenztypen
+(**Klassentypen**). Einfache Datentypen (wie z.B. int, char, double,
+boolean, ...) sind in eine Programmiersprache eingebaut, während die
+Referenztypen als Objekte verwaltet werden. Die Programmiersprache
+Smalltalk kennt beispielsweise gar keine einfachen Datentypen, sondern
+organisiert alles über Objekte.
+
+**Zeichenketten (Strings) sind in Java Objekte**. Eine Variable vom
+Referenztyp String enthält nicht die Zeichenkette selbst, sondern die
+Speicheradresse eines Objekts der Klasse String. Sie kann auch NULL
+enthalten, eine sogenannte Nullreferenz.
+
+## Erzeugen von Zeichenketten
+
+| Zeichenketten-Objekte können in Java auf verschiedene Arten erzeugt werden: |       String sName = “Kolmer“;       |
+|-----------------------------------------------------------------------------|:------------------------------------:|
+| Einfache Variante mit Initialisierung wie wir sie verwenden                 |                                      |
+| Erzeugen eines Objekts mit dem Konstruktor                                  | String sName = new String(“Kolmer“); |
+
+## Vergleich von Zeichenketten**
+
+Da Zeichenketten Objekte sind, ist ein simpler Vergleich wie  if (sName
+== "Kolmer")  nicht möglich, da so nur die Adressen der Objekte
+verglichen würde. Dafür gibt es in der String-Klasse die Methoden equals
+und compareTo. Hier soll die Methode equals genügen.
+
+In der Klassendokumentation der Klasse java.lang.String kann folgender
+Eintrag entnommen werden:
+
+| boolean | equals(Object anObject)  Compares this string to the specified object. |
+|:-------:|:----------------------------------------------------------------------:|
+
+Als kleines Beispiel soll die folgende Methode dienen, die als
+Parameterwert einen Usernamen erhält und testen soll, ob es "Kolmer"
+ist. 
+
+´´´md
+public boolean pruefeUser(String pUsername)
+{
+  String sName = "Kolmer";
+  boolean bErIstEs = false;
+  
+  if (pUsername.equals(sName))
+  {
+    bErIstEs = true;
+  }
+    return bErIstEs;
+
+    // Anmerkung: Statt der Verzweigung ginge auch kürzer:
+    // bErIstEs = pUsername.equals(sName);
+    // Selbstverständlich ginge auch:
+    // bErIstEs = sName.equals(pUsername);
+}
+´´´ 
+
++---+--------------------------------------------------------------------+
+| 1 | public boolean pruefeUser(String pUsername)                        |
+|   |                                                                    |
+| 2 | {                                                                  |
+|   |                                                                    |
+| 3 |   String sName = \"Kolmer\";                                       |
+|   |                                                                    |
+| 4 |   boolean bErIstEs = false;                                        |
+|   |                                                                    |
+| 5 |   if (pUsername.equals(sName))                                     |
+|   |                                                                    |
+| 6 |   {                                                                |
+|   |                                                                    |
+| 7 |   bErIstEs = true;                                                 |
+|   |                                                                    |
+| 8 |   }                                                                |
+|   |                                                                    |
+| 9 |   return bErIstEs;                                                 |
+|   |                                                                    |
+| 1 | }                                                                  |
+| 0 |                                                                    |
+|   | // Anmerkung: Statt der Verzweigung ginge auch kürzer:             |
+| 1 |                                                                    |
+| 1 | // bErIstEs = pUsername.equals(sName);                             |
+|   |                                                                    |
+| 1 | // Selbstverständlich ginge auch:                                  |
+| 2 |                                                                    |
+|   | // bErIstEs = sName.equals(pUsername);                             |
+| 1 |                                                                    |
+| 3 |                                                                    |
+|   |                                                                    |
+| 1 |                                                                    |
+| 4 |                                                                    |
++===+====================================================================+
++---+--------------------------------------------------------------------+
+
+## Weitere Stringoperationen 
+
+Mit Hilfe verschiedener Methoden der String-Bibliothek können Anfragen
+an einen String gestellt werden. Für die folgenden Beschreibungen dieser
+Methoden sei angenommen, dass die folgenden Variablen deklariert seien
+(siehe Kasten rechts). Die Operation ...
+
++----------------------------+-----------------------------------------+
+| i = s.length();            | liefert die Anzahl der Zeichen im       |
+|                            | String s.                               |
+|                            |                                         |
+|                            | [Achtung:]{.underline} Hat ein String   |
+|                            | die Länge 5, so ist er von 0 bis 4      |
+|                            | indiziert!                              |
++============================+=========================================+
+| ch = s.charAt(3);          | liefert das Zeichen mit dem Index 3 aus |
+|                            | dem String s, also hier ein "o". Die    |
+|                            | Indizierung beginnt bei 0.              |
++----------------------------+-----------------------------------------+
+| i = s.compareTo(\"also a   | liefert -1, weil s vor dem angegebenen  |
+| long string\");            | String in der lexikographischen Ordnung |
+|                            | liegt. Der Wert 0 ergibt sich bei       |
+|                            | Gleichheit und der Wert +1, wenn der    |
+|                            | angegebene String hinter dem String s   |
+|                            | steht.                                  |
++----------------------------+-----------------------------------------+
+| i = s.indexOf(\"ng\") +    | liefert die Position des ersten         |
+| s.indexOf('a');            | Vorkommens von „ng" in s oder -1, falls |
+|                            | „ng" nicht gefunden                     |
+|                            |                                         |
+|                            | wurde. Hier erhält man also 4 + 1. Man  |
+|                            | sieht, dass man auch eine               |
+|                            | char-Konstante als Parameter übergeben  |
+|                            | kann.                                   |
++----------------------------+-----------------------------------------+
+| i = s.indexOf(\"ng\",5);   | liefert die Position des ersten         |
+|                            | Vorkommens von „ng" in s, beginnt die   |
+|                            | Suche aber erst ab Position 5. Im       |
+|                            | Beispiel wird also 11 zurück geliefert  |
++----------------------------+-----------------------------------------+
+| s2 = s.substring(2);       | liefert den Teilstring von s ab der     |
+|                            | Position 2, hier „long string".         |
++----------------------------+-----------------------------------------+
+| s2 = s.substring(2,6);     | liefert den Teilstring von s ab der     |
+|                            | Position 2 und bis ausschließlich 6,    |
+|                            | hier „long"                             |
++----------------------------+-----------------------------------------+
+| s2 = s+"!!!";              | Liefert „a long string!!!". Mit „+"     |
+|                            | kann man zwei Strings verbinden.        |
++----------------------------+-----------------------------------------+
+
+Alle Methoden findet man in der vollständigen Klassendokumentation.[\
+
+](https://kurse.moodleschule.de/mod/book/view.php?id=8116#_ftn2)
+
+**Aufgabe:**
+
+Überführe folgendes Klassendiagramm in Java Quellcode und implementiere
+die Methoden vollständig inkl. Dokumentation und PAP oder Struktogramm
+für die Methoden *palindromTest()* und *ZeichenkettenUmkehren().* Nutze
+hierfür den Java Editor!
+
+Teste anschließend die
+Methoden *palindromTest()* und *ZeichenkettenUmkehren().*
+
+![Klasse Tester](./Bilder/stringoperationen/image2.png){width="6.295833333333333in"
+height="5.415972222222222in"}
+
+## Klassendokumentation Tester
+
+Die Klasse Tester werden einfache Zeichenkettenoperationen auf Basis der
+Klasse String durchgeführt.
+
+**Konstruktor**
+
+**Tester() **Ein Objekt wird erzeugt und die beiden Attribute zEingabe
+und zAusgabe initialisiert.
+
+**Anfrage**
+
+**getZEingabe():String** Die Anfrage liefert den Wert von zEingabe
+zurück
+
+**Anfrage**
+
+**getZAusgabe():String** Die Anfrage liefert den Wert von zAusgabe
+zurück
+
+**Auftrag**
+
+**setZEingabe(pEingabe:String)** Der Auftrag setzt den Wert von zEingabe
+auf pEingabe.
+
+**Auftrag**
+
+**setZAusgabe(pEingabe:String)** Der Auftrag setzt den Wert von zAusgabe
+auf pEingabe.
+
+**Anfrage**
+
+**zeichenketteUmkehren():String** Die Anfrage kehrt die Zeichenabfolge
+von zEingabe herum, speichert die neue Zeichenkette in zAusgabe und gibt
+diesen Wert zurück.
+
+**Anfrage**
+
+**palimdromTest():boolean** Die Anfrage testet den Wert von zEingabe auf
+ein Palimdrom und gibt wahr zurück, wenn ein Palindrom gespeichert ist,
+sonst falsch.
+
+**Hilfe**
+
+http://www.standardsicherung.nrw.de/abitur-gost/fach.php?fach=15
+
+http://openbook.rheinwerk-verlag.de/javainsel/javainsel_04_004.html#dodtp7f11b4f3-2973-47a1-9c29-5043481df6f4
