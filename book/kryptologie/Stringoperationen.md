@@ -12,7 +12,7 @@ angeben[\[1\]](https://www.standardsicherung.schulministerium.nrw.de/cms/zentral
 Für Strings wird der sichere Umgang mit rechts stehenden Methoden
 erwartet.
 
-![Stringoperationen](./Bilder/stringoperationen/image1.png)
+![Stringoperationen](/Bilder/stringoperationen/image1.png)
 
 ## Was muss man sich unter einem String vorstellen?
 
@@ -116,13 +116,12 @@ Alle Methoden findet man in der vollständigen Klassendokumentation.
 
 Überführe folgendes Klassendiagramm in Java Quellcode und implementiere
 die Methoden vollständig inkl. Dokumentation und PAP oder Struktogramm
-für die Methoden *palindromTest()* und *ZeichenkettenUmkehren().* Nutze
-hierfür den Java Editor!
+für die Methoden *palindromTest()* und *ZeichenkettenUmkehren().* 
 
 Teste anschließend die
 Methoden *palindromTest()* und *ZeichenkettenUmkehren().*
 
-![Klasse Tester](./Bilder/stringoperationen/image2.png)
+![Klasse Tester](/Bilder/stringoperationen/image2.png)
 
 ## Klassendokumentation Tester
 
