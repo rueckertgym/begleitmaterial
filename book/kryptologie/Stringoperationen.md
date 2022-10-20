@@ -101,7 +101,7 @@ Methoden sei angenommen, dass die folgenden Variablen deklariert seien
 
 | Java Synthax                           |           Erläuterung                                                           |
 |----------------------------------------|----------------------------------------------------------------------------------|
-|i = s.length();                         | liefert die Anzahl der Zeichen im String s.  **Achtung:** Hat ein String die Länge 5, so ist er von 0 bis 4 indiziert
+|i = s.length();                         | liefert die Anzahl der Zeichen im String s.  **Achtung:** Hat ein String die Länge 5, so ist er von 0 bis 4 indiziert  |
 | ch = s.charAt(3);                      | liefert das Zeichen mit dem Index 3 aus dem String s, also hier ein ”o“. Die Indizierung beginnt bei 0. |
 | i = s.compareTo("also a long string"); | liefert -1, weil s vor dem angegebenen String in der lexikographischen Ordnung liegt. Der Wert 0 ergibt sich bei Gleichheit und der Wert +1, wenn der angegebene String hinter dem String s steht.    |
 | i = s.indexOf("ng") + s.indexOf(’a’);  | liefert die Position des ersten Vorkommens von „ng“ in s oder -1, falls „ng“ nicht gefunden wurde. Hier erhält man also 4 + 1. Man sieht, dass man auch eine char-Konstante als Parameter übergeben kann. |
