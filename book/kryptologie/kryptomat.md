@@ -13,8 +13,8 @@ classDiagram
     <<Abstract>> Kryptomat
     Kryptomat : -String gt
     Kryptomat : -String kt
-    Kryptomat: +verschluesseln()
-    Kryptomat: +entschlüsseln()
+    Kryptomat: _+verschluesseln()_
+    Kryptomat: _+entschlüsseln()_
     Kryptomat: -zahlenZuBuchstaben(int pWert) char
     Kryptomat: -BuchstabenZuZahlen(char pWert) int
     Kryptomat: +getGt() String
@@ -30,7 +30,7 @@ classDiagram
       +verschluesseln() void
       +entschluesseln() void
     }
-    class viginere{
+    class Viginere{
       -String schluessel
       +Vigenere()
       +getSchluessel() String
