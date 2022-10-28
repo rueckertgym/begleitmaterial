@@ -5,6 +5,7 @@ toc: show
 ---
 
 # Die abstrakte Oberklasse Kryptomat
+Die gemeinesame Modellierung hat folgendes Klassendiagramm ergeben.
 
 ```mermaid
 classDiagram
