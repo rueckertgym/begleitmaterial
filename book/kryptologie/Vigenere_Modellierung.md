@@ -14,7 +14,7 @@ classDiagram
           -String gt
           -String kt
           -String schluessel
-          +Vigenere(String pKT, String pSchluessel)
+          +Vigenere()
           +verschluesseln() void
           +entschluesseln() void
           -zahlenZuBuchstaben(int pWert):char

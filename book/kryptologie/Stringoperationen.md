@@ -1,5 +1,5 @@
 ---
-name: Vorbereitung Kryptologie
+name: Stringoperation - Vorbereitung Kryptologie
 index: 0
 toc: show
 ---
