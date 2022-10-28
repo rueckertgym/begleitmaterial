@@ -1,5 +1,5 @@
 ---
-name: Stringoperation - Vorbereitung Kryptologie
+name: Zeichenketten in Java
 index: 0
 toc: show
 ---

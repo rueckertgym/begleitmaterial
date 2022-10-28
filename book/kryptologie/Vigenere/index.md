@@ -1,4 +1,4 @@
 ---
-name: Vigenere
-index: 4
+name: Vigenère
+index: 2
 ---

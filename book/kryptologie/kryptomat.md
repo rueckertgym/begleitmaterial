@@ -1,11 +1,11 @@
 ---
-name: Abstrakte Klasse Kryptomat
+name: Kryptomat
 index: 6
 toc: show
 ---
 
 # Die abstrakte Oberklasse Kryptomat
-Die gemeinesame Modellierung hat folgendes Klassendiagramm ergeben.
+Die gemeinesame Modellierung/Schnittstellenvereinbarung hat folgendes Klassendiagramm ergeben.
 
 ```mermaid
 classDiagram

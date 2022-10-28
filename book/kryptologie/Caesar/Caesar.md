@@ -1,5 +1,5 @@
 ---
-name: Caesar Verschlüsselung
+name: Verschlüsselung
 index: 1
 toc: show
 ---

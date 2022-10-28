@@ -1,6 +1,6 @@
 ---
-name: Vigenère Verschlüsselung
-index: 4
+name: Verschlüsselung
+index: 1
 toc: show
 ---
 
