@@ -31,7 +31,7 @@ classDiagram
       +verschluesseln() void
       +entschluesseln() void
     }
-    class Viginere{
+    class Vigenere{
       -String schluessel
       +Vigenere()
       +getSchluessel() String
