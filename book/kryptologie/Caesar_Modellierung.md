@@ -11,20 +11,20 @@ Wir haben im Unterricht eine gemeimsame Klassendiagramm (also eine Schnittstelle
 ```mermaid
 classDiagram
       class Caesar{
-          -String zGt
-          -String zKt
+          -String gt
+          -String kt
           -int zSchluessel
           +Caesar(String pKT, String pSchluessel)
           +verschluesseln() void
           +entschluesseln() void
           -zahlenZuBuchstaben(int pWert) char
           -buchtsabenZuZahlen(char pWert) int
-          +getzGt() String
-          +setzGt(String pGt) void
-          +getzKt() String
-          +setzKt(String pGt) void         
-          +getzSchluessek() int
-          +setzSchluessel(int pSchluessel) void
+          +getGt() String
+          +setGt(String pGt) void
+          +getKt() String
+          +setKt(String pGt) void         
+          +getzchluessek() int
+          +setSchluessel(int pSchluessel) void
         }
  ```
 

@@ -11,21 +11,21 @@ Wir haben im Unterricht eine gemeimsame Klassendiagramm (also eine Schnittstelle
 ```mermaid
 classDiagram
       class Vigenere{
-          -String zGt
-          -String zKt
-          -String zSchluessel
+          -String gt
+          -String kt
+          -String schluessel
           +Vigenere(String pKT, String pSchluessel)
           +verschluesseln() void
           +entschluesseln() void
           +zahlenZuBuchstaben(int pWert):char
           +buchstabenZuZahlen(char pWert):int
-          -verschiebe(char pZeichen, int pSchliuessel) char
-          +getzGt() String
-          +setzGt(String pGt) void
-          +getzKt() String
-          +setzKt(String pGt) void         
-          +getzSchluessek() String
-          +setzSchluessel(String pSchluessel) void
+          -verschiebe(char pZeichen, int pSchluessel) char
+          +getGt() String
+          +setGt(String pGt) void
+          +getKt() String
+          +setKt(String pGt) void         
+          +getSchluessek() String
+          +setSchluessel(String pSchluessel) void
         }
  ```
 
