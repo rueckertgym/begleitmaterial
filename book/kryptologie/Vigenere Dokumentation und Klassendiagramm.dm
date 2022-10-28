@@ -17,6 +17,8 @@ classDiagram
           +Vigenere(String pKT, String pSchluessel)
           +verschluesseln() void
           +entschluesseln() void
+          +zahlenZuBuchstaben(int pWert):char
+          +buchstabenZuZahlen(char pWert):int
           -verschiebe(char pZeichen, int pSchliuessel) char
           +getzGt() String
           +setzGt(String pGt) void
