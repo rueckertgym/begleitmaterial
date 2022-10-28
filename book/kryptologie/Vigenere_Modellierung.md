@@ -5,7 +5,7 @@ toc: show
 ---
 
 ### Modellierung im Unterricht
-Wir haben im Unterricht eine gemeimsame Klassendiagramm (also eine Schnittstellenvereinbarung) entwickelt. Zu einer Schnittstellenverinbarung gehört auch eine Dokumentation, damit eindeutig für alle beteiligten Entwickler festgelegt ist, was welche Methode leitet, wobei das "Wie" den Programmieren obliegt.
+Wir haben im Unterricht eine gemeimsame Klassendiagramm (also eine Schnittstellenvereinbarung) entwickelt. Zu einer Schnittstellenverinbarung gehört auch eine Dokumentation, damit eindeutig für alle beteiligten Entwickler festgelegt ist, was welche Methode leistet, wobei das "Wie" den Programmierern obliegt.
 
 ### Klassendiagramm der gemeinsamen Modellierungsphase
 ```mermaid
@@ -17,9 +17,8 @@ classDiagram
           +Vigenere(String pKT, String pSchluessel)
           +verschluesseln() void
           +entschluesseln() void
-          +zahlenZuBuchstaben(int pWert):char
-          +buchstabenZuZahlen(char pWert):int
-          -verschiebe(char pZeichen, int pSchluessel) char
+          -zahlenZuBuchstaben(int pWert):char
+          -buchstabenZuZahlen(char pWert):int
           +getGt() String
           +setGt(String pGt) void
           +getKt() String
@@ -522,27 +521,5 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </body>
 </html>
 
-### Klassendiagramm der vorgegebenen Modellierung
-### Klassendiagramm der Vorlage
-```mermaid
-classDiagram
-      class Vigenere{
-          -String zGeheimtext
-          -String zKlartext
-          -String zSchluessel
-          +Vigenere()
-          +Vigenere(String pKlartext, String pSchluessel)
-          +verschluesseln() String
-          +entschluesseln() String
-          -verschiebe(char pZeichen, int pSchliuessel) int
-          -zahlenZuBuchstaben(int pAscii) char
-          -buchstabenZuZahlen(char p) int
-          +gebeGeheimtext() String
-          +setzeGeheimtext(String pGeheimtext) void
-          +gebeKlartext() String
-          +setzeKlartext(String pKlartext) void         
-          +gibSchluessel() String
-          +setzeSchluessel(String pSchluessel) void
-        }
- ```
+
 

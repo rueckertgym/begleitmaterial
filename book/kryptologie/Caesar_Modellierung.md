@@ -29,7 +29,7 @@ classDiagram
  ```
 
 ### Dokumentation aus der gemeinsamen Modellierungsphase
-#### Class TCaesar (Diese Dokumentation muss noch hinzugefügt werden; noch wird die alte Doku verwendet)
+#### Klasse Caesar (Diese Dokumentation muss noch hinzugefügt werden; noch wird die alte Doku verwendet)
 
 <!DOCTYPE HTML>
 <!-- NewPage -->
@@ -248,7 +248,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#maximum()">maximum</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Die Schubladennummer mit der grten Zahl als Inhalt wird gesucht und zurckgegeben</div>
+<div class="block">Die Schubladennummer mit der größten Zahl als Inhalt wird gesucht und zurückgegeben</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
