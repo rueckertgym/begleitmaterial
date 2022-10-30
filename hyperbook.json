@@ -15,5 +15,31 @@
   "logo": "logo/hornseLogoEinhornGruenTransparent.png",
   "elements": {
     "bookmarks": true
-  }
+  },
+  "links": [
+    {
+      "label": "Kontakt",
+      "links": [
+        {
+          "label": "Mail",
+          "icon": "📧",
+          "href": "mailto:sebastian.horn@schule.duesseldorf.de"
+        },
+        {
+          "label": "Twitter",
+          "icon": "🐦",
+          "href": "https://twitter.com/hornse77"
+        },
+        {
+          "label": "Kofie",
+          "icon": "☕",
+          "href": "https://Ko-fi.com/hornse7000"
+        }
+      ]
+    },
+    {
+      "label": "OpenPatch",
+      "href": "https://openpatch.org"
+    }
+  ]
 }
