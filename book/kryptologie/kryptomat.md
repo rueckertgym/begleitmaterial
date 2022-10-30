@@ -14,8 +14,8 @@ classDiagram
     <<Abstract>> Kryptomat
     Kryptomat : -String gt
     Kryptomat : -String kt
-    Kryptomat: _+verschluesseln()_
-    Kryptomat: _+entschlüsseln()_
+    Kryptomat: +verschluesseln()*
+    Kryptomat: +entschlüsseln()*
     Kryptomat: -zahlenZuBuchstaben(int pWert) char
     Kryptomat: -BuchstabenZuZahlen(char pWert) int
     Kryptomat: +getGt() String
