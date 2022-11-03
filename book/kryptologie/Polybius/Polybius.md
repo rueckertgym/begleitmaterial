@@ -3,7 +3,7 @@ name: Verschlüsselung
 index: 1
 toc: show
 ---
-#Ein Verfahren – vielleicht noch älter als das von Caesar
+# Ein Verfahren – vielleicht noch älter als das von Caesar
  
 Zu allen Zeiten bedienten sich Staatsmänner, Botschafter, Geheimdienstler der Kryptographie (Geheimschrift) und verschickten verschlüsselte Nachrichten in der Hoffnung, vom Gegner unentdeckt zu bleiben.
  
@@ -15,8 +15,6 @@ Schon der griechische Geschichtsschreiber Polybios (etwa 200 v. Chr.) erwähnte 
 Aufgabe
 1. Verschlüssele folgende Sätze: NUR MUT ! INFORMATIK IST SCHOEN. KRYPTOLOGIE MACHT SPASS.
 2. Entschlüssele:  15331431241323 211542241533 !
- 
-Nun wollen wir dieses neue Verfahren natürlich auch implementieren
 3. Ergänze unsere Modellierung um eine Unterklasse Polybius.
-4. Wie müsste eine geeignete Datenstruktur als Abbild der obigen Tabelle aussehen?
+4. Wie müsste eine geeignete Datenstruktur als Abbild der obigen Tabelle aussehen? Weitere Infos findet ihr im Abschnitt zur Modellierung!
  :::
