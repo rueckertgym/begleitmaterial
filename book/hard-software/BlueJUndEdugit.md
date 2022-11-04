@@ -72,8 +72,9 @@ In den folgenden Videos beschreibe ich das Arbeiten mit BlueJ in Verbindung mit 
 ### 05 Edugit: Arbeiten mit Markdown
 ::youtube[05 Edugit:  Arbeiten mit Markdown]{#Dzjb2FZveaE}
 :::
+:::tab{title="06 Eigenes Projekt" id="06 Edugit: Eigenes Projekt erstellen"}
 ### 06 Edugit: Eigenes Projekt erstellen
-::youtube[06 Edugit:  #Eigenes Projekt erstellen]{#BvFHF5YmdwE}
+::youtube[06 Edugit: Eigenes Projekt erstellen]{#BvFHF5YmdwE}
 :::
 ::::
 
