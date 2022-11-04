@@ -74,7 +74,7 @@ In den folgenden Videos beschreibe ich das Arbeiten mit BlueJ in Verbindung mit 
 :::
 :::tab{title="06 Eigenes Projekt" id="06 Edugit: Eigenes Projekt erstellen"}
 ### 06 Edugit: Eigenes Projekt erstellen
-::youtube[06 Edugit: Eigenes Projekt erstellen]{#BvFHF5YmdwE}
+::youtube[06 Edugit: Eigenes Projekt erstellen]{#fxzrTqEFTr4}
 :::
 ::::
 
