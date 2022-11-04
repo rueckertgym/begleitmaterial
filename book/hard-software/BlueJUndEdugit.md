@@ -27,7 +27,7 @@ Ein push erfolgt nach einem erfolgreichen commit und ist für das Bereitstellen/
 Ein großer Vorteil solcher git-System ist die Möglichkeit auf ältere Versionen seiner Daten zurückgreifen zu können - es geht nichts verloren
 
 > Eine Versionsverwaltung ist ein System, das zur Erfassung von Änderungen an Dokumenten oder Dateien verwendet wird. Alle Versionen werden in einem Archiv mit Zeitstempel und Benutzerkennung gesichert und können später wiederhergestellt werden. Versionsverwaltungssysteme werden typischerweise in der Softwareentwicklung eingesetzt, um Quelltexte zu verwalten. Versionsverwaltung kommt auch bei Büroanwendungen oder Content-Management-Systemen zum Einsatz.
->> Quelle: https://de.wikipedia.org/wiki/Versionsverwaltung
+ Quelle: https://de.wikipedia.org/wiki/Versionsverwaltung
 
 ## BlueJ
 Als Entwicklungsumgebung (IDE) kommt bei uns im Unterricht BlueJ https://blueJ.org zum Einsatz.
