@@ -20,12 +20,12 @@ classDiagram
     Kryptomat <|-- Vigenere
     Kryptomat <|-- Polybius
     <<Abstract>> Kryptomat
-    Kryptomat : -String gt
-    Kryptomat : -String kt
+    Kryptomat : #String gt
+    Kryptomat : #String kt
     Kryptomat: +verschluesseln()*
     Kryptomat: +entschlüsseln()*
-    Kryptomat: -zahlenZuBuchstaben(int pWert) char
-    Kryptomat: -BuchstabenZuZahlen(char pWert) int
+    Kryptomat: #zahlenZuBuchstaben(int pWert) char
+    Kryptomat: #BuchstabenZuZahlen(char pWert) int
     Kryptomat: +getGt() String
     Kryptomat: +setGt(String pGt) void
     Kryptomat: +getKt() String
@@ -52,6 +52,8 @@ classDiagram
       +Vigenere()
       +getSchluessel() String
       +setSchluessel(String pSchluessel) void
+      +verschluesseln() void
+      +entschluesseln() void
     }
     
 ```
