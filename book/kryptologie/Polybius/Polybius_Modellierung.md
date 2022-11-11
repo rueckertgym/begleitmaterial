@@ -22,8 +22,8 @@ classDiagram
     <<Abstract>> Kryptomat
     Kryptomat : #String gt
     Kryptomat : #String kt
-    Kryptomat: +verschluesseln()*
-    Kryptomat: +entschlüsseln()*
+    Kryptomat: +verschluesseln()* void
+    Kryptomat: +entschlüsseln()* void
     Kryptomat: #zahlenZuBuchstaben(int pWert) char
     Kryptomat: #BuchstabenZuZahlen(char pWert) int
     Kryptomat: +getGt() String
