@@ -70,19 +70,19 @@ classDiagram
 :::protect{password="PlayFair" description="Wie heißt das Verfahren?"}
 ```java
 /**
-* Beschreiben Sie hier die Klasse PlayFair. Zur Vereinfachung der Situation gehen wir momentan davon aus, dass im Schlüsselwort 
+* Zur Vereinfachung der Situation gehen wir momentan davon aus, dass im Schlüsselwort 
 * keine doppelten Buchstaben vorkommen und der Klartext maximal einmal einen doppelten Buchstaben erhält
 *
-* @author Sebastia Horn
-* @version 0.1
+* @author Sebastian Horn
+* @version 0.2
 */
 public class PlayFair extends Kryptomat
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    // Instanzvariablen bzw. globale Variabeln
     private char[][] play;
     
     /**
-    * Konstruktor f? Objekte der Klasse PlayFair
+    * Konstruktor für Objekte der Klasse PlayFair
     */
     public PlayFair()
     {
@@ -93,15 +93,15 @@ public class PlayFair extends Kryptomat
         kt.replace('J','I');
         kt = this.doppelteAufeinanderFolgendeBuchstabenfinden(kt);
         schluessel = this.schluesselAnpassen();
-        this.matrixBefuellen();
-        this.matrixAusgabe();
+        this.bfmS();
+        this.Ausgabe();
         this.verschluesseln();
     }
     /**
      * Befuellt die Matrix nach dem PlayFair Verfahren. Erst wird das Schluesselwort eingesetzt,
      * anschliessend die restlichen Buchstaben des Alphabets.
      * 1. Version: Wir gehen davon aus, dass im Schlüssel keine doppelten Buchstaben vorkommen.
-     * 2. Version für Schnelle: Implementiert die Methode schluesselAnpassen() die doppelte Buchstaben 
+     * 2. Version für Schnelle: Implementiert die Methode schluesselAnpassen(), die doppelte Buchstaben 
      * aus dem Schluessel entfernt.
      */
     public void bfmS()
@@ -181,7 +181,7 @@ public class PlayFair extends Kryptomat
         }
     }
     /**
-     * Die Methode findet doppelte aufeinander folgende Buchstaben wie z.B. LL in HALLO und ersetzt 
+     * Die Methode findet doppelte aufeinanderfolgende Buchstaben wie z.B. LL in HALLO und ersetzt 
      * den zweiten doppelten Buchstaben durch ein X. So wird aus HALLO --> HALXO
      * 
      * @return String der übergebende Text ohne doppelte aufeinander folgende Buchstaben wird zurueckgegeben
@@ -222,7 +222,7 @@ public class PlayFair extends Kryptomat
     }
     
     /**
-     * Methode gibt die Spalte in der sich ein Buchstabe befindet zurueck.
+     * Die Methode gibt die Spalte in der sich ein Buchstabe befindet zurueck.
      * 
      * @return hSpaltee des uebergebenden Buchstabens
      */    
@@ -243,7 +243,7 @@ public class PlayFair extends Kryptomat
     }
     
     /**
-     * Methode zum Verschluesseln eines Klartext nach der PlayFair Methode
+     * Methode zum Verschluesseln eines Klartexts nach der PlayFair Methode
      * 
      * @return String das verschluesselte Wort (gt) wird zurueckgedgeben
      */
