@@ -7,10 +7,10 @@ toc: show
 
 An dieser Stelle schauen wir uns der Typumwandlung etwas genauer an. 
 
-Hin und wieder benötigen wir Möglichkeitenen einen int Wert in einen String oder ähnlich umzuwandeln.
+Hin und wieder benötigen wir Möglichkeiten, um einen int Wert in einen String oder ähnlich umzuwandeln.
 
 ## String zu int
-Es gibt mehre Möglichkeiten einen String in einen int zu konvertieren.
+Hier einige
 
 Integer.​toString(i)
 
@@ -47,16 +47,16 @@ public String entschluesseln()
 Die einfachste und schnellste Möglichkeit einen int Wert in einen String zu konvertieren ist das anhängen eines leeren String:
 
 ### Kurzbeispiel
-´´´java
+```java
 int i = 7;
 String s = "James Bond 00";
 String s = i + "";
 System.out.println(s);
-´´´
+```
 Hier ergibt die Ausgabe der Stringvariable s: James Bond007
 
 ### Langbeispiel
-´´´java
+```java
 public class Konvertierer
 {
    public Konvertierer() {
@@ -78,7 +78,7 @@ public class Konvertierer
        System.out.println("Addieren eines Integer (7) und eines String (\"7\"). Das Ergebnis ist ein neuer String: " + hilfsZahl2 + hilfsText2);
    }
 }
-´´´
+```
 ## char zu int
 Im Rahmen der Kryptologie haben wir die Methode ´public char zahlenZuBuchstaben(int pZahl)´ und ´public int buchstabenZuZahlen(char pBuchstabe)´ genutzt um einem int in einen char bzw. einen char in einen int Wert zu konvertieren. 
 Für unser Projekt haben wir uns zunutze gemacht, dass die Rückgabe der Methoden auf Basis der ASCII Tabelle erfolgte.
