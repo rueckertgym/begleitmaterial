@@ -1,8 +1,8 @@
 ---
-name: Typasting
+name: Typeasting
 toc: show
 ---
-# Typasting
+# Typeasting
 
 An dieser Stelle schauen wir uns der Typumwandlung etwas genauer an. 
 
