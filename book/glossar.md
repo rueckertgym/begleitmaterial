@@ -7,7 +7,7 @@ toc: show
 # Glossar
 ## Java
 ### Typcasting
-Mit Typcasting wird der Vorgang beschrieben um einen Datentyp in einen anderen zu konvertieren. Wie dies in Java funktioniert findest du :t[hier]{#typecastin.md}.
+Mit Typcasting wird der Vorgang beschrieben um einen Datentyp in einen anderen zu konvertieren. Wie dies in Java funktioniert findest du :t[hier]{#typecasting.md}.
 ## lineare Datenstrukturen
 
 ### Arrays (dt. Feld)

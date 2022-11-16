@@ -9,38 +9,19 @@ An dieser Stelle schauen wir uns der Typumwandlung etwas genauer an.
 Hin und wieder benötigen wir Möglichkeiten, um einen int Wert in einen String oder ähnlich umzuwandeln.
 
 ## String zu int
-Hier einige
+Mit Hilfe der Methoden `parseInt()` und `valueOf()` kann ein String in einen int umgewandelt werden.
 
-Integer.​toString(i)
+1. `parseInt` ist eine static-Methode der Integer-Klasse, die ein Integer-Objekt zurückgibt, das den angegebenen String-Parameter repräsentiert.
 
-Integer.toString(int i, int base)
+Die Signatur der Methode lautet:`
 
-i + ""
+`public static int parseInt(String str) throws NumberFormatException`
 
-String.format() i
+Oder
 
-```java
-public String entschluesseln()
-{
-        kt = "";
-        int zeile = 0;
-        int spalte = 0;
-        for(int i = 0; i < gt.length()-1; i= i+2)
-        {
-            String substr1 = gt.substring(i, i+1);
-            String substr2 = gt.substring(i+1, i+2);
-            //int spalte = (int)substr.charAt(1) -49;
-            zeile = Integer.parseInt(gt.charAt(i)+""); //substr1);
-            spalte = Integer.parseInt(gt.charAt(i+1)+"");//substr2);
-            
-            
-            //int spalte = (int)substr.charAt(1) -49;
-            kt = kt + this.zahlenZuBuchstaben(Quadrat[zeile][spalte]);
-            //kt += (char)Quadrat[zeile][spalte];
-        }
-        return kt;
-}
-```   
+`public static int parseInt(String str, int radix) throws NumberFormatException`
+`
+Hierbei ist der Parameter str der String, der umgewandelt werden soll und radix die Basis der geparsten Zahl.
 
 ## int zu String
 Die einfachste und schnellste Möglichkeit einen int Wert in einen String zu konvertieren ist das anhängen eines leeren String:
@@ -54,7 +35,9 @@ System.out.println(s);
 ```
 Hier ergibt die Ausgabe der Stringvariable s: James Bond007
 
-### Langbeispiel
+### Langbeispiele
+::::tabs
+:::tab{title="Konvertierer"}
 ```java
 public class Konvertierer
 {
@@ -78,7 +61,36 @@ public class Konvertierer
    }
 }
 ```
-## char zu int
+:::
+:::tab{title="Polybius entschluesseln()"}
+```java
+public String entschluesseln()
+{
+        kt = "";
+        int zeile = 0;
+        int spalte = 0;
+        for(int i = 0; i < gt.length()-1; i= i+2)
+        {
+            String substr1 = gt.substring(i, i+1);
+            String substr2 = gt.substring(i+1, i+2);
+            //int spalte = (int)substr.charAt(1) -49;
+            zeile = Integer.parseInt(gt.charAt(i)+""); //substr1);
+            spalte = Integer.parseInt(gt.charAt(i+1)+"");//substr2);
+            
+            
+            //int spalte = (int)substr.charAt(1) -49;
+            kt = kt + this.zahlenZuBuchstaben(Quadrat[zeile][spalte]);
+            //kt += (char)Quadrat[zeile][spalte];
+        }
+        return kt;
+}
+``` 
+:::
+::::
+Des Weiteren besteht die Möglichkeit die Methoden `Integer.​toString(int i)` und `Integer.toString(int i, int base)` zu nutzen.
+
+
+## char zu int und int zu char
 Im Rahmen der Kryptologie haben wir die Methode ´public char zahlenZuBuchstaben(int pZahl)´ und ´public int buchstabenZuZahlen(char pBuchstabe)´ genutzt um einem int in einen char bzw. einen char in einen int Wert zu konvertieren. 
 Für unser Projekt haben wir uns zunutze gemacht, dass die Rückgabe der Methoden auf Basis der ASCII Tabelle erfolgte.
 ::::tabs
@@ -115,4 +127,3 @@ System.out.println(i);
 ```
 Die Ausgabe auf der Konsole ist 7.
 
-## int zu char
