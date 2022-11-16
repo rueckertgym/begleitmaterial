@@ -1,6 +1,7 @@
 ---
 name: Arrays in Java
 index: 0
+toc: show
 ---
 # Arrays
 Arrays (Felder) benutzt man, um eine vorher bestimme Anzahl Daten eines einzelnen Datentyps (zum Beispiel Zahlen) zu speichern und auf diese über eine Indizierung zugreifen zu können. 

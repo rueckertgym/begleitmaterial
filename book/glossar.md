@@ -1,32 +1,34 @@
 ---
 name: Glossar
-index: 2
+
 toc: show
 ---
 
 # Glossar
+## Java
+### Typcasting
+Mit Typcasting wird der Vorgang beschrieben um einen Datentyp in einen anderen zu konvertieren. Wie dies in Java funktioniert findest du :t[hier]{#typecastin.md}.
+## lineare Datenstrukturen
 
-# lineare Datenstrukturen
-
-## Arrays (dt. Feld)
+### Arrays (dt. Feld)
 Weitere Informatioten zu Arrays findest du :t[hier]{#array.md}.
 
-## List (dt. Liste)
+### List (dt. Liste)
 
-## Queue (dt. Wsarteschlange)
+### Queue (dt. Wsarteschlange)
 
-## Stack (dt. Keller oder Stapel)
+### Stack (dt. Keller oder Stapel)
 
-# hierarische Datenstrukturen
+## hierarische Datenstrukturen
 
-# Graphen
+## Graphen
 
-# Werkzeuge
+## Werkzeuge
 
-## Hyperbook
+### Hyperbook
 Ein tolles Tool, welches wir im Unterricht benutzen um ein begleitendes Buch/Webseite als Vorbereitung für das Abitur 2024. In der vollständigen [Dokumentation](https://hyperbook.openpatch.org) findet du weiterführende Informationen.
 
-## Markdown
+### Markdown
 Markdown ist eine Textbeschreibungssprache, die mit jedem Texteditor geschrieben werden kann. Ein großer Vorteil von Markdown ist die Lesbarkeit des "Quelltext". 
 
 Weitere Information zu Markdown findest du in der [Dokumentation](https://hyperbook.openpatch.org) des hyperbooks. 
