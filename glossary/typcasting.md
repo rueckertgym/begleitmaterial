@@ -1,6 +1,5 @@
 ---
 name: Typasting
-index: 2
 toc: show
 ---
 # Typasting

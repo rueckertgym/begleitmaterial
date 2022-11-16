@@ -31,7 +31,7 @@ Ein tolles Tool, welches wir im Unterricht benutzen um ein begleitendes Buch/Web
 ### Markdown
 Markdown ist eine Textbeschreibungssprache, die mit jedem Texteditor geschrieben werden kann. Ein großer Vorteil von Markdown ist die Lesbarkeit des "Quelltext". 
 
-Weitere Information zu Markdown findest du in der [Dokumentation](https://hyperbook.openpatch.org) des hyperbooks. 
+Weitere Information zu Markdown findest du in der [Dokumentation](https://hyperbook.openpatch.org) des hyperbooks oder :t[hier]{#markdown.md}. 
 
 
 

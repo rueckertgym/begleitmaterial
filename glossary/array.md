@@ -1,6 +1,5 @@
 ---
 name: Arrays in Java
-index: 0
 toc: show
 ---
 # Arrays
