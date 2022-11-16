@@ -20,7 +20,7 @@ Die Signatur der Methode lautet:`
 Oder
 
 `public static int parseInt(String str, int radix) throws NumberFormatException`
-`
+
 Hierbei ist der Parameter str der String, der umgewandelt werden soll und radix die Basis der geparsten Zahl.
 
 ## int zu String
@@ -33,7 +33,7 @@ String s = "James Bond 00";
 String s = i + "";
 System.out.println(s);
 ```
-Hier ergibt die Ausgabe der Stringvariable s: James Bond007
+Hier ergibt die Ausgabe der `Stringvariable s: James Bond007`
 
 ### Langbeispiele
 ::::tabs
@@ -102,7 +102,7 @@ public char zahlenZuBuchstaben(int pZahl)
 }
 ```
 
-Der Aufruf der Methode ´zahlenZuBuchstaben(65)´ gibt das Zeichen A wieder, da dieser Buchstabe laut ASCII Tabelle mit 65 als Dezimalzahl kodiert ist.
+Der Aufruf der Methode zahlenZuBuchstaben(65)` gibt das Zeichen A wieder, da dieser Buchstabe laut ASCII Tabelle mit 65 als Dezimalzahl kodiert ist.
 :::
 :::tab{title="Buchstaben zu Zahlen"}
 ```java
@@ -111,14 +111,11 @@ public int buchstabenZuZahlen(char pBuchstabe)
     return (int)pBuchstabe;
 }
 ```
-Der Aufruf der Methode ´buchstabenZuZahlen('B') gibt den Zahlenwert 66 wieder, da B das 66. Zeichen laut ASCII Tabelle ist.
+Der Aufruf der Methode `buchstabenZuZahlen('B')` gibt den Zahlenwert 66 wieder, da B das 66. Zeichen laut ASCII Tabelle ist.
 :::
 ::::
 
-
-
-
-Wenn nun der numerische Wert eines Zeichen gesucht wird, nutzt man am besten die ´getNumericValue(…)-Methode´ der Klasse Character.
+Wenn nun der numerische Wert eines Zeichen gesucht wird, nutzt man am besten die `getNumericValue(…)-Methode` der Klasse Character.
 
 ```java
 char c = '7';
