@@ -12,7 +12,7 @@
   "colors": {
     "brand": "#457B9D"
   },
-  "logo": "logo/hornseLogoEinhornGruenTransparent.png",
+  "logo": "/logo/hornseLogoEinhornGruenTransparent.png",
   "elements": {
     "bookmarks": true
   },

@@ -44,7 +44,76 @@ public String entschluesseln()
 ```   
 
 ## int zu String
+Die einfachste und schnellste Möglichkeit einen int Wert in einen String zu konvertieren ist das anhängen eines leeren String:
 
+### Kurzbeispiel
+´´´java
+int i = 7;
+String s = "James Bond 00";
+String s = i + "";
+System.out.println(s);
+´´´
+Hier ergibt die Ausgabe der Stringvariable s: James Bond007
+
+### Langbeispiel
+´´´java
+public class Konvertierer
+{
+   public Konvertierer() {
+
+       int hilfsZahl = 5;
+       //  Java int zu String
+       String hilfsText = hilfsZahl + "";
+       //  Ergebnis ausgeben
+       System.out.println("Int zu String umwandeln in Java: " + hilfsText);
+       //  int ausgeben
+       System.out.println("Unser int: " + hilfsZahl);
+       //  Das „Addieren“ eines int und eines Strings ergibt einen neuen String
+       System.out.println("Addieren eines int (5) und eines String (\"5\"). Das Ergebnis ist ein neuer String: " + hilfsText + hilfsZahl);
+       //  Integer zu String in Java
+       Integer hilfsZahl2 = 7;
+       String hilfsText2 = hilfsZahl2 + "";
+       System.out.println("nteger zu String umwandeln: " + hilfsText2);
+       System.out.println("Unser Integer: " + hilfsZahl2);
+       System.out.println("Addieren eines Integer (7) und eines String (\"7\"). Das Ergebnis ist ein neuer String: " + hilfsZahl2 + hilfsText2);
+   }
+}
+´´´
 ## char zu int
+Im Rahmen der Kryptologie haben wir die Methode ´public char zahlenZuBuchstaben(int pZahl)´ und ´public int buchstabenZuZahlen(char pBuchstabe)´ genutzt um einem int in einen char bzw. einen char in einen int Wert zu konvertieren. 
+Für unser Projekt haben wir uns zunutze gemacht, dass die Rückgabe der Methoden auf Basis der ASCII Tabelle erfolgte.
+::::tabs
+:::tab{title="Zahlen zu Buchstaben"}
+```java
+public char zahlenZuBuchstaben(int pZahl)
+{
+    return (char)pZahl;
+}
+```
+
+Der Aufruf der Methode ´zahlenZuBuchstaben(65)´ gibt das Zeichen A wieder, da dieser Buchstabe laut ASCII Tabelle mit 65 als Dezimalzahl kodiert ist.
+:::
+:::tab{title="Buchstaben zu Zahlen"}
+```java
+public int buchstabenZuZahlen(char pBuchstabe)
+{
+    return (int)pBuchstabe;
+}
+```
+Der Aufruf der Methode ´buchstabenZuZahlen('B') gibt den Zahlenwert 66 wieder, da B das 66. Zeichen laut ASCII Tabelle ist.
+:::
+::::
+
+
+
+
+Wenn nun der numerische Wert eines Zeichen gesucht wird, nutzt man am besten die ´getNumericValue(…)-Methode´ der Klasse Character.
+
+```java
+char c = '7';
+int i = Character.getNumericValue(c);
+System.out.println(i);
+```
+Die Ausgabe auf der Konsole ist 7.
 
 ## int zu char
