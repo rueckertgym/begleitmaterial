@@ -30,7 +30,7 @@ Mit Hilfe der Methoden `parseInt()` und `valueOf()` kann ein String in einen int
         private int zahl;
         private int zahl2;
 
-        public Demo2() 
+        public StringZuInt() 
         {
             str = "111";
 
@@ -41,7 +41,7 @@ Mit Hilfe der Methoden `parseInt()` und `valueOf()` kann ein String in einen int
         }
     }
     ```
-    Die Ausgabe auf der Konsole ist `parseInt(String): 11` und `parseInt(String mit radix 2): 7``.
+    Die Ausgabe auf der Konsole ist `parseInt(String): 111` und `parseInt(String mit radix 2): 7`.
     
    
 2. `valueOf()`
