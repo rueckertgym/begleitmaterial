@@ -17,4 +17,6 @@ Aufgabe
 2. Entschlüssele:  15331431241323 211542241533 !
 3. Ergänze unsere Modellierung um eine Unterklasse Polybius.
 4. Wie müsste eine geeignete Datenstruktur als Abbild der obigen Tabelle aussehen? Weitere Infos findet ihr im Abschnitt zur Modellierung!
+
+Hilfe bei der Programmierung findest du auch im Glossar unter Typecasting.
  :::

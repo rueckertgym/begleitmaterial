@@ -11,18 +11,40 @@ Hin und wieder benötigen wir Möglichkeiten, um einen int Wert in einen String 
 ## String zu int
 Mit Hilfe der Methoden `parseInt()` und `valueOf()` kann ein String in einen int umgewandelt werden.
 
-1. `parseInt` ist eine static-Methode der Integer-Klasse, die ein Integer-Objekt zurückgibt, das den angegebenen String-Parameter repräsentiert.
+1. `parseInt()` ist eine static-Methode der Integer-Klasse, die ein Integer-Objekt zurückgibt, das den angegebenen String-Parameter repräsentiert.
 
-Die Signatur der Methode lautet:`
+    Die Signatur der Methode lautet:
 
-`public static int parseInt(String str) throws NumberFormatException`
+    `public static int parseInt(String str) throws NumberFormatException`
 
-Oder
+    Oder
 
-`public static int parseInt(String str, int radix) throws NumberFormatException`
+    `public static int parseInt(String str, int radix) throws NumberFormatException`
 
-Hierbei ist der Parameter str der String, der umgewandelt werden soll und radix die Basis der geparsten Zahl.
+    Hierbei ist der Parameter str der String, der umgewandelt werden soll und radix die Basis der geparsten Zahl.
+    
+    ```java
+    public class StringZuInt 
+    {
+        private String str;
+        private int zahl;
+        private int zahl2;
 
+        public Demo2() 
+        {
+            str = "111";
+
+            zahl = Integer.parseInt(str);
+            System.out.println("parseInt(String): "+ zahl);
+            zahl2 = Integer.parseInt(str, 2); // Binärzahl
+            System.out.println("parseInt(String mit radix 2): " + Zahl2);
+        }
+    }
+    ```
+    Die Ausgabe auf der Konsole ist `parseInt(String): 11` und `parseInt(String mit radix 2): 7``.
+    
+   
+2. `valueOf()`
 ## int zu String
 Die einfachste und schnellste Möglichkeit einen int Wert in einen String zu konvertieren ist das anhängen eines leeren String:
 
