@@ -46,7 +46,7 @@ Mit Hilfe der Methoden `parseInt()` und `valueOf()` kann ein String in einen int
    
 2. `valueOf()`
 ## int zu String
-Die einfachste und schnellste Möglichkeit einen int Wert in einen String zu konvertieren ist das anhängen eines leeren String:
+Die einfachste und schnellste Möglichkeit einen int Wert in einen String zu konvertieren ist durch das Anhängen eines leeren Strings.
 
 ### Kurzbeispiel
 ```java
