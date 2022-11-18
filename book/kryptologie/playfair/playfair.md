@@ -10,5 +10,5 @@ Eine schöne Erläuterung des Verfahren findet ihr im nachfolgenden Video
 
 ## Hilfen
 
-Quellcodehilfen findet ihr im Kapitel [Modellierung](book/kryptologie/playfair/PlayFair_Modellierung.md)
+Quellcodehilfen findet ihr im Kapitel [Modellierung](/book/kryptologie/playfair/PlayFair_Modellierung.md)
  
