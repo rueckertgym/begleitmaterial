@@ -5,7 +5,10 @@ toc: show
 ---
 
 # PlayFair Verschlüsslung
+Eine schöne Erläuterung des Verfahren findet ihr im nachfolgenden Video
+::youtube[Costa Rica]{#uLr_6KyzpBc}
 
-https://youtu.be/uLr_6KyzpBc
+## Hilfen
 
-## Quellcode Hilfe
+Quellcodehilfen findet ihr im Kapitel [Modellierung](book/kryptologie/playfair/PlayFair_Modellierung.md)
+ 
