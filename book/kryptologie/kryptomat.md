@@ -36,6 +36,8 @@ classDiagram
       +Vigenere()
       +getSchluessel() String
       +setSchluessel(String pSchluessel) void
+      +verschluesseln() void
+      +entschluesseln() void
     }
     
 ```
