@@ -29,19 +29,21 @@ classDiagram
  ```
 
 ### Dokumentation aus der gemeinsamen Modellierungsphase
-#### Klasse Caesar (Diese Dokumentation muss noch hinzugefügt werden)
+#### Klasse Caesar
 
-`Caesar()`
+**Caesar()**
 
 Ein Objekt der Klasse Caesar wird erzeugt. Hierbei wird der Klartext und der Geheimtext mit keinem Wert initialisiert und der Wert für den Schlüssel auf 0 gesetzt.
 
-`void verschluesseln()`
+**void verschluesseln()**
 
 Der Klartext wird mit Hilfe des Schluessels nach der Caesarmethode verschluesselt. Sind weder Schluessel und/oder Klartext gesetzt wird das "leere" Wort mit einem Schlüsselwert von 0 verschluesselt. Beim Verschlüsseln werden nur Grossbuchstaben verschlüsslelt.
 
-`void entschluesseln()`
+| void entschluesseln()  |
+|---|
+| Der verschlüsselte Text (Geheimtext) wird nach der Caesarmethode entschlusslet und speichert den entschlüssleten Text im Attribut für den Klartext (kt).  |
 
-Der verschlüsselte Text (Geheimtext) wird nach der Caesarmethode entschlusslet und speichert den entschlüssleten Text im Attribut für den Klartext (kt).
+
 
 `char zahlenZuBuchstaben(int pWert)`
 
@@ -67,16 +69,10 @@ Die Anfrage gibt den unverschlüssleten Text (Klartext) wieder (Wert des Attribu
 
 Setze Methode für den Klartext auf den Wert des Parameters pKt.
 
-`String getSchluessel()`
+`int getSchluessel()`
 
 Die Anfrage gibt den des Schlüssels wieder (Wert des Attributs schluessel).
 
 `void setSchluessel(int pSchluessel)`
 
 Setze Methode für den Schlüssel auf den Wert des Parameters pSchluessel.
-
-
-
-
-
-
