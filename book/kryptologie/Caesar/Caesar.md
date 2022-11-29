@@ -10,7 +10,7 @@ toc: show
 
 Obwohl der Caesar-Code zu den unsichersten Verschlüsselungsverfahren der Weltgeschichte gehört, kann man behaupten, dass mit diesem Code die Kryptographie begonnen hat. Der Name leitet sich von seinem „Erfinder“ C. J. Caesar (100 – 44 v. Chr.) ab.
 
-### Keine Geheimzeichen!
+## Keine Geheimzeichen!
 Entgegen anderer Verfahren, die zum Beispiel Buchstaben oder ganze Wörter durch Codes oder Geheimzeichen ersetzen, liegt bei der Caesar-Verschlüsselung eine radikale Entscheidung zugrunde: Die Klartextzeichen und die Geheimtextzeichen sind dieselben, für beide werden die Buchstaben benutzt.
 ## Eingebaute Variabilität!
 Zudem hatte das Caesar-Verfahren, welches nachweislich auch schon vor mehr als zweitausend Jahren ge-nutzt wurde, schon den Aspekt berücksichtigt, dass man nach einer bestimmten Zeit die Verschlüsselung ändern können müsse. Sein „Code” besteht nämlich nicht nur aus einer einzigen Übersetzungsvorschrift, sondern aus einer ganzen Menge. Der Wechsel der einzelnen Vorschriften ist sozusagen in das System eingebaut. Wir werden das später durch den Begriff „Schlüssel” beschreiben.
