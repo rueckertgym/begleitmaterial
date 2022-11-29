@@ -13,7 +13,7 @@ Für Polybius findet ihr unten eine mögliche Modellierung basierend auf einem 2
 **Für die Schnellen:** Findet eine Lösung ohne die Verwendung eines 2-dimensionalen Arrays und auf der Basis eines Strings.
 :::
 
-# Klassendiagramm der gemeinsamen Modellierungsphase
+## Klassendiagramm der gemeinsamen Modellierungsphase
 ```mermaid
 classDiagram
     Kryptomat <|-- Caesar
@@ -58,10 +58,11 @@ classDiagram
     
 ```
 
+## Dokumentation der gemeinsamen Modellierung 
+Die Klassen Caesar, Viginere und die abstrakte Oberklasse Kryptomat sind im Abschnitt Kryptomat vollständig dokumentiert.
+### Klasse Polybius
 
-# Dokumentation der gemeinsamen Modellierung (fehlt noch)
-
-# Quellcode
+## Quellcode
 :::protect{password="Polybius" description="Wie heißt das Verfahren?"}
 ```java
 /**

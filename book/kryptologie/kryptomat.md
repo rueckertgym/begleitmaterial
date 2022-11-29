@@ -18,7 +18,7 @@ classDiagram
     Kryptomat: +verschluesseln()*
     Kryptomat: +entschlüsseln()*
     Kryptomat: -zahlenZuBuchstaben(int pWert) char
-    Kryptomat: -BuchstabenZuZahlen(char pWert) int
+    Kryptomat: -buchstabenZuZahlen(char pWert) int
     Kryptomat: +getGt() String
     Kryptomat: +setGt(String pGt) void
     Kryptomat: +getKt() String
@@ -43,7 +43,9 @@ classDiagram
     
 ```
 ## Dokumentation
-### Klasse Kryptomat
+::::tabs
+
+:::tab{title="Klasse Kryptomat"} 
 **Kryptomat()**
 
 Ein Objekt der Klasse Kryptomat wird erzeugt. Hierbei wird der Klartext und der Geheimtext mit keinem Wert initialisiert.
@@ -79,8 +81,8 @@ Die Anfrage gibt den unverschlüssleten Text (Klartext) wieder (Wert des Attribu
 **void setKt(String pKt)**
 
 Setze Methode für den Klartext auf den Wert des Parameters pKt.
-
-### Klasse Caesar
+:::
+:::tab{title="Klasse Caesar"} 
 **Caesar()**
 
 Ein Objekt der Klasse Caesar wird erzeugt. Hierbei wird der Klartext und der Geheimtext mit keinem Wert initialisiert und der Wert für den Schlüssel auf 0 gesetzt.
@@ -100,7 +102,8 @@ Die Anfrage gibt den des Schlüssels wieder (Wert des Attributs schluessel).
 **void setSchluessel(int pSchluessel)**
 
 Setze Methode für den Schlüssel auf den Wert des Parameters pSchluessel.
-### Klasse Viginere
+:::
+:::tab{title="Klasse Viginere"} 
 **Viginere()**
 
 Ein Objekt der Klasse Viginere wird erzeugt. Hierbei wird der Klartext und der Geheimtext mit keinem Wert und der Schlüssel mit A (also Verschiebung um keinen Wert) initialisiert.
@@ -120,3 +123,5 @@ Die Anfrage gibt den des Schlüssels wieder (Wert des Attributs schluessel).
 **void setSchluessel(int pSchluessel)**
 
 Setze Methode für den Schlüssel auf den Wert des Parameters pSchluessel.
+:::
+::::
