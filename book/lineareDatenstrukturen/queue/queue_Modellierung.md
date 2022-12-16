@@ -11,21 +11,11 @@ Wir haben im Unterricht eine gemeimsame Klassendiagramm (also eine Schnittstelle
 ## Klassendiagramm der gemeinsamen Modellierungsphase
 ```mermaid
 classDiagram
-      class Caesar{
-          -String gt
-          -String kt
-          -int schluessel
-          +Caesar()
-          +verschluesseln() void
-          +entschluesseln() void
-          -zahlenZuBuchstaben(int pWert) char
-          -buchstabenZuZahlen(char pWert) int
-          +getGt() String
-          +setGt(String pGt) void
-          +getKt() String
-          +setKt(String pGt) void         
-          +getSchluessel() int
-          +setSchluessel(int pSchluessel) void
+      class Queue{
+          +Warteschlange()
+          +schiebeErsten():void
+          +gibErsten(): Patient
+          +hintenAnlegen(Patient pPatient):void        
         }
  ```
 
