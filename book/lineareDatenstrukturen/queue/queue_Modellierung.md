@@ -32,7 +32,7 @@ classDiagram
 ## Dokumentation aus der gemeinsamen Modellierungsphase
 ### Klasse Caesar
 
-**Caesar()**
+**Queue**
 
 Ein Objekt der Klasse Caesar wird erzeugt. Hierbei wird der Klartext und der Geheimtext mit keinem Wert initialisiert und der Wert für den Schlüssel auf 0 gesetzt.
 
