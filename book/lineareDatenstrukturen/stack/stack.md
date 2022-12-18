@@ -11,17 +11,19 @@ Ein Stack (auch Stapelspeicher genannt) ist eine dynamische Datenstruktur. Man h
 :::tab{title="Klassendiagramm Stack" id="Klassendiagramm Stack"}
 ```mermaid
 classDiagram
-      Stack : -Node topNode
-      Stack: +add()
-      Stack: +remove()
-      Stack: +getTopNode()
-      class Node{
-        -Node nextNode
-        -String id
-        +getNextNode()
-        +setNextNode()
-        +getId()
-      }
+  class Stack {
+    Stack : -Node topNode
+    Stack: +add()
+    Stack: +remove()
+    Stack: +getTopNode()
+  }
+  class Node{
+    -Node nextNode
+    -String id
+    +getNextNode()
+    +setNextNode()
+    +getId()
+  }
 ```
 :::
 
