@@ -8,7 +8,7 @@ toc: show
 Ein Stack (auch Stapelspeicher genannt) ist eine dynamische Datenstruktur. Man hat eine Warteschlange, wobei jedes Objekt an den Anfang gehängt wird. Danach wird jedes Element von vorne bis hinten durchgegangen.
 
 ::::tabs{id="Stack"}
-:::tab{title="Klassendiagramm Stack" id="Klassendiagramm Stack"}
+:::tab{title="Klassendiagramm" id="Klassendiagramm"}
 ```mermaid
 classDiagram
   class Stack {
@@ -27,7 +27,7 @@ classDiagram
 ```
 :::
 
-:::tab{title="Java Stack" id="Java Stack"}
+:::tab{title="Java" id="Java Quellcode"}
 ```java
 public class Stack {
   private Node topNode;
