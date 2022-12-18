@@ -12,7 +12,6 @@ Wir haben im Unterricht eine gemeimsame Klassendiagramm (also eine Schnittstelle
 ```mermaid
 classDiagram
       class Queue{
-          -String gt
           +Warteschlange()
           +schiebeErsten():void
           +gibErsten(): Patient

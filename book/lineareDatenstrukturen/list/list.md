@@ -12,7 +12,15 @@ In der Regel können in einer Liste Elemente unterschiedlicher Typen gespeichert
 
 Um Elemente in einer Liste zu speichern und zu verwalten, werden in der Regel mehrere Methoden bereitgestellt, wie beispielsweise **add()** oder **remove()** zum Hinzufügen oder Entfernen von Elementen, **get()** oder **set()** zum Abrufen oder Ändern von Elementen an bestimmten Indizes und viele andere.
 
+::::tabs{id="List"}
+:::tab{title="Struktogramm List" id="Struktogramm List"}
+Hier bitte Struktogramm
+:::
 
+:::tab{title="Java List" id="Java List"}
+Hier bitte Java
+:::
+::::
 
 
 
