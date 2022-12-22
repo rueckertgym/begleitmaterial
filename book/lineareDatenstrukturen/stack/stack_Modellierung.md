@@ -67,8 +67,8 @@ public class Node {
 :::
 ::::
 
-## Dokumentation aus der gemeinsamen Modellierungsphase
-### Klasse Caesar
+## Dokumentation der Modellierung
+### Klasse Stack
 
 **Caesar()**
 
