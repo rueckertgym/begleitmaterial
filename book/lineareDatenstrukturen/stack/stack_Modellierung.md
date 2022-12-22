@@ -3,29 +3,69 @@ name: Modellierung
 index: 2
 toc: show
 ---
-# Modellierung im Unterricht
-Wir haben im Unterricht eine gemeimsame Klassendiagramm (also eine Schnittstellenvereinbarung) entwickelt. Zu einer Schnittstellenverinbarung gehört auch eine Dokumentation, damit eindeutig für alle beteiligten Entwickler festgelegt ist, was welche Methode leitet, wobei das "Wie" den Programmieren obliegt.
-
-## Klassendiagramm der gemeinsamen Modellierungsphase
+::::tabs{id="Stack"}
+:::tab{title="Klassendiagramm" id="Klassendiagramm"}
 ```mermaid
 classDiagram
-      class Caesar{
-          -String gt
-          -String kt
-          -int schluessel
-          +Caesar()
-          +verschluesseln() void
-          +entschluesseln() void
-          -zahlenZuBuchstaben(int pWert) char
-          -buchstabenZuZahlen(char pWert) int
-          +getGt() String
-          +setGt(String pGt) void
-          +getKt() String
-          +setKt(String pGt) void         
-          +getSchluessel() int
-          +setSchluessel(int pSchluessel) void
-        }
- ```
+  class Stack {
+    Stack : -Node topNode
+    Stack: +add()
+    Stack: +remove()
+    Stack: +getTopNode()
+  }
+  class Node{
+    -Node nextNode
+    -String id
+    +getNextNode()
+    +setNextNode()
+    +getId()
+  }
+```
+:::
+
+:::tab{title="Java" id="Java Quellcode"}
+```java
+public class Stack {
+  private Node topNode;
+
+  public Node getTopNode() {
+    return topNode;
+  }
+
+  public void add(Node newNode) {
+    newNode.setNextNode(topNode);
+    topNode = newNode;
+  }
+
+  public void remove() {
+    topNode = topNode.getNextNode();
+  }
+}
+
+public class Node {
+
+  private Node nextNode;
+  private final String id;
+
+  public Node(String id) {
+    this.id = id;
+  }
+
+  public Node getNextNode() {
+    return nextNode;
+  }
+
+  public void setNextNode(Node nextNode) {
+    this.nextNode = nextNode;
+  }
+
+  public String getId() {
+    return id;
+  }
+}
+``` 
+:::
+::::
 
 ## Dokumentation aus der gemeinsamen Modellierungsphase
 ### Klasse Caesar
