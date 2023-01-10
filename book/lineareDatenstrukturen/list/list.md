@@ -92,7 +92,6 @@ Hier bitte Struktogramm
     }
 }`
 
-
 :::
 ::::
 
