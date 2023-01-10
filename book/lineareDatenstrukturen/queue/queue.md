@@ -20,14 +20,27 @@ Eine Queue (deutsch: Warteschlange) ist eine dynamische Datenstrucktur. Die Wart
 :::tab{title="ULM Diagram"}
 ```mermaid
 classDiagram
-      class Queue{
-          +Warteschlange()
-          +schiebeErsten():void
-          +gibErsten(): Patient
-          +hintenAnlegen(Patient pPatient):void        
+Warteschlange <|-- Patient
+      class Warteschlange{
+      - Patient vorne
+          +patientenWarteschlange()
+          +Patient gibErsten()
+          +schickeErsten():void
+          +hintenAnstellen(Patient pPatient):void        
         }
+        class Patient{
+        -Patient nachfolger
+        - String hatName
+        -int hatKrknummer
+          +Patient()
+          +setNachfolger(Patient pPatient):void
+          +getNachfolger()
+          +setName(String pName):void
+          +getName()
+          +setKrknummer(int pKrknummer):void
+          +getKrknummer():void
+          }
  ```
-
 :::
 
 :::tab{title="Struktogram"}
@@ -45,4 +58,77 @@ https://struktog.openpatch.org/#pako:eNqVVdtu00AQ_RXjpyJ10N4vrfoCQgIJEL8wuzNLLFw
 ::::
 
 # Quellcode
+```java
+public class PatientenWarteschlange
+{
+private Patient vorne;
+
+public PatientenWarteschlange()
+{
+
+}
+
+public Patient gibErsten(){
+return vorne; 
+}
+
+public void schickeErsten() {
+Patient aktuellerPatient = vorne ;
+if( vorne!= null){
+  vorne = aktuellerPatient.getNachfolger();
+}
+}
+
+public void hintenAnstellen(Patient pPatient)
+{
+Patient aktuellerPatient = vorne;
+if (vorne == null){
+vorne = pPatient; 
+}
+else{
+while(aktuellerPatient.getNachfolger() != null) {
+aktuellerPatient = aktuellerPatient.getNachfolger();
+}
+aktuellerPatient.setNachfolger(pPatient);
+}
+}
+}
+
+public class Patient
+{
+private Patient nachfolger;
+private String hatName;
+private int hatKrknummer;
+
+public Patient(String pName, int pKrknummer)
+{
+this.hatName = pName;
+this.hatKrknummer = pKrknummer;
+}
+
+public void setNachfolger(Patient pPatient) {
+nachfolger = pPatient;
+}
+
+public Patient getNachfolger() {
+return nachfolger;
+}
+
+public void setName(String pName){
+hatName= pName;
+} 
+
+public String getName(){
+return hatName; 
+}
+
+public void setKrknummer(int pKrknummer){
+hatKrknummer= pKrknummer;
+} 
+
+public int getKrknummer(){
+return hatKrknummer; 
+}
+}
+```
 # Klassendokumentation 
