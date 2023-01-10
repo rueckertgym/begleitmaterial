@@ -18,7 +18,81 @@ Hier bitte Struktogramm
 :::
 
 :::tab{title="Java List" id="Java List"}
-Hier bitte Java
+`public class List
+{
+    private Elephant firstElement;
+    private Elephant searchedElement;
+    private Elephant lastElement;
+    /**
+     * Konstruktor
+     */
+    public List(Elephant pElephant){
+        firstElement = pElephant;
+        lastElement = pElephant;
+    }
+    /**
+    *Füge ein Element am Ende der Liste hinzu
+    *@param Elephant pElephant
+    */
+    public void append(Elephant pElephant){
+        lastElement.setNext(pElephant);
+        lastElement = lastElement.getNext();
+    }
+    /**
+    * Erhalte den Wert von einem Element an einer pestimten Position
+    * @param int pos
+    * @return Elephant searchedElement
+    */
+    public Elephant get(int pos){
+        setSearched(pos);
+        return searchedElement;
+    }
+    /**
+    * Ändere das Element an einer bestimten Position
+    * @param Elephant pElephant
+    * @param int pos
+    */
+    public void set(Elephant pElephant, int pos){
+        setSearched(pos);
+        pElephant.setNext(searchedElement.getNext());
+        remove(pos);
+        add(pElephant, pos);
+    }
+    /**
+    * Füge ein Element an einer bestimmten Position in der Liste hinzu
+    * @param Elephant pElephant
+    * @param int pos
+    */
+    public void add(Elephant pElephant, int pos){
+        setSearched(pos);
+        pElephant.setNext(searchedElement);
+        Elephant tmp = searchedElement;
+        setSearched(pos - 1);
+        searchedElement.setNext(pElephant);
+    }
+    /**
+    * Entfernt ein Element an einer bestimmten Position in der Liste
+    * @param int pos
+    */
+    public void remove(int pos){
+        setSearched(pos + 1);
+        Elephant tmp = searchedElement;
+        setSearched(pos - 1);
+        searchedElement.setNext(tmp);
+    }
+    /**
+     * interne Funktion die ein gesuchtes Element in einer Methodenübergreifenden Variable
+     */
+    private void setSearched(int pos){
+        Elephant ele = firstElement;
+        for(int i = 0; i < pos; i++){
+            ele = ele.getNext();
+        }
+        searchedElement = ele;
+    }
+}
+
+
 :::
 ::::
 
