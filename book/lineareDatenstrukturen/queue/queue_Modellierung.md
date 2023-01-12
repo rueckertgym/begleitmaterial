@@ -17,15 +17,15 @@ toc: show
 :::tab{title="ULM Diagram"}
 ```mermaid
 classDiagram
+Patient --> "- nachfolger" Patient
+Warteschlange --> "- vorne" Patient 
       class Warteschlange{
-      - Patient vorne
           +patientenWarteschlange()
           +Patient gibErsten()
           +schickeErsten():void
           +hintenAnstellen(Patient pPatient):void        
         }
         class Patient{
-        -Patient nachfolger
         - String hatName
         -int hatKrknummer
           +Patient()
