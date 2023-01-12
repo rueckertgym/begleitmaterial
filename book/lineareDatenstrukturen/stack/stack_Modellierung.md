@@ -4,7 +4,7 @@ index: 2
 toc: show
 ---
 ::::tabs{id="Stack"}
-:::tab
+:::tab{title="Video"}
 []("https://www.youtube.com/embed/hJresi7z_YM?autoplay=1")
 :::
 :::tab{title="Klassendiagramm" id="Klassendiagramm"}
