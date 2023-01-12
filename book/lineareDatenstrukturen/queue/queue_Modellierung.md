@@ -132,69 +132,36 @@ return hatKrknummer;
 
 Ein Objekt der Klasse Warteschlange wird erzeugt.
 
-**Patient gibErsten()**
+**Patient gibErsten()
+Der erste Patient in der Warteschlange zurückgegeben.**
 
 
 
-**void schickeErsten()**
+**void schickeErsten()
+Der erste Patient wird gelöscht bzw. aus der Warteschlange entlassen. Der zweite wird dann der erste Patient, der dritte wird der zweite usw.**
 
-**void hintenAnstellen(Patient pPatient)**
+**void hintenAnstellen(Patient pPatient)
+Die Methode sucht den Patient, der keinen Patienten mehr hinter sich hat. Dort wird der pPatient anghängt und ist nun der letzte. Wenn kein Patient in der Warteschlange ist, dann wird der pPatient der erste in der Warteschlange.**
 
 **Patient()**
 
-**void setNachfolger(Patient pPatient)**
+**void setNachfolger(Patient pPatient)
+Setze Methode für den Nachfolger eines Patienten durch einen weiteren Patienten pPatient.**
 
-**getNachfolger()**
+**getNachfolger()
+Die Anfrage gibt den Nachfolger des aktuellen Patienten wieder.**
 
-**void setName(String pName)**
+**void setName(String pName)
+Setze Methode für den Namen auf den Wert des Parameters pName.**
 
-**getName()**
+**getName()
+Die Anfrage gibt den Namen des Patienten Text wieder.**
 
-**setKrknummer(int pKrknummer)**
+**setKrknummer(int pKrknummer)
+Setze Methode für die Krknummer auf den Wert des Parameters pKrknummer.**
 
-**void getKrknummer()**
+**void getKrknummer()
+Die Anfrage gibt die Krknummer des Patienten wieder.**
 
 **Queue**
 
-Ein Objekt der Klasse Caesar wird erzeugt. Hierbei wird der Klartext und der Geheimtext mit keinem Wert initialisiert und der Wert für den Schlüssel auf 0 gesetzt.
-
-**void verschluesseln()**
-
-Der Klartext wird mit Hilfe des Schluessels nach der Caesarmethode verschluesselt. Sind weder Schluessel und/oder Klartext gesetzt wird das "leere" Wort mit einem Schlüsselwert von 0 verschluesselt. Beim Verschlüsseln werden nur Grossbuchstaben verschlüsslelt.
-
-**void entschluesseln()**
-
-Der verschlüsselte Text (Geheimtext) wird nach der Caesarmethode entschlusslet und speichert den entschlüssleten Text im Attribut für den Klartext (kt).
-
-
-**char zahlenZuBuchstaben(int pWert)**
-
-Die Anfrage liefert zu einem Zahlenwert den nach ASCII Tabelle passenden Buchstaben.
-
-**int buchstabenZuZahlen(char pWert)**
-
-Die Anfrage liefert zu einem Buchstaben den nach ASCII Tabelle passenden Zahlenwert.
-
-**String getGt()**
-
-Die Anfrage gibt den verschlüssleten Text (Geheimtext) wieder (Wert des Attributs gt).
-
-**void setGt(String pGt)**
-
-Setze Methode für den Geheimtext auf den Wert des Parameters pGt.
-
-**String getKt()**
-
-Die Anfrage gibt den unverschlüssleten Text (Klartext) wieder (Wert des Attributs kt).
-
-**void setKt(String pKt)**
-
-Setze Methode für den Klartext auf den Wert des Parameters pKt.
-
-**int getSchluessel()**
-
-Die Anfrage gibt den des Schlüssels wieder (Wert des Attributs schluessel).
-
-**void setSchluessel(int pSchluessel)**
-
-Setze Methode für den Schlüssel auf den Wert des Parameters pSchluessel.
