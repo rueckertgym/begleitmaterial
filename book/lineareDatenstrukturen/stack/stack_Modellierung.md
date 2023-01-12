@@ -5,7 +5,7 @@ toc: show
 ---
 ::::tabs{id="Stack"}
 :::tab{title="Video"}
-[]("https://www.youtube.com/embed/hJresi7z_YM?autoplay=1")
+[]("https://www.youtube.com/watch?v=hJresi7z_YM?autoplay=1")
 :::
 :::tab{title="Klassendiagramm" id="Klassendiagramm"}
 ```mermaid
