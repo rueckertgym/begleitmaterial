@@ -8,7 +8,9 @@ toc: show
 ::::tabs
 
 :::tab{title="Video"}
-[Link](#) zum Video
+
+::youtube[01 Lineare Datenstrukturen:  Queue ohne Knoten ]{#fd2Ty1Jkw00}
+:::
 
 :::
 
