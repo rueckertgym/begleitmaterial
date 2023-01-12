@@ -18,7 +18,8 @@ Hier bitte Struktogramm
 :::
 
 :::tab{title="Java List" id="Java List"}
-`public class List
+```java
+public class List
 {
     private Elephant firstElement;
     private Elephant searchedElement;
@@ -90,7 +91,7 @@ Hier bitte Struktogramm
         }
         searchedElement = ele;
     }
-}`
+}```
 
 :::
 ::::
