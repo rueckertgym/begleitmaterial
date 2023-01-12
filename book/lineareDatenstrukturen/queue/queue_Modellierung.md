@@ -56,76 +56,76 @@ Das Struktogram, für wenn entwas hinten angehängt wird.
 
 # Quellcode
 ```java
-public class PatientenWarteschlange
+public class PatientenWarteschlange 
 {
-private Patient vorne;
+    private Patient vorne;
 
-public PatientenWarteschlange()
-{
+    public PatientenWarteschlange()
+    {
 
-}
+    }
 
-public Patient gibErsten(){
-return vorne; 
-}
+    public Patient gibErsten(){
+        return vorne; 
+    }
 
-public void schickeErsten() {
-Patient aktuellerPatient = vorne ;
-if( vorne!= null){
-  vorne = aktuellerPatient.getNachfolger();
-}
-}
+    public void schickeErsten() {
+        Patient aktuellerPatient = vorne ;
+        if( vorne!= null){
+            vorne = aktuellerPatient.getNachfolger();
+        }
+    }
 
-public void hintenAnstellen(Patient pPatient)
-{
-Patient aktuellerPatient = vorne;
-if (vorne == null){
-vorne = pPatient; 
-}
-else{
-while(aktuellerPatient.getNachfolger() != null) {
-aktuellerPatient = aktuellerPatient.getNachfolger();
-}
-aktuellerPatient.setNachfolger(pPatient);
-}
-}
+    public void hintenAnstellen(Patient pPatient)
+    {
+        Patient aktuellerPatient = vorne;
+        if (vorne == null){
+            vorne = pPatient; 
+        }
+        else{
+            while(aktuellerPatient.getNachfolger() != null) {
+                aktuellerPatient = aktuellerPatient.getNachfolger();
+            }
+            aktuellerPatient.setNachfolger(pPatient);
+        }
+    }
 }
 
 public class Patient
 {
-private Patient nachfolger;
-private String hatName;
-private int hatKrknummer;
+    private Patient nachfolger;
+    private String hatName;
+    private int hatKrknummer;
 
-public Patient(String pName, int pKrknummer)
-{
-this.hatName = pName;
-this.hatKrknummer = pKrknummer;
-}
+    public Patient(String pName, int pKrknummer)
+    {
+        this.hatName = pName;
+        this.hatKrknummer = pKrknummer;
+    }
 
-public void setNachfolger(Patient pPatient) {
-nachfolger = pPatient;
-}
+    public void setNachfolger(Patient pPatient) {
+        nachfolger = pPatient;
+    }
 
-public Patient getNachfolger() {
-return nachfolger;
-}
+    public Patient getNachfolger() {
+        return nachfolger;
+    }
 
-public void setName(String pName){
-hatName= pName;
-} 
+    public void setName(String pName){
+        hatName= pName;
+    } 
 
-public String getName(){
-return hatName; 
-}
+    public String getName(){
+        return hatName; 
+    }
 
-public void setKrknummer(int pKrknummer){
-hatKrknummer= pKrknummer;
-} 
+    public void setKrknummer(int pKrknummer){
+        hatKrknummer= pKrknummer;
+    } 
 
-public int getKrknummer(){
-return hatKrknummer; 
-}
+    public int getKrknummer(){
+        return hatKrknummer; 
+    }
 }
 ```
 # Klassendokumentation 
