@@ -5,7 +5,7 @@ toc: show
 ---
 ::::tabs{id="Stack"}
 :::tab
-<iframe src="https://www.youtube.com/embed/hJresi7z_YM?autoplay=1"></iframe>
+[]("https://www.youtube.com/embed/hJresi7z_YM?autoplay=1")
 :::
 :::tab{title="Klassendiagramm" id="Klassendiagramm"}
 ```mermaid
