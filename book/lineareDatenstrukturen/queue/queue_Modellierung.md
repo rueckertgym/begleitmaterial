@@ -134,36 +134,45 @@ return hatKrknummer;
 
 Ein Objekt der Klasse Warteschlange wird erzeugt.
 
-**Patient gibErsten()
-Der erste Patient in der Warteschlange zurückgegeben.**
+**Patient gibErsten()**
+
+Der erste Patient in der Warteschlange zurückgegeben.
 
 
 
-**void schickeErsten()
-Der erste Patient wird gelöscht bzw. aus der Warteschlange entlassen. Der zweite wird dann der erste Patient, der dritte wird der zweite usw.**
+**void schickeErsten()**
 
-**void hintenAnstellen(Patient pPatient)
-Die Methode sucht den Patient, der keinen Patienten mehr hinter sich hat. Dort wird der pPatient anghängt und ist nun der letzte. Wenn kein Patient in der Warteschlange ist, dann wird der pPatient der erste in der Warteschlange.**
+Der erste Patient wird gelöscht bzw. aus der Warteschlange entlassen. Der zweite wird dann der erste Patient, der dritte wird der zweite usw.
+
+**void hintenAnstellen(Patient pPatient)**
+
+Die Methode sucht den Patient, der keinen Patienten mehr hinter sich hat. Dort wird der pPatient anghängt und ist nun der letzte. Wenn kein Patient in der Warteschlange ist, dann wird der pPatient der erste in der Warteschlange.
 
 **Patient()**
 
-**void setNachfolger(Patient pPatient)
-Setze Methode für den Nachfolger eines Patienten durch einen weiteren Patienten pPatient.**
+**void setNachfolger(Patient pPatient)**
 
-**getNachfolger()
-Die Anfrage gibt den Nachfolger des aktuellen Patienten wieder.**
+Setze Methode für den Nachfolger eines Patienten durch einen weiteren Patienten pPatient.
 
-**void setName(String pName)
-Setze Methode für den Namen auf den Wert des Parameters pName.**
+**getNachfolger()**
 
-**getName()
-Die Anfrage gibt den Namen des Patienten Text wieder.**
+Die Anfrage gibt den Nachfolger des aktuellen Patienten wieder.
 
-**setKrknummer(int pKrknummer)
-Setze Methode für die Krknummer auf den Wert des Parameters pKrknummer.**
+**void setName(String pName)**
 
-**void getKrknummer()
-Die Anfrage gibt die Krknummer des Patienten wieder.**
+Setze Methode für den Namen auf den Wert des Parameters pName.
+
+**getName()**
+
+Die Anfrage gibt den Namen des Patienten Text wieder.
+
+**setKrknummer(int pKrknummer)**
+
+Setze Methode für die Krknummer auf den Wert des Parameters pKrknummer.
+
+**void getKrknummer()**
+
+Die Anfrage gibt die Krknummer des Patienten wieder.
 
 **Queue**
 
