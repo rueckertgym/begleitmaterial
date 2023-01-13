@@ -5,7 +5,8 @@ toc: show
 ---
 ::::tabs{id="Stack"}
 :::tab{title="Video"}
-[]("https://www.youtube.com/watch?v=hJresi7z_YM?autoplay=1")
+
+::youtube[01 Lineare Datenstrukturen:  Stack ohne Knoten ]{#sTRpUqBAvyc}
 :::
 :::tab{title="Klassendiagramm" id="Klassendiagramm"}
 ```mermaid
@@ -79,12 +80,12 @@ Ein Objekt der Klasse Stack wird erzeugt.
 
 **void add()**
 
-Fügt eine Note (einen Knoten) zum Stack hinzu.
+Fügt eine Node zum Stack hinzu.
 
 **void remove()**
 
-Entfernt eine Note (einen Knoten) vom Stack.
+Entfernt eine Node vom Stack.
 
 **Node getTopNode()**
 
-Gibt den obersten Knotenpunkt zurück.
+Gibt die erste Node zurück.
