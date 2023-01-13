@@ -3,9 +3,9 @@ name: Modellierung
 index: 2
 toc: show
 ---
-::::tabs{id="Stack"}
+::::tabs
 
-:::tab{title="Klassendiagramm" id="Klassendiagramm"}
+:::tab{title="Klassendiagramm ohne Knoten"}
 ```mermaid
 classDiagram
   class Stack {
@@ -23,8 +23,11 @@ classDiagram
   }
 ```
 :::
+:::tab{title="Klassendiagramm mit Knoten"}
 
-:::tab{title="Java" id="Java Quellcode"}
+:::
+
+:::tab{title="Quellcode ohne Knoten"}
 ```java
 public class Stack {
   private Node topNode;
@@ -66,10 +69,82 @@ public class Node {
 }
 ``` 
 :::
+:::tab{title="Quellcode mit Knoten"}
+```java
+
+public class Stack<E> {
+    private Node topNode;
+
+    public E getContent() {
+        if (topNode == null){
+            return null;
+        }
+        return topNode.getContent();
+    }
+
+    public void add(E content) {
+        Node newNode = new Node(content);
+        newNode.setNextNode(topNode);
+        topNode = newNode;
+    }
+
+    public void remove() {
+        topNode = topNode.getNextNode();
+    }
+
+    public class Node {
+
+        private Node nextNode;
+        private E content;
+        public Node( E pContent) {
+            content = pContent;
+        }
+
+        public E getContent(){
+            return content;
+        }
+
+        public void setContent(E pContent){
+            content = pContent;
+        }
+
+        public Node getNextNode() {
+            return nextNode;
+        }
+
+        public void setNextNode(Node nextNode) {
+            this.nextNode = nextNode;
+        }
+
+    }
+}
+
+public class Elefant
+{
+
+    private int Gewicht;
+    private int Groeße;
+    private int laenge;
+    private int ruessellaenge;
+    private String Name;
+
+    public Elefant(String pName, int pGewicht, int pGroeße,int pLaenge,int pRuessellaenge)
+    {
+        Name = pName;
+        Gewicht=pGewicht;
+        Groeße = pGroeße;
+        laenge= pLaenge;
+        ruessellaenge= pRuessellaenge;
+    }
+
+}
+```
+:::
+
 ::::
 
 ## Dokumentation der Modellierung
-### Klasse Stack
+### ohne Knoten 
 
 **Stack()**
 
@@ -86,3 +161,5 @@ Entfernt eine Node vom Stack.
 **Node getTopNode()**
 
 Gibt die erste Node zurück.
+
+### mit Knoten
