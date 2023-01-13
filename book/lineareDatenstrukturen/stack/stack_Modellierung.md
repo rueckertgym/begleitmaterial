@@ -8,14 +8,14 @@ toc: show
 :::tab{title="Klassendiagramm ohne Knoten"}
 ```mermaid
 classDiagram
-  class Stack {
-    Stack : -Node topNode
+Stack --> Node : -topNode
+Node --> Node : -nextNode
+  class Stack {    
     Stack: +add()
     Stack: +remove()
     Stack: +getTopNode()
   }
   class Node{
-    -Node nextNode
     -String id
     +getNextNode()
     +setNextNode()

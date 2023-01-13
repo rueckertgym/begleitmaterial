@@ -17,8 +17,8 @@ toc: show
 :::tab{title="ULM Diagram"}
 ```mermaid
 classDiagram
-Patient --> "- nachfolger" Patient
-Warteschlange --> "- vorne" Patient 
+Patient -->  Patient : - nachfolger
+Warteschlange --> Patient : - vorne
       class Warteschlange{
           +patientenWarteschlange()
           +Patient gibErsten()
