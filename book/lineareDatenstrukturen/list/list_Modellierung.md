@@ -24,121 +24,139 @@ Um Elemente in einer Liste zu speichern und zu verwalten, werden in der Regel me
 ```java
 public class List
 {
-    private Node abcPrefixFirstElement;
-    private Node abcPrefixSearchedElement;
-    private Node abcPrefixLastElement;
     /**
-     * Konstruktor
+       The first element
+       */
+    private Node fe;
+    /**
+       The searched element
+       */
+    private Node se;
+    /**
+       The last element
+       */
+    private Node le;
+    
+    public List(Node i){
+        fe = i;
+        le = i;
+    }
+    /**
+    *Adds a node to the end of the list
+    */
+    public void f(Node i){
+        le.setN(i);
+        le = le.getN();
+    }
+    /**
+    * Return the node at pos p
+    */
+    public Node g(int p){
+        e(p);
+        return se;
+    }
+    /**
+    * Change the element at the given position p
+    */
+    public void s(Node i, int p){
+        e(p);
+        i.setN(se.getN());
+        r(p);
+        a(i, p);
+    }
+    /**
+    * Add the element at the position p
+    */
+    public void a(Node i, int p){
+        e(p);
+        i.setN(se);
+        Node tmp = se;
+        e(p - 1);
+        se.setN(i);
+    }
+    /**
+    * Removes the element at position p
+    */
+    public void r(int p){
+        e(p + 1);
+        Node temp = se;
+        e(p - 1);
+        se.setN(temp);
+    }
+    /**
+     * Sets se to the element that is searched
      */
-    public List(Node cItem){
-        abcPrefixFirstElement = cItem;
-        abcPrefixLastElement = cItem;
-    }
-    /**
-    *Füge ein Element am Ende der Liste hinzu
-    *@param Elephant pElephant
-    */
-    public void append(Node cItem){
-        abcPrefixLastElement.setNextNode(cItem);
-        abcPrefixLastElement = abcPrefixLastElement.getNextNode();
-    }
-    /**
-    * Erhalte den Wert von einem Element an einer pestimten fPosition
-    * @param int fPos
-    * @return Elephant abcPrefixSearchedElement
-    */
-    public Node get(int fPos){
-        setSearched(fPos);
-        return abcPrefixSearchedElement;
-    }
-    /**
-    * Ändere das Element an einer bestimten fPosition
-    * @param Elephant pElephant
-    * @param int fPos
-    */
-    public void set(Node cItem, int fPos){
-        setSearched(fPos);
-        cItem.setNextNode(abcPrefixSearchedElement.getNextNode());
-        remove(fPos);
-        add(cItem, fPos);
-    }
-    /**
-    * Füge ein Element an einer bestimmten fPosition in der Liste hinzu
-    * @param Elephant pElephant
-    * @param int fPos
-    */
-    public void add(Node cItem, int fPos){
-        setSearched(fPos);
-        cItem.setNextNode(abcPrefixSearchedElement);
-        Node tmp = abcPrefixSearchedElement;
-        setSearched(fPos - 1);
-        abcPrefixSearchedElement.setNextNode(cItem);
-    }
-    /**
-    * Entfernt ein Element an einer bestimmten fPosition in der Liste
-    * @param int fPos
-    */
-    public void remove(int fPos){
-        setSearched(fPos + 1);
-        Node temp = abcPrefixSearchedElement;
-        setSearched(fPos - 1);
-        abcPrefixSearchedElement.setNextNode(temp);
-    }
-    /**
-     * interne Funktion die ein gesuchtes Element in einer Methodenübergreifenden Variable
-     */
-    private void setSearched(int fPos){
-        Node cItem = abcPrefixFirstElement;
-        for(int i = 0; i < fPos; i++){
-            cItem = cItem.getNextNode();
+    private void e(int p){
+        Node i = fe;
+        for(int j = 0; j < p; j++){
+            i = i.getN();
         }
-        abcPrefixSearchedElement = cItem;
-    }
-}
-
-public class Node<T> {
-
-    private final T cItem;
-    
-    private Node qNextNode;
-    
-    public Node(T cItem) {
-        this.cItem = cItem;
-    }
-    
-    public Node getqNextNode() {
-        return qNextNode;
-    }
-    
-    public void setqNextNode(Node qNextNode) {
-        this.qNextNode = qNextNode;
-    }
-    
-    public T getcItem() {
-        return cItem;
+        se = i;
     }
 }
 
 public class Elephant{
     
-    private String zName;
+    /**
+       The name
+       */
+    private String n;
     
-    public Elephant(String zName){
-        this.zName = zName;
+    public Elephant(String n){
+        this.n = n;
     }
     /**
-     * gibt den zNamen zurück
-     * @return String zName
+     * Returns the name
      */
-    public String getzName(){
-        return zName;
+    public String getN(){
+        return n;
     }
     /**
-     * setzt den zNamen
-     * @param String pzName
+     * Sets the name
      */
-    public void setzName(String zName){
-        this.zName = zName;
+    public void setN(String n){
+        this.n = n;
+    }
+}
+
+public class Node<T> {
+
+    /**
+       The item
+       */
+    private final T i;
+    
+    /**
+       The node
+       */
+    private Node n;
+    
+    /**
+       Given i, the item
+       */
+    public Node(T i) {
+        this.i = i;
+    }
+    
+    /**
+       Returns the node
+       */
+    public Node getN() {
+        return n;
+    }
+    
+    /**
+       Sets the node
+       */
+    public void setN(Node n) {
+        this.n = n;
+    }
+    
+    /**
+       Returns the item
+       */
+    public T getI() {
+        return i;
     }
 }
 ```
