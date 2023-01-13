@@ -4,10 +4,7 @@ index: 2
 toc: show
 ---
 ::::tabs{id="Stack"}
-:::tab{title="Video"}
 
-::youtube[01 Lineare Datenstrukturen:  Stack ohne Knoten ]{#sTRpUqBAvyc}
-:::
 :::tab{title="Klassendiagramm" id="Klassendiagramm"}
 ```mermaid
 classDiagram
