@@ -22,141 +22,155 @@ Um Elemente in einer Liste zu speichern und zu verwalten, werden in der Regel me
 :::tab{title="Quellcode List" id="Quellcode List"}
 :::tab{title="Java List" id="Java List"}
 ```java
-public class List
-{
-    /**
-       The first element
-       */
-    private Node fe;
-    /**
-       The searched element
-       */
-    private Node se;
-    /**
-       The last element
-       */
-    private Node le;
-    
-    public List(Node i){
-        fe = i;
-        le = i;
-    }
-    /**
-    *Adds a node to the end of the list
-    */
-    public void f(Node i){
-        le.setN(i);
-        le = le.getN();
-    }
-    /**
-    * Return the node at pos p
-    */
-    public Node g(int p){
-        e(p);
-        return se;
-    }
-    /**
-    * Change the element at the given position p
-    */
-    public void s(Node i, int p){
-        e(p);
-        i.setN(se.getN());
-        r(p);
-        a(i, p);
-    }
-    /**
-    * Add the element at the position p
-    */
-    public void a(Node i, int p){
-        e(p);
-        i.setN(se);
-        Node tmp = se;
-        e(p - 1);
-        se.setN(i);
-    }
-    /**
-    * Removes the element at position p
-    */
-    public void r(int p){
-        e(p + 1);
-        Node temp = se;
-        e(p - 1);
-        se.setN(temp);
-    }
-    /**
-     * Sets se to the element that is searched
-     */
-    private void e(int p){
-        Node i = fe;
-        for(int j = 0; j < p; j++){
-            i = i.getN();
-        }
-        se = i;
-    }
-}
+public class List<E> {
 
-public class Elephant{
-    
+    private Node<E> firstElement;
+    private Node<E> searchedElement;
+    private Node<E> lastElement;
+
     /**
-       The name
-       */
-    private String n;
-    
-    public Elephant(String n){
-        this.n = n;
-    }
+     * Erstellt eine leere liste
+     * */
+    public List() {}
+
     /**
-     * Returns the name
+     * Erstellt eine neue liste und setzt das element "item" an die erste und letzte stelle
      */
-    public String getN(){
-        return n;
+    public List(E item) {
+        Node<E> node = new Node<>(item);
+        firstElement = node;
+        lastElement = node;
     }
+
     /**
-     * Sets the name
+     * Fügt ein element ans ende der liste hinzu
      */
-    public void setN(String n){
-        this.n = n;
+    public void append(E item) {
+        Node<E> node = new Node<>(item);
+        if(lastElement == null) {
+            firstElement = node;
+            lastElement = node;
+        } else {
+            lastElement.setNextNode(node);
+            lastElement = lastElement.getNextNode();
+        }
+    }
+
+    /**
+     * Gibt das element zurück, welches an der position "index" gespeichert ist
+     */
+    public E get(int index) {
+        if(index == 0)
+            return firstElement.getItem();
+        setSearched(index);
+        return searchedElement.getItem();
+    }
+
+    /**
+     * Ersetze das Element an der position "pos" durch das neue element "item"
+     */
+    public void set(E item, int pos) {
+        Node<E> node = new Node<>(item);
+        setSearched(pos);
+        node.setNextNode(searchedElement.getNextNode());
+        remove(pos);
+        add_intern(node, pos);
+    }
+
+    /**
+     * Eine Hilfsmethode, wird in "set(E item, int pos)" benötigt
+     * */
+    private void add_intern(Node<E> item, int pos) {
+        setSearched(pos);
+        item.setNextNode(searchedElement);
+        setSearched(pos - 1);
+        searchedElement.setNextNode(item);
+    }
+
+    /**
+     * Fügt das element "item" an der position "pos" der liste hinzu
+     */
+    /*
+    * Bsp:
+    * A -> B -> C
+    * add(F, 1)
+    * A -> F -> B -> C
+    * */
+    public void add(E item, int pos) {
+        Node<E> node = new Node<>(item);
+        if(pos == 0) {
+            node.setNextNode(firstElement);
+            firstElement = node;
+        } else if(pos == getSize()) {
+            append(item);
+        } else {
+            setSearched(pos);
+            node.setNextNode(searchedElement);
+            setSearched(pos - 1);
+            searchedElement.setNextNode(node);
+        }
+    }
+
+    /**
+     * Entfernt das element an der position "pos"
+     */
+    /*
+    * Bsp:
+    * A -> B -> C
+    * remove(1)
+    * A -> C
+    * */
+    public void remove(int pos) {
+        setSearched(pos + 1);
+        Node<E> temp = searchedElement;
+        setSearched(pos - 1);
+        searchedElement.setNextNode(temp);
+    }
+
+    /**
+     * Interne methode, welche das "searchedElement" setzt
+     */
+    private void setSearched(int pos) {
+        if(pos > getSize())
+            throw new IndexOutOfBoundsException();
+        Node<E> item = firstElement;
+        for (int i = 0; i < pos; i++) {
+            item = item.getNextNode();
+        }
+        searchedElement = item;
+    }
+
+    public int getSize() {
+        int size = 0;
+        Node<E> temp = firstElement;
+        while (temp != null) {
+            temp = temp.getNextNode();
+            size++;
+        }
+        return size;
     }
 }
 
 public class Node<T> {
 
-    /**
-       The item
-       */
-    private final T i;
-    
-    /**
-       The node
-       */
-    private Node n;
-    
-    /**
-       Given i, the item
-       */
-    public Node(T i) {
-        this.i = i;
+    private final T item;
+
+    private Node<T> nextNode;
+
+    public Node(T item) {
+        this.item = item;
     }
-    
-    /**
-       Returns the node
-       */
-    public Node getN() {
-        return n;
+
+    public Node<T> getNextNode() {
+        return nextNode;
     }
-    
-    /**
-       Sets the node
-       */
-    public void setN(Node n) {
-        this.n = n;
+
+    public void setNextNode(Node<T> nextNode) {
+        this.nextNode = nextNode;
     }
-    
-    /**
-       Returns the item
-       */
-    public T getI() {
-        return i;
+
+    public T getItem() {
+        return item;
     }
 }
 ```
