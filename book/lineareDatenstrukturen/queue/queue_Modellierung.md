@@ -130,6 +130,97 @@ public class Patient
     }
 }
 ```
+# Quellcode mit Knoten
+```java
+public class PatientenWarteschlange<T>{
+    private Knoten vorne;
+    /*
+     * Konstruktor
+     * Erstellt leere Queue
+     */
+    public PatientenWarteschlange(){
+        vorne = null;
+    }
+    /*
+     * Gibt das erste Objekt der Queue zurück
+     */
+    public T gibErsten(){
+        return vorne.getZeigeAuf();
+    }
+    /*
+     * Ertfernt das erste Objekt aus der Queue
+     */
+    public void schickeErsten(){
+        if( vorne.getNachfolger()!= null){
+            vorne = vorne.getNachfolger();
+        }
+    }
+    /*
+     * Fügt ein neues Element am Ende der Queue hinzu
+     */
+    public void hintenAnstellen(T pPatient){
+        Knoten aktuellerPatient = vorne;
+        Knoten neuerPatient = new Knoten(pPatient);
+        neuerPatient.setNachfolger(null);
+        if (vorne == null){
+            vorne = neuerPatient;
+        }
+        else{
+            while(aktuellerPatient.getNachfolger() != null) {
+                aktuellerPatient = aktuellerPatient.getNachfolger(); 
+            }
+            aktuellerPatient.setNachfolger(neuerPatient);
+        }
+    }
+    
+    private class Knoten{
+        private T zeigeAuf;                             //Speichert das Objekt auf welches der Knoten zeigt
+        private Knoten nachfolger;                      //Speichert den nachfolgenden Knoten
+        
+        public Knoten(T pZeigeAuf){
+            zeigeAuf = pZeigeAuf;
+        }
+        public Knoten getNachfolger(){
+            return nachfolger;
+        }
+        public void setNachfolger(Knoten pNachfolger){
+            this.nachfolger = pNachfolger;
+        }
+        public T getZeigeAuf(){
+            return zeigeAuf;
+        }
+    }
+}
+
+public class Patient
+{
+    private String hatName;
+    private int hatKrknummer;
+
+    public Patient(String pName, int pKrknummer){
+        this.hatName = pName;
+        this.hatKrknummer = pKrknummer;
+    }
+
+    public void setName(String pName){
+        hatName = pName;
+    } 
+
+    public String getName(){
+        return hatName; 
+    }
+
+    public void setKrknummer(int pKrknummer){
+        hatKrknummer= pKrknummer;
+    } 
+
+    public int getKrknummer(){
+        return hatKrknummer; 
+    }
+}
+```
+
+
 # Klassendokumentation 
 
 **patientenWarteschlange()**
