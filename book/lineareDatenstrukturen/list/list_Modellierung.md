@@ -175,11 +175,22 @@ public class Node<T> {
 ```
 :::
 :::tab{title="Dokumentation List"}
-**void f(Node i)**
-Fügt den Knoten "i" ans Ende der Liste hinzu und setzt den pointer "le" auf den Knoten
-**Node g(int pos)**
-Gibt den Knoten an der Position pos zurück
-**void s(Node i, int p)**
-asd
+**void append(E item)**
+Erstellt für das item einen Knoten und fügt diesen an das Ende der Liste hinzu
+
+**E get(int index)**
+Gibt das Element an der Position des "index" zurück
+
+**void set(E item, int pos)**
+Erstellt für das item einen Knoten und ersetzt das Element an der Position pos
+
+**void add(E item, int pos)**
+Erstellt für das item einen Knoten und fügt diesen an der Position in der Liste ein
+
+**void remove(int pos)**
+Entfernt das Element an der Position "pos" von der Liste
+
+**int getSize()**
+Gibt die Größe der Liste zurück
 :::
 ::::
