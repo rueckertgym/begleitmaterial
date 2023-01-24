@@ -13,7 +13,7 @@ toc: show
 :::
 :::
 :::tab{title="Video 2"}
-::youtube[01a Lineare Datenstrukturen: Queue mit Knoten]{57vUckNYHFU}
+::youtube[01a Lineare Datenstrukturen: Queue mit Knoten]{#57vUckNYHFU}
 :::
 
 :::tab{title="ULM Diagram"}
