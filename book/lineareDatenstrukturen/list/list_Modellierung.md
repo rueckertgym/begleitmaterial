@@ -161,5 +161,13 @@ public class Node<T> {
 }
 ```
 
+:::tab{title="Dokumentation List" id="Dokumentation List"}
+**void f(Node i)**
+Fügt den Knoten "i" ans Ende der Liste hinzu und setzt den pointer "le" auf den Knoten
+**Node g(int pos)**
+Gibt den Knoten an der Position pos zurück
+**void s(Node i, int p)**
+asd
+:::
 :::
 ::::
