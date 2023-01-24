@@ -1,5 +1,5 @@
 ---
-name: List 2.0 Modellierung
+name: List 2.0
 index: 1
 toc: show
 ---
@@ -19,7 +19,6 @@ Um Elemente in einer Liste zu speichern und zu verwalten, werden in der Regel me
 :::
 
 :::
-:::tab{title="Quellcode List" id="Quellcode List"}
 :::tab{title="Java List" id="Java List"}
 ```java
 public class List<E> {
@@ -174,7 +173,7 @@ public class Node<T> {
     }
 }
 ```
-
+:::
 :::tab{title="Dokumentation List" id="Dokumentation List"}
 **void f(Node i)**
 Fügt den Knoten "i" ans Ende der Liste hinzu und setzt den pointer "le" auf den Knoten
@@ -182,6 +181,5 @@ Fügt den Knoten "i" ans Ende der Liste hinzu und setzt den pointer "le" auf den
 Gibt den Knoten an der Position pos zurück
 **void s(Node i, int p)**
 asd
-:::
 :::
 ::::
