@@ -163,3 +163,37 @@ Entfernt eine Node vom Stack.
 Gibt die erste Node zurück.
 
 ### mit Knoten
+
+### Dokumentation der Modelierung
+### mit Knoten 
+
+**Stack()**
+
+Ein Objekt der Klasse Stack wird erzeugt.
+
+**void add()**
+
+Fügt ein Element auf die oberste Stelle des Stacks hinzu.
+
+**void remove()**
+
+Entfernt das oberste Element vom Stack.
+
+**Node getTopNode()**
+
+Gibt das erste Element zurück.
+ 
+**setContent()**
+
+Erzeugt ein Element.
+
+**getNextNode()**
+
+Gibt das nächste Element zurück.
+
+**setNextNode**
+
+Setzt das nächste Element fest.
+
+
+
