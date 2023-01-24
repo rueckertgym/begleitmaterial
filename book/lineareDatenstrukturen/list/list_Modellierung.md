@@ -12,14 +12,14 @@ In der Regel können in einer Liste Elemente unterschiedlicher Typen gespeichert
 
 Um Elemente in einer Liste zu speichern und zu verwalten, werden in der Regel mehrere Methoden bereitgestellt, wie beispielsweise **add()** oder **remove()** zum Hinzufügen oder Entfernen von Elementen, **get()** oder **set()** zum Abrufen oder Ändern von Elementen an bestimmten Indizes und viele andere.
 
-::::tabs{id="List"}
+::::tabs
 
-:::tab{title="Video Liste" id="Video Liste"}
+:::tab{title="Video Liste"}
 ::youtube[02 Lineare Datenstrukturen:  List ohne Knoten ]{#zSad1XVQ0hg}
 :::
 
 :::
-:::tab{title="Java List" id="Java List"}
+:::tab{title="Java List"}
 ```java
 public class List<E> {
 
@@ -174,7 +174,7 @@ public class Node<T> {
 }
 ```
 :::
-:::tab{title="Dokumentation List" id="Dokumentation List"}
+:::tab{title="Dokumentation List"}
 **void f(Node i)**
 Fügt den Knoten "i" ans Ende der Liste hinzu und setzt den pointer "le" auf den Knoten
 **Node g(int pos)**
