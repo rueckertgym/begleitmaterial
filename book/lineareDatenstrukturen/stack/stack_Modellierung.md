@@ -23,8 +23,36 @@ Node --> Node : -nextNode
   }
 ```
 :::
-:::tab{title="Klassendiagramm mit Knoten"}
 
+:::tab{title="Klassendiagramm mit Knoten"}
+```mermaid
+classDiagram
+Stack --> Node : -topNode
+Node --> Node : -nextNode
+
+  class Stack<E> {    
+    +E getContent()
+    +add(E content)
+    +remove()
+  }
+  class Node{
+    -E content
+    +Node(E pContent)
+    +E getContent()
+    +setContent(E pContent)
+    +Node getNextNode()
+    +setNextNode(Node nextNode)
+  }
+classDiagram 
+  class Elefant{
+    -int Gewicht
+   -intGröße
+   -int laenge 
+   -int ruessellaenge
+   -String Name
+   +Elefant(String pName, int pGewicht, int pGröße, int plaenge, int ruessellaenge)
+  }
+```
 :::
 
 :::tab{title="Quellcode ohne Knoten"}
