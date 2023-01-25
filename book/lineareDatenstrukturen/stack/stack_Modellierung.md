@@ -27,8 +27,8 @@ Node --> Node : -nextNode
 :::tab{title="Klassendiagramm mit Knoten"}
 ```mermaid
 classDiagram
-Stack --> Node : -topNode
-Node --> Node : -nextNode
+Stack<E> --|> Node : -topNode
+Node --|> Node : -nextNode
 
   class Stack<E> {    
     +E getContent()
@@ -43,10 +43,9 @@ Node --> Node : -nextNode
     +Node getNextNode()
     +setNextNode(Node nextNode)
   }
-classDiagram 
   class Elefant{
-    -int Gewicht
-   -intGröße
+   -int Gewicht
+   -int Größe
    -int laenge 
    -int ruessellaenge
    -String Name
@@ -190,9 +189,6 @@ Entfernt eine Node vom Stack.
 
 Gibt die erste Node zurück.
 
-### mit Knoten
-
-### Dokumentation der Modelierung
 ### mit Knoten 
 
 **Stack()**
