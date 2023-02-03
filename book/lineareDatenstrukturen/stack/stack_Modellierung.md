@@ -11,9 +11,9 @@ classDiagram
 Stack --> Node : -topNode
 Node --> Node : -nextNode
   class Stack {    
-    Stack: +add()
-    Stack: +remove()
-    Stack: +getTopNode()
+     +add()
+     +remove()
+    +getTopNode()
   }
   class Node{
     -String id
@@ -27,10 +27,10 @@ Node --> Node : -nextNode
 :::tab{title="Klassendiagramm mit Knoten"}
 ```mermaid
 classDiagram
-Stack<E> --|> Node : -topNode
-Node --|> Node : -nextNode
+Stack~E~ --> Node : -topNode
+Node --> Node : -nextNode
 
-  class Stack<E> {    
+  class Stack~E~ {    
     +E getContent()
     +add(E content)
     +remove()
