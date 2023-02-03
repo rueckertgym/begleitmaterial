@@ -4,7 +4,7 @@ index: 2
 toc: show
 ---
 
-# List Lösung von <Zagros>
+# List Lösung von <Zagros und Marouane>
 ```java
 import java.util.Scanner;
 
