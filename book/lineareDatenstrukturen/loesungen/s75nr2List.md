@@ -4,7 +4,22 @@ index: 2
 toc: show
 ---
 
-# List Lösung von <Zagros und Marouane>
+# List Lösung von Zagros und Marouane
+``` mermaid
+classDiagram
+    
+    class Vokabeltrainer{
+      +main() : void
+    }
+
+    class Vokabel{
+        -gerWord : String
+        -translation : String
+        +Vokabel(gerWord : String, translation : String)
+        +getGerWord() : String
+        +getTranslation() : String
+        }
+```
 ```java
 import java.util.Scanner;
 
