@@ -16,7 +16,7 @@ Sobald der Stack gebildet wurde, wird der oberste Buchstabe im Stack im String P
 Zum Schluss wird der String Palindrom mit dem Begriff verglichen.
 Trifft diese Aussage zu, ist dieses Wort ein Palindrom.
 
-
+b)
 
 ```mermaid
 classDiagram
@@ -152,3 +152,7 @@ public class PalindromTestV2
 }
 
 ```
+
+c)
+Das Problem bei "bei liese sei lieb" sind die Leerzeichen. Denn durch diese ist am Ende der Ausführung unseres Programms "bei liese sei lieb" kein Palindrom mehr. So wären die Leerzeichen an den falschen Stellen im Satz gesetzt. 
+Unser Ansatz wäre, alle Leerzeichen mit einer Methode zu entfernen. Dann überprüft man ob die Buchstabenreihnfolge, die bleibt, ein Palindrom ist. Wenn es true ist, dann setzt man an den selben Stellen wie vorher die Leerzeichen wieder ein.
