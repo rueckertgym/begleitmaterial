@@ -4,7 +4,7 @@ index: 1
 toc: show
 ---
 
-# Prüfungsvorbereitung Lösung von <Zagros und Marouane>
+# Prüfungsvorbereitung Lösung von Zagros und Marouane
 a) Die Datenstruktur ist deshalb der Schlange vorzuziehen, weil in einer Rinne beim Bowling mehrere Kugeln zu Verfügung stehen und man sich eine aussuchen kann. Da die Datenstruktur Schlange mit dem First-in-Fist-out-Prinzip funktioniert, hätte man bei der Wahl der Schlange nur eine Kugel, die man nehmen könnte.   
 b)
 ```java
