@@ -46,6 +46,7 @@ classDiagram
         +sprechstundeBeenden(): void
     }
     class Person{
+      +Person(name: String)
       +getName(): String
     }
 ```
