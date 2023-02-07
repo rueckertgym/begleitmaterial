@@ -4,7 +4,6 @@ index: 2
 toc: show
 ---
 
-# Stack Lösung von Tim und Sarah
 
 
 # Stack Lösung von Marouane und Zagros
