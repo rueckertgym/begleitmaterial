@@ -58,7 +58,7 @@ classDiagram
 
 ```mermaid
 
-classDiagram
+
     
     Queue~ContentType~ <-- Buero:PersonWarteSchlange
     Person  <-- Buero
@@ -73,6 +73,18 @@ classDiagram
         +getName():String
 
     }
+  
+    
+
+    class Buero{
+
+      +hintenAnstellen()
+      +Einlassen()
+      +sprechstundeBeenden()
+    
+    }
+    
+```
   
     
 
