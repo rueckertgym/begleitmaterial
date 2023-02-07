@@ -57,47 +57,21 @@ classDiagram
 # Queue und Stack Lösung von Marouane und Zagros
 
 ```mermaid
-
-
-    
-    Queue~ContentType~ <-- Buero:PersonWarteSchlange
+    classDiagram
+    Queue~ContentType~ <-- Buero : PersonWarteSchlange
     Person  <-- Buero
-    Queue~ContentType~ : 
-    Queue~ContentType~ : 
-    Queue~ContentType~: 
-    Queue~ContentType~: 
+
+         class Person{
+        -String name
+        +String getName()
+         }
+
+        class Buero{
+         +hintenAnstellen()
+         +Einlassen()
+         +sprechstundeBeenden()
+         } 
     
-
-    class Person {
-        -name:String
-        +getName():String
-
-    }
-  
-    
-
-    class Buero{
-
-      +hintenAnstellen()
-      +Einlassen()
-      +sprechstundeBeenden()
-    
-    }
-    
-```
-  
-    
-
-    class Buero{
-
-      +hintenAnstellen()
-      +Einlassen()
-      +sprechstundeBeenden()
-    
-    }
-    
-
-
 ```
 
 
