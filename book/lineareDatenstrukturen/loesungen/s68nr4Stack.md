@@ -41,3 +41,114 @@ PalindromTest --> Stack: -palindromStappel
 
     }
 ```
+
+Lösung mit unserer Klasse Stack: 
+
+```java
+
+
+public class PalindromTest
+{
+    
+    private Stack1<Character> zahlenStack;
+    private String wort;
+    private String Palindrom; 
+    char x; 
+    
+    public PalindromTest(String pWort)
+    {
+        
+       zahlenStack= new Stack1<>();
+        wort = pWort;
+        x=' '; 
+        Palindrom=""; 
+        PalindromTest(); 
+
+    }
+
+    public String getWort(){
+        return wort; 
+    }
+
+    public boolean PalindromTest(){
+
+        for(int i=0; i< wort.length(); i++){
+            x =wort.charAt(i);
+            zahlenStack.add(x);
+
+        }
+
+        for( int j=0; j< wort.length(); j++){
+            x=' '; 
+            x= zahlenStack.getContent(); 
+            Palindrom= Palindrom + x; 
+            zahlenStack.remove(); 
+
+        }
+        
+        if (Palindrom.equalsIgnoreCase(wort)){
+            System.out.println("True"); 
+            return true; 
+        }
+        else {
+            System.out.println("False"); 
+            return false; 
+        }
+    }
+
+}
+```
+Lösung mit der Klasse Stack des Zentralabiturs:
+```java 
+public class PalindromTestV2
+{
+   
+    private StackV2<Character> zahlenStack;
+    private String wort;
+    private String Palindrom; 
+    char x; 
+    
+    public PalindromTestV2(String pWort)
+    {
+        
+        zahlenStack= new StackV2<>();
+        wort = pWort;
+        x=' '; 
+        Palindrom=""; 
+        PalindromTest(); 
+
+    }
+
+    public String getWort(){
+        return wort; 
+    }
+
+    public boolean PalindromTest(){
+
+        for(int i=0; i< wort.length(); i++){
+            x =wort.charAt(i);
+            zahlenStack.push(x);
+
+        }
+
+        for( int j=0; j< wort.length(); j++){
+            x=' '; 
+            x= zahlenStack.top(); 
+            Palindrom= Palindrom + x; 
+            zahlenStack.pop(); 
+
+        }
+        
+        if (Palindrom.equalsIgnoreCase(wort)){
+            System.out.println("True"); 
+            return true; 
+        }
+        else {
+            System.out.println("False"); 
+            return false; 
+        }
+    }
+
+}
+
+```
