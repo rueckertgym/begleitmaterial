@@ -7,7 +7,7 @@ toc: show
 # List Lösung von Zagros und Marouane
 ``` mermaid
 classDiagram
-    
+    List <-- Vokabel
     class Vokabeltrainer{
       +main() : void
     }
@@ -19,6 +19,9 @@ classDiagram
         +getGerWord() : String
         +getTranslation() : String
         }
+    class List{
+
+    }
 ```
 ```java
 import java.util.Scanner;
