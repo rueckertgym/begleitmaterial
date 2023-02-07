@@ -87,9 +87,10 @@ public class ZAEinkaufsliste
         System.out.println("-----------------");
     }
 
-}
+}```
 :::
 
+:::
 :::tab{title="Q1 Implementation"}
 
 ```java
@@ -142,9 +143,7 @@ public class Q1Einkaufsliste
             System.out.println(einkaufsliste.get(i));
         }
     }
-}
+}```
 :::
-
-
-
+::::
 
