@@ -15,26 +15,21 @@ b)
 ```mermaid
 classDiagram
 Steuerung --> List: -Datensammlung<LED>
-Steuerung -- LED
+Steuerung --> LED
 
     
-    class Stack {
-        
+    class Steuerung{
+     -int anzahlLED
+     -LED hilfe 
+     +Steuerung()
+     +leuchten01() void
+     +leuchten02() void
+     +leuchten03() void 
+     +getAnzahlLED() int
+     +lichterketteAnhaengen( pLichterkette) void
 
     }
      
-      
-    
-    class PalindromTest {
-      -char x
-      -String wort
-      -String Palindrom
-      +PalindromTest(pWort)
-      +getWort() String
-      +PalindromTest() boolean
-    
-
-    }
     class LED{
       -boolean leuchtet
       -String name
