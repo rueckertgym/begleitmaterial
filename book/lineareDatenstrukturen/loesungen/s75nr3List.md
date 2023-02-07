@@ -51,9 +51,7 @@ public class LED
    private boolean leuchtet;
     private String name; 
 
-    /**
-     * Konstruktor für Objekte der Klasse LED
-     */
+    
     public LED(String pName)
     {
         
@@ -81,10 +79,8 @@ public class Steuerung
     private int anzahlLED;
     private List<LED> Datensammlung ;
     private LED hilfe; 
-private List [] LEDgitter; 
-    /**
-     * Konstruktor für Objekte der Klasse Steuerung
-     */
+ 
+    
     public Steuerung()
     {
        Datensammlung = new List<LED>(); 
@@ -95,7 +91,7 @@ private List [] LEDgitter;
        Datensammlung.append(GRÜN);
        Datensammlung.append(BLAU);
        anzahlLED= Datensammlung.getSize();  
-      // LEDgitter [0]= Datensammlung; 
+       
     }
 public void LEDgitterErweitern(List pLichterkette){
     
