@@ -91,4 +91,60 @@ public class ZAEinkaufsliste
 
 
 :::tab{title="Q1 Implementation"}
+::
+
+```java
+
+/**
+ * Beschreiben Sie hier die Klasse Q1Einkaufsliste.
+ * 
+ * @author (Ihr Name) 
+ * @version (eine Versionsnummer oder ein Datum)
+ */
+public class Q1Einkaufsliste
+{
+    private Q1List<Q1Artikel> einkaufsliste = new Q1List();
+    
+    /**
+     * Konstruktor für Objekte der Klasse Q1Einkaufsliste
+     */
+    public Q1Einkaufsliste()
+    {
+        
+    }
+    
+    public void artikelHinzufuegen(Q1Artikel pArtikel)
+    {
+        einkaufsliste.append(pArtikel);
+    }
+    
+    public void artikelEntfernen(Q1Artikel pArtikel)
+    {
+        for(int i = 0; i < einkaufsliste.getSize(); i++){
+            //if(einkaufsliste.get(i).istIdentisch(pArtikel)){
+                //einkaufsliste.remove(i);
+            //}
+        }
+    }
+    
+    public boolean istArtikelVorhanden(Q1Artikel pArtikel)
+    {
+        boolean istVorhanden = false;
+        for(int i = 0; i < einkaufsliste.getSize(); i++){
+            //if(einkaufsliste.get(i).istIdentisch(pArtikel)){
+                //istVorhanden = true;
+            //}
+        }
+        return istVorhanden;
+    }
+    
+    public void einkaufslisteAusgeben(){
+        for(int i = 0; i < einkaufsliste.getSize(); i++){
+            System.out.println(einkaufsliste.get(i));
+        }
+    }
+}
+
+
+
 
