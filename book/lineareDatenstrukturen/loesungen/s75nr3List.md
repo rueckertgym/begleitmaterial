@@ -42,3 +42,96 @@ Steuerung --> LED
     }
 
 ```
+c) und d)
+Außerdem muss man bei der Klasse List eine Methode "getSize" ergänzen, diese returnt die Länge der Liste.  
+
+``` java 
+public class LED
+{
+   private boolean leuchtet;
+    private String name; 
+
+    /**
+     * Konstruktor für Objekte der Klasse LED
+     */
+    public LED(String pName)
+    {
+        
+        name = pName; 
+        leuchtet = false; 
+    }
+
+    public void lichtAn(){
+        leuchtet= true; 
+        System.out.println("LED leuchtet"); 
+    }
+    public void lichtAus(){
+        leuchtet = false; 
+        System.out.println("LED leuchtet nicht");
+    }
+}
+
+
+```
+
+```java
+ 
+public class Steuerung
+{
+    private int anzahlLED;
+    private List<LED> Datensammlung ;
+    private LED hilfe; 
+private List [] LEDgitter; 
+    /**
+     * Konstruktor für Objekte der Klasse Steuerung
+     */
+    public Steuerung()
+    {
+       Datensammlung = new List<LED>(); 
+       LED GRÜN= new LED("GRÜN"); 
+       LED BLAU= new LED("BLAU"); 
+       LED LILA = new LED("LILA"); 
+       Datensammlung.append(LILA);
+       Datensammlung.append(GRÜN);
+       Datensammlung.append(BLAU);
+       anzahlLED= Datensammlung.getSize();  
+      // LEDgitter [0]= Datensammlung; 
+    }
+public void LEDgitterErweitern(List pLichterkette){
+    
+}
+   public void leuchten01(){
+       for( int i=0; i< anzahlLED; i++){
+           hilfe = Datensammlung.get1(i); 
+          hilfe.lichtAn();
+       }
+   }
+   public void leuchtet02(){
+       for( int i=0; i< anzahlLED; i=+2){
+           hilfe = Datensammlung.get1(i); 
+          hilfe.lichtAn();
+       } 
+   }
+   public void leuchtet03(){
+       for( int i=0; i< anzahlLED; i=+2){
+           hilfe = Datensammlung.get1(i); 
+          hilfe.lichtAn();
+          i++; 
+       } 
+   }
+   public int getAnzahlLED(){
+       return anzahlLED; 
+   }
+   public void lichterketteAnhaengen(List pLichterkette){
+       while(pLichterkette!= null){
+           Datensammlung.append(Datensammlung.getFirst()); 
+           pLichterkette.remove(0); 
+       }
+        anzahlLED = anzahlLED+ pLichterkette.getSize(); 
+       
+       
+   }
+}
+```
+
+d)  
