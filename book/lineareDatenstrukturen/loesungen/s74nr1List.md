@@ -6,10 +6,9 @@ toc: show
 
 # List Lösung von Tim und Sarah:
 
-::::tabs
-
+::::tabs{id="ListNr1"}
 :::tab{title="ZA Implementation"}
-::
+
 ```java
 /**
  * Diese Klasse erzeugt einen Einkaufszettel der verschiedene Artikel speichert.
@@ -89,3 +88,7 @@ public class ZAEinkaufsliste
     }
 
 }
+
+
+:::tab{title="Q1 Implementation"}
+
