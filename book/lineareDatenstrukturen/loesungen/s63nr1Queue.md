@@ -49,5 +49,6 @@ classDiagram
       +Person(name: String)
       +getName(): String
     }
+    
 ```
 :::
