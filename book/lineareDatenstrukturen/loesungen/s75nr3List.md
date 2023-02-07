@@ -130,4 +130,4 @@ public void LEDgitterErweitern(List pLichterkette){
 }
 ```
 
-d)  
+e)  
