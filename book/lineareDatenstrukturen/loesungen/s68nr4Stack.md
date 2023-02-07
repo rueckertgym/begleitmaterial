@@ -4,7 +4,7 @@ index: 5
 toc: show
 ---
 
-# Queue Lösung von <Yassin und Leo>
+# Queue Lösung von Yassin und Leo
 
 # Lösung der Aufgabe
 
