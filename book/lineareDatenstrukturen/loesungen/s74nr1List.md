@@ -88,10 +88,9 @@ public class ZAEinkaufsliste
     }
 
 }
-
+:::
 
 :::tab{title="Q1 Implementation"}
-::
 
 ```java
 
@@ -144,6 +143,7 @@ public class Q1Einkaufsliste
         }
     }
 }
+:::
 
 
 
