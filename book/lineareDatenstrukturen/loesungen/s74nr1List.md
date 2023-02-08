@@ -4,7 +4,7 @@ index: 1
 toc: show
 ---
 
-# List Lösung von Tim und Sarah:
+# List Lösung von Tim und Sarah
 
 ::::tabs{id="ListNr1"}
 :::tab{title="ZA Implementation"}
