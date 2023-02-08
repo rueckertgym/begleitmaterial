@@ -10,31 +10,27 @@ toc: show
 
 :::tab{title="ZA Implementation" id="ZA Implementation"}
 
+### Implementationsdiagramm
+
 ```mermaid
 classDiagram
     
-    Queue~ContentType~ <-- Thregekmu: - queue
-    Stack~ContentType~ <-- Thregekmu: - stack
-    Queue~ContentType~ : 
-    Queue~ContentType~ : 
-    Queue~ContentType~: 
-    Queue~ContentType~: 
-    Stack~ContentType~ 
-
-    class Stack~ContentType~
+    Queue~ContentType~ <-- Thregekmu: -queue
+    Stack~ContentType~ <-- Thregekmu: -stack
     
-    
-
     class Thregekmu{
 
-      -translation: int[]
+      -zahlenfolge: int[]
+      +ZATrhekegmu()
       +queueBefuellen()
       +queueLeeren()
-      +ausgabe_zahlenfolge()
+      +ausgabeZahlenfolge()
     
     }
   
 ```
+
+### Quellcode der Klasse "ZATrhekegmu"
 
 ```java
 
@@ -44,6 +40,7 @@ public class ZATrhekegmu
 
     private ZAQueue<Integer> queue = new ZAQueue<Integer>();
     private ZAStack<Integer> stack = new ZAStack<Integer>();
+
     /**
      * Konstruktor für Objekte der Klasse ZATrhekegmu.
      * Der Konstruktor leert die Queue und befüllt ein Array mit Zahlen,
@@ -82,7 +79,7 @@ public class ZATrhekegmu
      * Die in der Queue gespeicherte Zahlenfolge wird umgekehrt in ein Stack übertragen und wird dann in der Konsole ausgegeben.
      * Die Zahlenfolge ist umgekehrt.
      */
-    public void ausgabe_zahlenfolge()
+    public void ausgabeZahlenfolge()
     {
         queueLeeren();
         queueBefuellen();
@@ -103,80 +100,65 @@ public class ZATrhekegmu
 :::
 
 :::tab{title="Q1 Implementation" id="Q1 Implementation"}
+
+### Implementationsdiagramm
+
+```mermaid
+classDiagram
+    
+    Queue~ContentType~ <-- Thregekmu: -queue
+    Stack~ContentType~ <-- Thregekmu: -stack
+    
+    class Thregekmu{
+
+      +Q1Trhekegmu()
+      +queueBefuellen()
+      +stackBefuellen()
+      +outputStack()
+    
+    }
+  
+```
+### Quellcode der Klasse "Q1Trhekegmu"
+
 ```java
-public class List
-{
-    private Elephant firstElement;
-    private Elephant searchedElement;
-    private Elephant lastElement;
-    /**
-     * Konstruktor
-     */
-    public List(Elephant pElephant){
-        firstElement = pElephant;
-        lastElement = pElephant;
+import java.util.Arrays;
+
+public class Q1Trhekegmu{
+    Q1Queue<Integer> queue = new Q1Queue<Integer>();
+    Q1Stack<Integer> stack = new Q1Stack<Integer>();
+    
+    public Q1Trhekegmu(){
+        queueBefuellen();
+        stackBefuellen();
+        outputStack();
     }
-    /**
-    *Füge ein Element am Ende der Liste hinzu
-    *@param Elephant pElephant
-    */
-    public void append(Elephant pElephant){
-        lastElement.setNext(pElephant);
-        lastElement = lastElement.getNext();
-    }
-    /**
-    * Erhalte den Wert von einem Element an einer pestimten Position
-    * @param int pos
-    * @return Elephant searchedElement
-    */
-    public Elephant get(int pos){
-        setSearched(pos);
-        return searchedElement;
-    }
-    /**
-    * Ändere das Element an einer bestimten Position
-    * @param Elephant pElephant
-    * @param int pos
-    */
-    public void set(Elephant pElephant, int pos){
-        setSearched(pos);
-        pElephant.setNext(searchedElement.getNext());
-        remove(pos);
-        add(pElephant, pos);
-    }
-    /**
-    * Füge ein Element an einer bestimmten Position in der Liste hinzu
-    * @param Elephant pElephant
-    * @param int pos
-    */
-    public void add(Elephant pElephant, int pos){
-        setSearched(pos);
-        pElephant.setNext(searchedElement);
-        Elephant tmp = searchedElement;
-        setSearched(pos - 1);
-        searchedElement.setNext(pElephant);
-    }
-    /**
-    * Entfernt ein Element an einer bestimmten Position in der Liste
-    * @param int pos
-    */
-    public void remove(int pos){
-        setSearched(pos + 1);
-        Elephant tmp = searchedElement;
-        setSearched(pos - 1);
-        searchedElement.setNext(tmp);
-    }
-    /**
-     * interne Funktion die ein gesuchtes Element in einer Methodenübergreifenden Variable
-     */
-    private void setSearched(int pos){
-        Elephant ele = firstElement;
-        for(int i = 0; i < pos; i++){
-            ele = ele.getNext();
+    
+    private void queueBefuellen(){
+        int[] arr = {10, 4, 6, 8, 1, 3, 2};
+        System.out.println(Arrays.toString(arr));
+        for(int i = 0; i < arr.length; i++){
+            queue.hintenAnstellen(arr[i]);
         }
-        searchedElement = ele;
     }
-}```
+    private void stackBefuellen(){
+        for(int i = 0; i < 7; i++){
+            stack.add(queue.gibErsten());
+            queue.schickeErsten();
+        }
+    }
+    private void outputStack(){
+        Q1Stack tmpStack = stack;
+        String out = "";
+        for(int i = 0; i < 7; i++){
+            out += tmpStack.getContent() + ", ";
+            tmpStack.remove();
+        }
+        System.out.println(out);
+    }
+}
+
+```
 
 :::
 ::::
