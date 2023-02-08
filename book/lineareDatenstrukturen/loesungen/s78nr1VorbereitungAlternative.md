@@ -1,4 +1,4 @@
-# Prüfungsvorbereitung alternative Lösung von Sarah und Tim
+# Prüfungsvorbereitung alternative Lösung von Tim und Sarah
 
 ## a)
 Eine Liste ist für die Modellierung einer Bowling-Rinne besser geeignet als eine Schlange, da die spielende Person nicht immer die erste Kugel wählen muss, sondern sich eine Aussuchen kann. Anders als das first-in-first-out Prinzip der Schlange ist das interagieren mit einem Liste nämlich felixbel.

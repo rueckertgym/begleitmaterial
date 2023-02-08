@@ -9,6 +9,30 @@ toc: show
 ::::tabs{id="ListNr1"}
 :::tab{title="ZA Implementation"}
 
+```mermaid
+classDiagram
+    
+    ZAList~ContentType~ <-- Einkaufsliste: - einkaufsliste
+    
+    class ZAArtikel{
+    - name: String
+    - anzahl: int 
+    }
+    
+
+    class ZAEinkaufsliste{
+
+      - einkaufsliste: ZAList~ZAArtikel~
+      + ZAEinkaufsliste()
+      + artikelHinzufuegen(ZAArtikel pArtikel)
+      + artikelEntfernen(ZAArtikel pArtikel)
+      + listeLeer(): boolean
+      + listeAusgeben()
+    
+    }
+  
+```
+
 ```java
 /**
  * Diese Klasse erzeugt einen Einkaufszettel der verschiedene Artikel speichert.
@@ -94,12 +118,11 @@ public class ZAEinkaufsliste
 :::tab{title="Q1 Implementation"}
 
 ```java
-
 /**
  * Beschreiben Sie hier die Klasse Q1Einkaufsliste.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Tim) 
+ * @version (07.02.2023)
  */
 public class Q1Einkaufsliste
 {
