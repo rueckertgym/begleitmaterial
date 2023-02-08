@@ -9,20 +9,20 @@ toc: show
 ::::tabs{id="ListNr1"}
 :::tab{title="ZA Implementation"}
 
+### Implementationsdiagramm
+
 ```mermaid
 classDiagram
     
-    ZAList~ContentType~ <-- Einkaufsliste: - einkaufsliste
+    ZAList~ContentType~ <-- ZAEinkaufsliste: - einkaufsliste
     
     class ZAArtikel{
     - name: String
     - anzahl: int 
     }
     
-
     class ZAEinkaufsliste{
-
-      - einkaufsliste: ZAList~ZAArtikel~
+    
       + ZAEinkaufsliste()
       + artikelHinzufuegen(ZAArtikel pArtikel)
       + artikelEntfernen(ZAArtikel pArtikel)
@@ -32,6 +32,7 @@ classDiagram
     }
   
 ```
+### Quellcode der Klasse "ZAEinkaufsliste"
 
 ```java
 /**
@@ -111,11 +112,73 @@ public class ZAEinkaufsliste
         System.out.println("-----------------");
     }
 
-}```
+}
+```
+
+### Quellcode der Klasse "ZAArtikel"
+
+```java
+/**
+ * Die Klasse stellt einen Einkaufsartikel dar. Objekte dieser Klasse besitzten einen Namen und eine Anzahl.
+ * 
+ * @author (Sarah) 
+ * @version (07.02.2023)
+ */
+public class ZAArtikel
+{
+    private String name;
+    private int anzahl;
+
+    /**
+     * Kreiert ein Artikelobjekt
+     */
+    public ZAArtikel(String pName, int pAnzahl)
+    {
+        name = pName;
+        anzahl = pAnzahl;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public int getAnzahl()
+    {
+        return anzahl;
+    }
+}
+```
+
 :::
 
 :::
 :::tab{title="Q1 Implementation"}
+
+### Implementationsdiagramm
+
+```mermaid
+classDiagram
+    
+    Q1List~ContentType~ <-- Q1Einkaufsliste: - einkaufsliste
+    
+    class Q1Artikel{
+    - name: String
+    - anzahl: int 
+    }
+    
+    class Q1Einkaufsliste{
+
+      + Q1Einkaufsliste()
+      + artikelHinzufuegen(Q1Artikel pArtikel)
+      + artikelEntfernen(Q1Artikel pArtikel)
+      + istArtikelVorhanden(Q1Artikel pArtikel): boolean
+      + einkaufslisteAusgeben()
+    
+    }
+  
+```
+### Quellcode der Klasse "Q1Einkaufsliste"
 
 ```java
 /**
@@ -166,7 +229,38 @@ public class Q1Einkaufsliste
             System.out.println(einkaufsliste.get(i));
         }
     }
-}```
+}
+```
+
+### Quellcode der Klasse "Q1Artikel"
+
+```java
+/**
+ * Beschreiben Sie hier die Klasse Artikel.
+ * 
+ * @author (Tim) 
+ * @version (eine Versionsnummer oder ein Datum)
+ */
+public class Q1Artikel
+{
+    private String name = "";
+    private int anzahl = 0;
+
+    /**
+     * Konstruktor für Objekte der Klasse Artikel
+     */
+    public Q1Artikel(String pName, int pAnzahl)
+    {
+        name = pName;
+        anzahl = pAnzahl;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+}
+```
 :::
 ::::
 
