@@ -292,6 +292,9 @@ public class Kugel{
     public String toString(){
         return(this.farbe);
     }
+    public boolean istIdentisch(Kugel pKugel){
+        return(this.gewicht == pKugel.gewicht && this.farbe.equals(pKugel.farbe));
+    }
 }
 ```
 ## Ergebniss:
