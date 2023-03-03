@@ -24,7 +24,7 @@ Ein Stack (auch Stapelspeicher genannt) ist eine **dynamische Datenstruktur**. M
 ![](/excalidraw/Bilddateien/StackDrauflegenMitUeberschrift-2023-03-03-0831.excalidraw.png)
 :::
 :::tab{title="Entfernen"}
-![](/excalidraw/Bilddateien/WarteschlangeEntfernenMitUeberschrift-2023-03-03-0831.excalidraw.png)
+![](/excalidraw/Bilddateien/StackEntfernenMitUeberschrift-2023-03-03-0831.excalidraw.png)
 :::
 ::::
 
