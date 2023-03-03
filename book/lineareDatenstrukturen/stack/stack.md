@@ -11,4 +11,20 @@ Ein Stack (auch Stapelspeicher genannt) ist eine **dynamische Datenstruktur**. M
 **_Peek_**: das oberste Objekt wird zurückgegeben, ohne entfernt zu werden
 
 # Video ohne Knoten  
+::::tabs
+:::tab{title="Video ohne Knoten"}
+
 ::youtube[01 Lineare Datenstrukturen:  Stack ohne Knoten ]{#sTRpUqBAvyc}
+:::
+
+:::tab{title="Video mit Knoten"}
+
+:::
+:::tab{title="Drauflegen"}
+![](/excalidraw/Bilddateien/StackDrauflegenMitUeberschrift-2023-03-03-0831.excalidraw.png)
+:::
+:::tab{title="Entfernen"}
+![](/excalidraw/Bilddateien/WarteschlangeEntfernenMitUeberschrift-2023-03-03-0831.excalidraw.png)
+:::
+::::
+
