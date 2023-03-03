@@ -48,10 +48,10 @@ Das Struktogram, für wenn entwas hinten angehängt wird.
 ::::
 
 # Hinzufügen
-::excalidraw{src="/download//excalidraw/WarteschlangeHinzufuegenMitUeberschrift-2023-03-03-0831.excalidraw" aspectRatio="4/3" autoZoom=false center=true}
+::excalidraw{src="/download/excalidraw/WarteschlangeHinzufuegenMitUeberschrift-2023-03-03-0831.excalidraw" aspectRatio="4/3" autoZoom=false center=true}
 
 # Entfernen
-::excalidraw{src="/download//excalidraw/WarteschlangeEntfernenMitUeberschrift-2023-03-03-0831.excalidraw" aspectRatio="4/3" autoZoom=false center=true}
+::excalidraw{src="/download/excalidraw/WarteschlangeEntfernenMitUeberschrift-2023-03-03-0831.excalidraw" aspectRatio="4/3" autoZoom=false center=true}
 
 # Quellcode
 ```java
