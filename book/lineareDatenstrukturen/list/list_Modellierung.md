@@ -4,11 +4,11 @@ index: 1
 toc: show
 ---
 
-# List
+# List selbst programmiert
 
-Eine Liste (englisch: **list**) ist ein Datenstrukturtyp der es ermöglicht, eine Sammlung von Elementen zu speichern und zu verwalten. Eine Liste ist ein dynamisches Datenstruktur, das heißt, dass ihre Größe und ihr Inhalt sich während der Laufzeit eines Programms ändern können.
+Eine Liste (englisch: **list**) ist ein Datenstrukturtyp, der es ermöglicht, eine Sammlung von Elementen zu speichern und zu verwalten. Eine Liste ist ein dynamisches Datenstruktur, das heißt, dass ihre Größe und ihr Inhalt sich während der Laufzeit eines Programms ändern können.
 
-In der Regel können in einer Liste Elemente unterschiedlicher Typen gespeichert werden, beispielsweise Zahlen, Zeichenketten oder andere Objekte.
+In der Regel können in einer Liste Elemente unterschiedlicher Typen gespeichert werden, beispielsweise Zahlen, Zeichenketten oder andere Objekte, wobei man sich vorher auf einen Datentyp festlegen muß.
 
 Um Elemente in einer Liste zu speichern und zu verwalten, werden in der Regel mehrere Methoden bereitgestellt, wie beispielsweise **add()** oder **remove()** zum Hinzufügen oder Entfernen von Elementen, **get()** oder **set()** zum Abrufen oder Ändern von Elementen an bestimmten Indizes und viele andere.
 
@@ -272,3 +272,45 @@ Entfernt das Element an der Position "pos" von der Liste
 Gibt die Größe der Liste zurück
 :::
 ::::
+
+# Zentralabiturklasse List des Landes NRW
+## Die generische Klasse List
+Objekte der generischen Klasse List verwalten beliebig viele, linear angeordnete Objekte vom Typ ContentType. Auf höchstens eins der verwalteten Objekte, aktuelles Objekt ge- nannt, kann jeweils zugegriffen werden. Wenn eine Liste leer ist, vollständig durchlaufen wurde oder das aktuelle Objekt am Ende der Liste gelöscht wurde, gibt es kein aktuelles Objekt. Das erste oder das letzte Objekt einer Liste können durch einen Auftrag zum aktuellen Objekt gemacht werden. Außerdem kann das dem aktuellen Objekt folgende Listenobjekt zum neuen aktuellen Objekt werden.
+Das aktuelle Objekt kann gelesen, verändert oder gelöscht werden. Außerdem kann vor dem aktuellen Objekt ein Listenobjekt eingefügt werden.
+
+### Dokumentation der Klasse List<ContentType> List()
+Eine leere Liste wird erzeugt.
+
+**boolean isEmpty()**
+Die Anfrage liefert den Wert true, wenn die Liste keine Objekte enthält, sonst liefert sie den Wert false.
+
+**boolean hasAccess()**
+Die Anfrage liefert den Wert true, wenn es ein aktuelles Objekt gibt, sonst liefert sie den Wert false.
+
+**void next()**
+Falls die Liste nicht leer ist, es ein aktuelles Objekt gibt und dieses nicht das letzte Objekt der Liste ist, wird das dem aktuellen Objekt in der Liste folgende Objekt zum aktuellen Ob- jekt, andernfalls gibt es nach Ausführung des Auftrags kein aktuelles Objekt, d.h. hasAccess() liefert den Wert false.
+
+**void toFirst()**
+Falls die Liste nicht leer ist, wird das erste Objekt der Liste aktuelles Objekt. Ist die Liste leer, geschieht nichts.
+
+**void toLast()**
+Falls die Liste nicht leer ist, wird das letzte Objekt der Liste aktuelles Objekt. Ist die Liste leer, geschieht nichts.
+
+**ContentType getContent()**
+Falls es ein aktuelles Objekt gibt (hasAccess() == true), wird das aktuelle Objekt zu- rückgegeben. Andernfalls (hasAccess() == false) gibt die Anfrage den Wert null zurück.
+
+** void setContent(ContentType pContent)**
+Falls es ein aktuelles Objekt gibt (hasAccess() == true) und pContent ungleich null ist, wird das aktuelle Objekt durch pContent ersetzt. Sonst bleibt die Liste unverändert.
+
+**void append(ContentType pContent)**
+Ein neues Objekt pContent wird am Ende der Liste eingefügt. Das aktuelle Objekt bleibt unverändert. Wenn die Liste leer ist, wird das Objekt pContent in die Liste eingefügt und es gibt weiterhin kein aktuelles Objekt (hasAccess() == false). Falls pContent gleich null ist, bleibt die Liste unverändert.
+
+**void insert(ContentType pContent)**
+Falls es ein aktuelles Objekt gibt (hasAccess() == true), wird ein neues Objekt pContent vor dem aktuellen Objekt in die Liste eingefügt. Das aktuelle Objekt bleibt un- verändert. Falls die Liste leer ist und es somit kein aktuelles Objekt gibt (hasAccess() == false), wird pContent in die Liste eingefügt und es gibt weiterhin kein aktuelles Objekt. Falls es kein aktuelles Objekt gibt (hasAccess() == false) und die Liste nicht leer ist oder pContent == null ist, bleibt die Liste unverändert.
+
+**void concat(List<ContentType> pList)**
+Die Liste pList wird an die Liste angehängt. Anschließend wird pList eine leere Liste. Das aktuelle Objekt bleibt unverändert. Falls es sich bei der Liste und pList um dasselbe Objekt handelt, pList == null oder eine leere Liste ist, bleibt die Liste unverändert.
+
+**void remove()**
+Falls es ein aktuelles Objekt gibt (hasAccess() == true), wird das aktuelle Objekt ge- löscht und das Objekt hinter dem gelöschten Objekt wird zum aktuellen Objekt. Wird das Objekt, das am Ende der Liste steht, gelöscht, gibt es kein aktuelles Objekt mehr (hasAccess() == false). Wenn die Liste leer ist oder es kein aktuelles Objekt gibt (hasAccess() == false), bleibt die Liste unverändert.
+

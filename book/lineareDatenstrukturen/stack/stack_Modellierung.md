@@ -170,8 +170,8 @@ public class Elefant
 
 ::::
 
-## Dokumentation der Modellierung
-### ohne Knoten 
+# Dokumentation der Modellierung
+## ohne Knoten 
 
 **Stack()**
 
@@ -189,7 +189,7 @@ Entfernt eine Node vom Stack.
 
 Gibt die erste Node zurück.
 
-### mit Knoten 
+## mit Knoten 
 
 **Stack()**
 
@@ -220,4 +220,24 @@ Gibt das nächste Element zurück.
 Setzt das nächste Element fest.
 
 
+# Zentralbiturklasse Stack des Landes NRW
+## Die generische Klasse Stack
+Objekte der generischen Klasse Stack (Keller, Stapel) verwalten beliebige Objekte vom Typ ContentType nach dem Last-In-First-Out-Prinzip, d. h., das zuletzt abgelegte Objekt wird als erstes wieder entnommen. Alle Methoden haben eine konstante Laufzeit, unabhängig von der Anzahl der verwalteten Objekte.
+
+### Dokumentation der Klasse Stack<ContentType>
+
+**Stack()**
+Ein leerer Stapel wird erzeugt. Objekte, die in diesem Stapel verwaltet werden, müssen vom Typ ContentType sein.
+
+**boolean isEmpty()**
+Die Anfrage liefert den Wert true, wenn der Stapel keine Objekte enthält, sonst liefert sie den Wert false.
+
+**void push(ContentType pContent)**
+Das Objekt pContent wird oben auf den Stapel gelegt. Falls pContent gleich null ist, bleibt der Stapel unverändert.
+
+**void pop()**
+Das zuletzt eingefügte Objekt wird von dem Stapel entfernt. Falls der Stapel leer ist, bleibt er unverändert.
+
+**ContentType top()**
+Die Anfrage liefert das oberste Stapelobjekt. Der Stapel bleibt unverändert. Falls der Stapel leer ist, wird null zurückgegeben.
 
