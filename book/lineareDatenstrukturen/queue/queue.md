@@ -16,7 +16,13 @@ Eine Queue ist eine Datenstruktur, bei der Elemente in eine bestimmte Reihenfolg
 :::tab{title="Video mit Knoten"}
 ::youtube[01a Lineare Datenstrukturen: Queue mit Knoten]{#57vUckNYHFU}
 :::
-
+:::tab{title="Hinzufügen"}
+::excalidraw{src="/download/excalidraw/WarteschlangeHinzufuegenMitUeberschrift-2023-03-03-0831.excalidraw" aspectRatio="4/3" }
+:::
+:::tab{title="Entfernen"}
+![](/excalidraw/Bilddateien/WarteschlangeEntfernenMitUeberschrift-2023-03-03-0831.excalidraw.png)
+:::
+::::
 
 
 
