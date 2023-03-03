@@ -47,6 +47,8 @@ Das Struktogram, für wenn entwas hinten angehängt wird.
 
 ::::
 
+::excalidraw{src="/excalidraw/Warteschlange-2023-03-03-0831.excalidraw" aspectRatio="4/3" autoZoom=false center=true}
+
 # Quellcode
 ```java
 public class PatientenWarteschlange 
