@@ -14,12 +14,6 @@
   },
   "logo": "/logo/hornseLogoEinhornGruenTransparent.png",
   "elements": {
-    "excalidraw": {
-      "aspectRatio": "4/3",
-      "center": false,
-      "autoZoom": true,
-      "edit": false
-    },
     "bookmarks": true
   },
   "links": [
