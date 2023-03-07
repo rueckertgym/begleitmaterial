@@ -4,7 +4,7 @@ index: 1
 toc: show
 ---
 
-# List selbst programmiert
+# Schülereigene Modellierung
 
 Eine Liste (englisch: **list**) ist ein Datenstrukturtyp, der es ermöglicht, eine Sammlung von Elementen zu speichern und zu verwalten. Eine Liste ist ein dynamisches Datenstruktur, das heißt, dass ihre Größe und ihr Inhalt sich während der Laufzeit eines Programms ändern können.
 

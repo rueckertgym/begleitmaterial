@@ -25,7 +25,7 @@ Digitales Angebote/Lehrwerk
 * [Theoretische Informatik](https://flaci.com/home/)
 * [Visualisierung von Algorithmen](https://visualgo.net/de)
 * [Wird als Zugang zu edugit benötigt](https://ticdesk.teckids.org/account/register)
-* Bereitstellung von Implemenatione und Aufgaben mit [edugit](https://edugit.org/users/sign_in); zur Nutzung wird ein Zugang von [schulfrei](https://schul-frei.dev/pages/services.html)  benötigt. 
+* Bereitstellung von Implemenatione und Aufgaben mit [edugit](https://edugit.org/users/sign_in); zur Nutzung wird ein Zugang von [schulfrei](https://schul-frei.dev/pages/services.html) benötigt. 
 * [Zeichnen von Diagrammen](https://draw.io)
 * [Struktogrammeditor mit Java Quellcode Anzeige](https://dditools.inf.tu-dresden.de/ovk/Informatik/Programmierung/Grundlagen/Struktogramme.html?o=0)  **Hinweis:** Der Editor ist auch im hyperbook integriert!
 * [Graphen online zeichnen](https://graphonline.ru/de/)
@@ -41,7 +41,7 @@ Die Vorgaben zum Zentralabitur 2024 findet ihr auf der Seite der
 Die Operatoren können auch auf der Seite der Standardsicherung oder hier heruntergeladen werden.
 :download[Herunterladen]{src="/download/formales/IF_Operatoren.pdf"}
 
-## Zentralabiturklassen (ZAKlassen)
+## Zentralabiturklassen (ZA Klassen)
 Hier findest du die offiziellen ZA Klassen für das Zentralabitur Informatik in NRW. Die zip-Datei enthält die folgenden offiziellen Implementationen des Landes NRW:
 
 ::::collapsible{title="01 Datenstrukturklassen"}

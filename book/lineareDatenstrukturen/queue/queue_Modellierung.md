@@ -214,6 +214,9 @@ public class Patient
 ::::
 ## Klassendokumentation 
 
+###  ohne Knoten
+**Klasse Warteschlange**
+
 **patientenWarteschlange()**
 
 Ein Objekt der Klasse Warteschlange wird erzeugt.
@@ -222,8 +225,6 @@ Ein Objekt der Klasse Warteschlange wird erzeugt.
 
 Der erste Patient in der Warteschlange zurückgegeben.
 
-
-
 **void schickeErsten()**
 
 Der erste Patient wird gelöscht bzw. aus der Warteschlange entlassen. Der zweite wird dann der erste Patient, der dritte wird der zweite usw.
@@ -231,6 +232,8 @@ Der erste Patient wird gelöscht bzw. aus der Warteschlange entlassen. Der zweit
 **void hintenAnstellen(Patient pPatient)**
 
 Die Methode sucht den Patient, der keinen Patienten mehr hinter sich hat. Dort wird der pPatient anghängt und ist nun der letzte. Wenn kein Patient in der Warteschlange ist, dann wird der pPatient der erste in der Warteschlange.
+
+**Klasse Patient**
 
 **Patient()**
 
@@ -258,6 +261,7 @@ Setze Methode für die Krknummer auf den Wert des Parameters pKrknummer.
 
 Die Anfrage gibt die Krknummer des Patienten wieder.
 
+### mit Knoten
 **Queue**
 
 # Zentralbiturklasse Queue des Landes NRW

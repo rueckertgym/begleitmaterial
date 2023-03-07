@@ -3,6 +3,7 @@ name: Modellierung
 index: 2
 toc: show
 ---
+# Schülereigene Modellierung
 ::::tabs
 
 :::tab{title="Klassendiagramm ohne Knoten"}
@@ -170,8 +171,8 @@ public class Elefant
 
 ::::
 
-# Dokumentation der Modellierung
-## ohne Knoten 
+## Dokumentation der Modellierung
+### ohne Knoten 
 
 **Stack()**
 
@@ -189,7 +190,7 @@ Entfernt eine Node vom Stack.
 
 Gibt die erste Node zurück.
 
-## mit Knoten 
+### mit Knoten 
 
 **Stack()**
 
