@@ -59,6 +59,52 @@ Die Vorgaben zum Zentralabitur 2024 findet ihr auf der Seite der
 Die Operatoren können auch auf der Seite der Standardsicherung oder hier heruntergeladen werden.
 :download[Herunterladen]{src="/download/formales/IF_Operatoren.pdf"}
 
+# Zentralabiturklassen (ZAKlassen)
+Hier findest du die offiziellen ZA Klassen für das Zentralabitur Informatik in NRW. Die zip-Datei enthält die folgenden offiziellen Implementationen des Landes NRW:
+
+::::collapsible{title=""01 Datenstrukturklassen}
+:::collapsible{title="01 linear"}
+* Queue.java
+* Stack.java
+* List.java
+:::
+::::
+::::collapsible{title="02 Datenbankklassen"}
+:::collapsible{title="01 Version fuer MySQL"}
+* DatabaseConnector.java
+* QueryResult.java
+* Wichtig.rtf
+:::
+:::collapsible{title="02 Version fuer SQLite"}
+* DatabaseConnector.java
+* QueryResult.java
+* Wichtig.rtf
+:::
+:::collapsible{title="03 Version fuer MSAccess"}
+* DatabaseConnector.java
+* QueryResult.java
+* Wichtig.rtf
+:::
+::::
+:::collapsible{title="03 Netzklassen"}
+* Client.java
+* Connection.java
+* Server.java
+* Wichtig.rtf
+:::
+
+:download[Herunterladen]{src="/download/formales/2020-03-11_Implementationen_von_Klassen_fuer_das_Zentralabitur_ab_2018.zip"}
+
+Die benötigten java Klassen müssen nur in denselben Ordner kopiert werden, in der sich das BlueJ Projekt befindet.
+Anschließend muss das Projekt geschlossen und erneut geöffnet werden, damit die hinzugefügten java Klassen sichtbar werden.
+
+Die vollständige Dokumentation findet ihr in den Kapiteln zu den jeweiligen Datenstrukturen und in der offiziellen Dokumentation, die weiter unten angefügt ist.
+
+## Dokumentation
+Die Dokumentation und weitere wichtige Information kannst hier herunterladen.
+
+:download[Herunterladen]{src="/download/formales/Dokumentation_ZA-IF_GK-LK_ab_2018_2021_12_22.pdf"}
+
 
 
 
