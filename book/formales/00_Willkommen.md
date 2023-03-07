@@ -29,3 +29,36 @@ Materialien: Klausurbögen kariert, Stifte, Geodreieck, essen und trinken. Alle 
     Themenbereiche: Grundbegriffe der objektorientierung Programmierung, Arrays, Suchen und Sortieren
 :::
 
+:::alert{warn}
+**Klausur 3** 
+
+    Datum: 03.03.2023
+    Uhrzeit: 08:00 Uhr
+    Raum: 
+    Länge: 180 Minuten
+    Themenbereiche: Lineare Datenstrukturen (Queue, Stack und List) und Modellierung mit Hilfe von Entwurfs- und Implementationsdiagrammen
+    
+    Voraussetzung: 
+    * sicherer Umgang mit den Methoden der Klasse String
+    * Arrays
+    * Modellierung
+    * Implementierung
+:::
+
+:::alert{warn}
+**Klausur 4** 
+
+    Datum: 11.05.2023
+    Uhrzeit: 08:00 Uhr
+    Raum: 
+    Länge: 180 Minuten
+    Themenbereiche: Hierarichische Datenstrukuren (BinaryTree, BinarySearchTree und ComparableContent) ggf. weiteres
+    
+    Voraussetzung: 
+    * sicherer Umgang mit den Methoden der Klasse String
+    * Arrays
+    * Lineare Datenstrukturen (Queue, Stack und List)
+    * Modellierung mit Hilfe von Entwurfs- und Implementationsdiagrammen
+    * Implementierung
+:::
+

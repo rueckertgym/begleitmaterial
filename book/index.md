@@ -17,7 +17,9 @@ Das workbuch ist in mehrer Abschnitte aufgeteilt und in einigen Fällen verdeutl
 ## 1. [Formales](/formales/00_Willkommen)
 ## 2. [Einführung BlueJ und edugit](/hard-software/BlueJUndEdugit)
 ## 3. [Suchen und Sortieren](../SuchenUndSortieren/Suchen)
-## 4. [Kryptologie](/kryptologie/Caesar)
+## 4. [Kryptologie](/kryptologie/Caesar/Caesar)
+## 5. [lineare Datenstrukturen](/lineareDatenstrukturen/queue/queue)
+## 6. [hierarichische Datenstrukturen](/hierarichische Datenstrukturen/baumstrukturen)
 
 
 Viel Spaß
