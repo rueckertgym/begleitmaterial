@@ -12,41 +12,29 @@ https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/fae
 
 ## Zahlreiche Quellen für weitere Materialien sind
 
-* Materialien im Lehrplannavigator von NRW: Abitur 2018 ff
-insbesondere die Dokumentation für den Grundkurs bzw. Leistungskurs sowie Implementationen von Klassen für das Zentralabitur
-* https://www.schulentwicklung.nrw.de/lehrplaene/lehrplannavigator-s-ii/gymnasiale-oberstufe/informatik/hinweise-und-beispiele/hinweise-und-beispiele.html
-
-* Lehrwerk "Informatik 2"
-
-Materialien von Tino Hempel zur Informatik:
-* https://tinohempel.de/index.htm
-
-IO-Stick von Tino Hempel für den eigenen USB-Stick, der für Einsatz bei schulischen Laptops mitgeführt werden kann (nur windows):
-* https://tinohempel.de/info/info/IoStick/index.html
+* [Materialien im Lehrplannavigator von NRW: Abitur 2018 ff
+insbesondere die Dokumentation für den Grundkurs bzw. Leistungskurs sowie Implementationen von Klassen für das Zentralabitur](https://www.schulentwicklung.nrw.de/lehrplaene/lehrplannavigator-s-ii/gymnasiale-oberstufe/informatik/hinweise-und-beispiele/hinweise-und-beispiele.html)
+* Lehrwerk "Informatik 2" (Schoeningh Verlag)
+* [Materialien von Tino Hempel zur Informatik] (https://tinohempel.de/index.htm)
+* [IO-Stick (Informatik on a stick)](https://tinohempel.de/info/info/IoStick/index.html) von Tino Hempel für den eigenen USB-Stick, der für Einsatz bei schulischen Laptops mitgeführt werden kann (nur windows).
 
 Digitales Angebote/Lehrwerk
-* Lehrwerk mit vertiefenden Aspekten abgestimmt auf Lehrplan in NRW 
-https://i2.net-schulbuch.de/
-
-* Inf-Schule: Umfangreiches Web-Angebot aus Rheinland-Pfalz, das sich als "elektronisches Schulbuch" versteht
-http://www.inf-schule.de
-
-* Informatikprojekte von Julian Dorn
-https://wi-wissen.de/#projekte
-* Unterrichtsmaterialien der ETH Zürich
-https://educ.ethz.ch/unterrichtsmaterialien/informatik.html
-* Materialsammlung Informatik auf den Seiten der Universität Wuppertal (wird überarbeitet) 
-https://ddi.uni-wuppertal.de/website/index-ddi.html?navi=materialien&main=spioncamp
+* Lehrwerk mit vertiefenden Aspekten abgestimmt auf Lehrplan in NRW [i2.net-schulbuch.de](https://i2.net-schulbuch.de/)
+* [Inf-Schule](http://www.inf-schule.de): Umfangreiches Web-Angebot aus Rheinland-Pfalz, das sich als "elektronisches Schulbuch" versteht
+* [Informatikprojekte von Julian Dorn](https://wi-wissen.de/#projekte)
+* [Unterrichtsmaterialien der ETH Zürich](https://educ.ethz.ch/unterrichtsmaterialien/informatik.html)
+* [Materialsammlung Informatik auf den Seiten der Universität Wuppertal (wird überarbeitet)](https://ddi.uni-wuppertal.de/website/index-ddi.html?navi=materialien&main=spioncamp)
 
 ## Software und Tools
+* [BlueJ als Entwicklungsumgebung](https://www.bluej.org)
+* [Theoretische Informatik](https://flaci.com/home/)
+*  [Visualisierung von Algorithmen] (https://visualgo.net/de)
+* [Wird als Zugang zu edugit benötigt](https://ticdesk.teckids.org/account/register)
+*  Bereitstellung von Implemenatione und Aufgaben mit [edugit]((https://edugit.org/users/sign_in)); zur Nutzung wird ein Zugang von [schulfrei](https://schul-frei.dev/pages/services.html)  benötigt. 
+* [(Zeichnen von Diagrammen](https://draw.io)
+* [Struktogrammeditor mit Java Quellcode Anzeige](https://dditools.inf.tu-dresden.de/ovk/Informatik/Programmierung/Grundlagen/Struktogramme.html?o=0)  **Hinweis:** Der Editor ost auch im hyperbook integriert!
+* [Graphen online zeichnen](https://graphonline.ru/de/)
 
-* https://www.bluej.org/   (BlueJ als Entwicklungsumgebung)
-* https://flaci.com/home/ (Theoretische Informatik)
-* https://visualgo.net/de   (Visualisierung von Algorithmen)
-* https://ticdesk.teckids.org/account/register   (Wird als Zugang zu edugit benötigt)
-* https://edugit.org/users/sign_in  (Bereitstellung von Implemenatione und Aufgaben; zur Nutzung wird ein Zugang von https://schul-frei.dev/pages/services.html  benötigt)
-* https://draw.io (Zeichnen von Diagrammen)
-* https://dditools.inf.tu-dresden.de/ovk/Informatik/Programmierung/Grundlagen/Struktogramme.html?o=0   (Struktogrammeditor mit Java Quellcode Anzeige)
 ## Videos
 Im Abschnit [Hard- und Software](/hard-software/BlueJUndEdugit.md) habe ich für den Unterricht relevante Videos hinterlegt.
 

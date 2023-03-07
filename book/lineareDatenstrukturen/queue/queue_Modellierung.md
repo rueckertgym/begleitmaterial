@@ -3,7 +3,7 @@ name: Modellierung
 index: 2
 toc: show
 ---
-
+# Schülereigene Modellierung der Warteschlange
 
 ::::tabs
 
@@ -34,12 +34,12 @@ Warteschlange --> Patient : - vorne
 
 :::tab{title="Struktogram"}
 
-Das Struktogram für wenn der erste die Queue verlässt.
+Struktogram der Methode zum Entfernen des ersten/vordersten Objekts.
 
 
 ::struktog{data="https://struktog.openpatch.org/#pako:eNqVVE1vE0EM_SvRnlqpRvPl-UiVCwgJDiAOSJw9M3ay6naDthsKqvrfmUBLoShRM6eVZ_Y9-_nZd931tvLQLe-6vnbLzjlLPpoKKouATaZAdZ4gRKttrr676OYfX7m9fD_e8DR_bH-3mGyHYXv7duBrHuc_YDaaKMoWsNU5UBwDJNdgVcLgvPkL7DPdXD1Azfy9IXQfeN60wHLxhddr3vB4kCWToYrVQ3RioOhEkD0psMUHb5hOSrmQNVGlAFStA6T2ZdqBKGQM1nIs5U809w1rQVfzjoeBp8fAavFtO428uFwc5I0GfawhA2sJoIwv4HLN4FTURkw4qQipBm2wBN6VCC5ghUI6QUYSKpyewF5PNJbNv2X0cvY73dVqMe6G4fwgT3XUrFIjoFCCRClCpZJAVSWmpPyypPcc9-3ltOM3m36oT72QlHX2GUxEBCpowaTWZ6-dQx1O0wSLWCPsIYg0JZgsWNekjkk3dMXHGjvxvJvGX2JcHiTQbDEZrg3WZahJNdP4Zvu4Hx2ReoIY900OoeHmmR7eovZkK2TjEUzYzxTm5lJdXfbKnOYR1iRiLSQuDkiShhBMBMHKIjod02Px4OfVf1Z_teb5XT_OPJ6dH5bKB4uYiwLxjVazctBagVBiMVViOqkQ3RaJU9xWS0TfpKnY1lZEyFFFLKxf0NjnVRyZU1ds0gk1cGlut1T2ls8aitOEjHJSlx_PRbfhfr1pFzq5i-62r_OmW8YU7n8Cs8K5-A"}
 
-Das Struktogram, für wenn entwas hinten angehängt wird. 
+Struktogram der Methode zum Anfügung eines Objektes.
 
 ::struktog{data="https://struktog.openpatch.org/#pako:eNqVVdtu3FYM_BVVTw5gFud-ceCHpCiQAkXRh_4AzyHpFaJojV25bhH430sjjh033UW1AvZBl-FwOJzzefy0J57Hq8_jROPVGILHVByBaSLgq-tAISHk4q1vlMbLcf37lvXNX5YjH9bf9Gu9J_t53t__PPMnXtZnMJ9rizURWBMJiqQEtbMFCS1LSPQC9gcePz5BrfyXIozvlnuejnfLzUl0U6kW3xhcVpbZMgK5UoEzkTOmb6KKJOyFM8TYKxQUgmS7BymGY4z2HNXbuzZPffhzP9GAy3HleeZluLj9HddJa7w5WbQXH4tnrdergxRrBetNhpwws16bOnCm6-TEAFFxOjkOYDB0SEwKF_y5Dp6YDvhxvXtkf_h641q7Oiw8vB1O1iVkJ5gJOKBAizZAE6s0EL0hsZuaEHLRZ4-QQi8Qstqmo60Ki4Kd6wvY-wMuffe6jUkuvtC9vh6Wu3k-rTwFVJNTgShYoWItylcHb8iI67X9P9KPNR70zcMd_7SbZnoZrNRmW2rgSoyAPXpwlZJaKoRo87bBMqLY7oLKoYNtMau2Vl2Sug1SKJ8b7JMcw1cvvj3txaiMPelyYkMIJqlzihGI1UZjcIsiD6qJ4Hz8lyjJR5vQEzSXoi5tUIPGFiBaCi0Zt0mU3o2Phhp03VqImRuk5B30QE2F-SZaPjDSr_v97Wth7pUaf-f3H294_TAtKy8Xb4Yfvpjo9FwalkcWYLFlcFFDUxsxwNXX3JvZ5KH-SiqOyFE0E3SlItRQEzh22mJpDYP126RKsWQvFdC0pn9dF5SdhcrG-ebknH-G_4qEc6qdNliV1nxJFWKXrNHUEui2q9WIrc-5bjtZSq5cSc0j4sA1aaAnQQA2obkqZ-P6O_rHZ_rPkX26DeRepPgAiCVAMU4PnKaB1RMH1yVt2pNvf5fjjqebnT50sVyO9xOtu_Gq1PzwD5bCYUk"}
 
@@ -47,7 +47,7 @@ Das Struktogram, für wenn entwas hinten angehängt wird.
 
 ::::
 
-# Quellcode
+## Quellcode
 ```java
 public class PatientenWarteschlange 
 {
@@ -121,7 +121,7 @@ public class Patient
     }
 }
 ```
-# Quellcode mit Knoten
+## Quellcode mit Knoten
 ```java
 public class PatientenWarteschlange<T>{
     private Knoten vorne;
@@ -211,8 +211,7 @@ public class Patient
 }
 ```
 
-
-# Klassendokumentation 
+## Klassendokumentation 
 
 **patientenWarteschlange()**
 
@@ -261,7 +260,7 @@ Die Anfrage gibt die Krknummer des Patienten wieder.
 **Queue**
 
 # Zentralbiturklasse Queue des Landes NRW
-## Die generische Klasse Queue
+## Dokumentation der generischen Klasse Queue
 Objekte der generischen Klasse Queue (Schlange) verwalten beliebige Objekte vom Typ ContentType nach dem First-In-First-Out-Prinzip, d. h., das zuerst abgelegte Objekt wird als erstes wieder entnommen. Alle Methoden haben eine konstante Laufzeit, unabhängig von der Anzahl der verwalteten Objekte.
 
 ### Dokumentation der Klasse Queue<ContentType> Queue()
@@ -283,5 +282,7 @@ Das erste Objekt wird aus der Schlange entfernt. Falls die Schlange leer ist, wi
 
 Die Anfrage liefert das erste Objekt der Schlange. Die Schlange bleibt unverändert. Falls die Schlange leer ist, wird null zurückgegeben.
 
+## Implementation
+Die Implementation der ZA Klasse Queue findet ihr auf der Seite der standardsicherung oder im Kapitel ["Unser Fahrplan bis zum Abitur 2024](/formales/01_Unser_Fahrplan_zum_Abitur_2024.md).
 
  
