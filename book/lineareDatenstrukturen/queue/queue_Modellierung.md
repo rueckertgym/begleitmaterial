@@ -45,9 +45,7 @@ Struktogram der Methode zum Anfügung eines Objektes.
 
 :::
 
-::::
-
-## Quellcode
+:::tab{title="Quellcode ohne Knoten"}
 ```java
 public class PatientenWarteschlange 
 {
@@ -121,7 +119,9 @@ public class Patient
     }
 }
 ```
-## Quellcode mit Knoten
+:::
+
+:::tab{title="Quellcode mit Knoten"}
 ```java
 public class PatientenWarteschlange<T>{
     private Knoten vorne;
@@ -210,7 +210,8 @@ public class Patient
     }
 }
 ```
-
+:::
+::::
 ## Klassendokumentation 
 
 **patientenWarteschlange()**
