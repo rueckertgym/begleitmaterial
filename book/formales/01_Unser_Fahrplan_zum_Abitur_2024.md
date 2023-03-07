@@ -25,8 +25,8 @@ IO-Stick von Tino Hempel für den eigenen USB-Stick, der für Einsatz bei schul
 * https://tinohempel.de/info/info/IoStick/index.html
 
 Digitales Angebote/Lehrwerk
-* Lehrwerk mit vertiefenden Aspekten abgestimmt auf Lehrplan in NRW
-        ​  https://i2.net-schulbuch.de/
+* Lehrwerk mit vertiefenden Aspekten abgestimmt auf Lehrplan in NRW 
+https://i2.net-schulbuch.de/
 
 * Inf-Schule: Umfangreiches Web-Angebot aus Rheinland-Pfalz, das sich als "elektronisches Schulbuch" versteht
 http://www.inf-schule.de
@@ -62,7 +62,7 @@ Die Operatoren können auch auf der Seite der Standardsicherung oder hier herunt
 # Zentralabiturklassen (ZAKlassen)
 Hier findest du die offiziellen ZA Klassen für das Zentralabitur Informatik in NRW. Die zip-Datei enthält die folgenden offiziellen Implementationen des Landes NRW:
 
-::::collapsible{title=""01 Datenstrukturklassen}
+::::collapsible{title="01 Datenstrukturklassen"}
 :::collapsible{title="01 linear"}
 * Queue.java
 * Stack.java
