@@ -58,3 +58,5 @@ Diese Strategie funktioniert, weil du sicherstellst, dass der Haufen immer durch
 
 
 
+
+
