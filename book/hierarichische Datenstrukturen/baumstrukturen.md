@@ -24,13 +24,18 @@ Zusammenfassend lässt sich sagen, dass Bäume im Gegensatz zu Listen, Stapeln u
 
 **Wichtige Begriffe**:
 
-**_Knoten_**: In einem Netzwerk ist ein Node (Netzwerkknoten oder Netzknoten) ein Verbindungspunkt. Das kann entweder ein Umverteilungspunkt oder ein Endpunkt bei der Datenübertragungen sein
+**_Knoten_**: In einem Netzwerk ist ein Node (Netzwerkknoten oder Netzknoten) ein Verbindungspunkt. Das kann entweder ein Umverteilungspunkt oder ein Endpunkt bei der Datenübertragungen sein kann.
+
 **_Kante_**: In einem Baum wird eine Verbindungslinie zwischen zwei Knoten als Kante bezeichnet.
 Kanten werden als Linien dargestellt.
+
 **_Pfad_**:Ein Pfad ist ein Weg in einem Baum, der von einem Startknoten über eine oder mehrere Kanten zu einem Endknoten verläuft.
 Handelt es sich bei dem Startknoten um die Wurzel des Baums, spricht man von einem absoluten Pfad, andernfalls von einem relativen Pfad.
+
 **_Wurzel_**: Die Wurzel eines Baums ist ein besonderer Knoten, zu dem keine Kante zeigt. Jeder Baum hat genau eine Wurzel. (Start Punkt)
+
 **_Ebene_**: Ebene auf der sich die Knoten befinden. So befindet sich auf Ebene 1 z.B die Wurzel
+
 **_Grad_**: Die höchste Anzahl an Kanten die in einem Pfad zu finden ist. Wenn der längste Pfad 4 Kanten hat, ist die Grad Anzahl 4
 
 **Spiel Nim**:
