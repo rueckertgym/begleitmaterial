@@ -56,6 +56,8 @@ Setze diese Strategie fort, bis nur noch ein Spielstein übrig bleibt. Bei diese
 
 Diese Strategie funktioniert, weil du sicherstellst, dass der Haufen immer durch 4 teilbar bleibt, während dein Gegner immer eine Anzahl von Spielsteinen nimmt, die den Haufen nicht durch 4 teilbar macht.
 
+![Beispiel](/download/HölzerDiagramm.excalidraw.png "Binary Tree")
+
 
 
 
