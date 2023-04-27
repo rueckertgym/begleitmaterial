@@ -52,13 +52,17 @@ Materialien: Klausurbögen kariert, Stifte, Geodreieck, essen und trinken. Alle 
     Uhrzeit: 08:00 Uhr
     Raum: 
     Länge: 180 Minuten
-    Themenbereiche: Hierarichische Datenstrukuren (BinaryTree, BinarySearchTree und ComparableContent) ggf. weiteres
+    Themenbereiche: Hierarichische Datenstrukuren: Baumstrukturen (BinaryTree, BinarySearchTree und ComparableContent) Graphen
     
     Voraussetzung: 
     * sicherer Umgang mit den Methoden der Klasse String
-    * Arrays
-    * Lineare Datenstrukturen (Queue, Stack und List)
+    * Arrays (ein- und Mehrdimensional)
+    * Lineare Datenstrukturen (Queue, Stack und List des Zentralabiturs!)
     * Modellierung mit Hilfe von Entwurfs- und Implementationsdiagrammen
-    * Implementierung
+    * Baumstrukturen (Bäume, Binärbäume und binäre Suchbäume)
+    * Graphen (Modellierung, Darstellung als Graph, Adjazenzliste, Adjezenzmatrix)
+    * Implementierung mit den zugehörigen Klassen des ZA: 
+        * Baumstrukturen: BinaryTree, BinarySearchTree und ComparableContent
+        * Graphe: Edge, Vertrex und ComparableContent
 :::
 
