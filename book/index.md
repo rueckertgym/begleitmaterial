@@ -19,7 +19,7 @@ Das workbuch ist in mehrer Abschnitte aufgeteilt und in einigen Fällen verdeutl
 ## 3. [Suchen und Sortieren](../SuchenUndSortieren/Suchen)
 ## 4. [Kryptologie](/kryptologie/Caesar/Caesar)
 ## 5. [lineare Datenstrukturen](/lineareDatenstrukturen/queue/queue)
-## 6. [hierarichische Datenstrukturen](/hierarichische Datenstrukturen/baumstrukturen)
+## 6. [hierarichische Datenstrukturen](/hierarichischeDatenstrukturen/baumstrukturen)
 
 
 Viel Spaß
