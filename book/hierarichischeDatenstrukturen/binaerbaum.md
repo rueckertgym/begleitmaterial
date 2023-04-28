@@ -7,7 +7,7 @@ index: 1
 
 Im Gegensatz zu Bäumen haben Binärbaume maximal zwei Nachfolgeknoten. Somit wergeben sich drei Möglichkeiten:
 
-1. Binärbaaum mit leeren Nachfolgeteilbäumen
+1. Binärbaum mit leeren Nachfolgeteilbäumen
 
 ![Keine Nachfolgebäume](/Bilder/baumstrukturen/BinärbaumKnotenMitKeinemNachfolger.svg)
 
