@@ -1,5 +1,5 @@
 ---
-name: Dokumentation ZA
+name: Dokumentation Bäume
 index: 5
 ---
 
