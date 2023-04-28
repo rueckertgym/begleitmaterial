@@ -1,5 +1,5 @@
 ---
-name: Omline-IDE
+name: Online-IDE
 index: 0
 ---
 
