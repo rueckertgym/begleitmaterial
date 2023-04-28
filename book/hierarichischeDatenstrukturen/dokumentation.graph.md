@@ -11,7 +11,7 @@ Die Klasse Graph stellt einen ungerichteten, kantengewichteten Graphen dar. Es k
 
 Abgesehen davon kann abgefragt werden, welches Knotenobjekt zu einer bestimmten ID gehört und ob der Graph leer ist.
 
-## Dokumentation der Klasse Graph
+### Dokumentation der Klasse Graph
 
 **Graph()**
 
@@ -75,3 +75,57 @@ Die Anfrage liefert true, wenn die Markierungen aller Kanten des Graphen den Wer
 **boolean isEmpty()**
 
 Die Anfrage liefert true, wenn der Graph keine Knoten enthält, ansonsten false.
+
+## Die Klasse Vertex
+Die Klasse Vertex stellt einen einzelnen Knoten eines Graphen dar. Jedes Objekt dieser Klasse verfügt über eine im Graphen eindeutige ID als String und kann diese ID zurückliefern. Darüber hinaus kann eine Markierung gesetzt und abgefragt werden.
+
+### Dokumentation der Klasse Vertex
+
+**Vertex(String pID)**
+
+Ein neues Objekt vom Typ Vertex mit der ID pID wird erstellt. Seine Markierung hat den Wert false.
+
+**String getID()**
+
+Die Anfrage liefert die ID des Knotens als String.
+
+**void setMark(boolean pMark)**
+
+Der Auftrag setzt die Markierung des Knotens auf den Wert pMark.
+
+**boolean isMarked()**
+
+Die Anfrage liefert true, wenn die Markierung des Knotens den Wert true hat, ansonsten false.
+
+## Die Klasse Edge
+Die Klasse Edge stellt eine einzelne, ungerichtete Kante eines Graphen dar. Beim Erstellen werden die beiden durch sie zu verbindenden Knotenobjekte und eine Gewichtung als double übergeben. Beide Knotenobjekte können abgefragt werden. Des Weiteren können die Gewichtung und eine Markierung gesetzt und abgefragt werden.
+
+### Dokumentation der Klasse Edge
+
+**Edge(Vertex pVertex, Vertex pAnotherVertex, double pWeight)**
+
+Ein neues Objekt vom Typ Edge wird erstellt. Die von diesem Objekt repräsentierte Kante verbindet die Knoten pVertex und pAnotherVertex mit der Gewichtung pWeight. Ihre Markierung hat den Wert false.
+
+**void setWeight(double pWeight)**
+
+Der Auftrag setzt das Gewicht der Kante auf den Wert pWeight.
+
+**double getWeight()**
+
+Die Anfrage liefert das Gewicht der Kante als double.
+
+**Vertex[] getVertices()**
+
+Die Anfrage gibt die beiden Knoten, die durch die Kante verbunden werden, als neues Feld vom Typ Vertex zurück. Das Feld hat genau zwei Einträge mit den Indexwerten 0 und 1.
+
+**void setMark(boolean pMark)**
+
+Der Auftrag setzt die Markierung der Kante auf den Wert pMark.
+
+**void setWeight(double pWeight)**
+
+Der Auftrag setzt das Gewicht der Kante auf den Wert pWeight.
+
+**boolean isMarked()**
+
+Die Anfrage liefert true, wenn die Markierung der Kante den Wert true hat, ansonsten false.
