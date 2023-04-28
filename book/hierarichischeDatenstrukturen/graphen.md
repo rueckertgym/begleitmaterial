@@ -12,5 +12,7 @@ index: 3
 
 https://graphonline.ru/de/
 
+:download[Herunterladen]{src="/download/graphen/Schulgraph2.graphml"}
+
 
 
