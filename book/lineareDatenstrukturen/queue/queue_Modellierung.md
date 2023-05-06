@@ -4,252 +4,211 @@ index: 2
 toc: show
 ---
 # Schülereigene Modellierung der Warteschlange
-
 ::::tabs
 
 :::tab{title="ULM Diagram"}
 ```mermaid
 classDiagram
-Graph
-Vertex
-
+Patient -->  Patient : - nachfolger
+Warteschlange --> Patient : - vorne
+      class Warteschlange{
+          +patientenWarteschlange()
+          +Patient gibErsten()
+          +schickeErsten():void
+          +hintenAnstellen(Patient pPatient):void        
+        }
+        class Patient{
+        - String hatName
+        -int hatKrknummer
+          +Patient()
+          +setNachfolger(Patient pPatient):void
+          +getNachfolger()
+          +setName(String pName):void
+          +getName()
+          +setKrknummer(int pKrknummer):void
+          +getKrknummer():void
+          }
  ```
 :::
 
-:::tab{title="Konstruktor"}
+:::tab{title="BStruktogram"}
 
+
+
+Struktogram der Methode zum Anfügung eines Objektes.
+
+::struktog{data="https://struktog.openpatch.org/#pako:eNqVVdtu3FYM_BVVTw5gFud-ceCHpCiQAkXRh_4AzyHpFaJojV25bhH430sjjh033UW1AvZBl-FwOJzzefy0J57Hq8_jROPVGILHVByBaSLgq-tAISHk4q1vlMbLcf37lvXNX5YjH9bf9Gu9J_t53t__PPMnXtZnMJ9rizURWBMJiqQEtbMFCS1LSPQC9gcePz5BrfyXIozvlnuejnfLzUl0U6kW3xhcVpbZMgK5UoEzkTOmb6KKJOyFM8TYKxQUgmS7BymGY4z2HNXbuzZPffhzP9GAy3HleeZluLj9HddJa7w5WbQXH4tnrdergxRrBetNhpwws16bOnCm6-TEAFFxOjkOYDB0SEwKF_y5Dp6YDvhxvXtkf_h641q7Oiw8vB1O1iVkJ5gJOKBAizZAE6s0EL0hsZuaEHLRZ4-QQi8Qstqmo60Ki4Kd6wvY-wMuffe6jUkuvtC9vh6Wu3k-rTwFVJNTgShYoWItylcHb8iI67X9P9KPNR70zcMd_7SbZnoZrNRmW2rgSoyAPXpwlZJaKoRo87bBMqLY7oLKoYNtMau2Vl2Sug1SKJ8b7JMcw1cvvj3txaiMPelyYkMIJqlzihGI1UZjcIsiD6qJ4Hz8lyjJR5vQEzSXoi5tUIPGFiBaCi0Zt0mU3o2Phhp03VqImRuk5B30QE2F-SZaPjDSr_v97Wth7pUaf-f3H294_TAtKy8Xb4Yfvpjo9FwalkcWYLFlcFFDUxsxwNXX3JvZ5KH-SiqOyFE0E3SlItRQEzh22mJpDYP126RKsWQvFdC0pn9dF5SdhcrG-ebknH-G_4qEc6qdNliV1nxJFWKXrNHUEui2q9WIrc-5bjtZSq5cSc0j4sA1aaAnQQA2obkqZ-P6O_rHZ_rPkX26DeRepPgAiCVAMU4PnKaB1RMH1yVt2pNvf5fjjqebnT50sVyO9xOtu_Gq1PzwD5bCYUk"}
+
+:::
+
+:::tab{title="Quellcode ohne Knoten"}
 ```java
-    public Schulgraph()
+public class PatientenWarteschlange 
+{
+    private Patient vorne;
+
+    public PatientenWarteschlange()
     {
-        // Aufbau des Schulgraphen in Form 18.04.2023
-        g = new Graph();
+
+    }
+
+    public Patient gibErsten(){
+        return vorne; 
+    }
+
+    public void schickeErsten() {
+        Patient aktuellerPatient = vorne ;
+        if( vorne!= null){
+            vorne = aktuellerPatient.getNachfolger();
+        }
+    }
+
+    public void hintenAnstellen(Patient pPatient)
+    {
+        Patient aktuellerPatient = vorne;
+        if (vorne == null){
+            vorne = pPatient; 
+        }
+        else{
+            while(aktuellerPatient.getNachfolger() != null) {
+                aktuellerPatient = aktuellerPatient.getNachfolger();
+            }
+            aktuellerPatient.setNachfolger(pPatient);
+        }
+    }
+}
+
+public class Patient
+{
+    private Patient nachfolger;
+    private String hatName;
+    private int hatKrknummer;
+
+    public Patient(String pName, int pKrknummer)
+    {
+        this.hatName = pName;
+        this.hatKrknummer = pKrknummer;
+    }
+
+    public void setNachfolger(Patient pPatient) {
+        nachfolger = pPatient;
+    }
+
+    public Patient getNachfolger() {
+        return nachfolger;
+    }
+
+    public void setName(String pName){
+        hatName= pName;
+    } 
+
+    public String getName(){
+        return hatName; 
+    }
+
+    public void setKrknummer(int pKrknummer){
+        hatKrknummer= pKrknummer;
+    } 
+
+    public int getKrknummer(){
+        return hatKrknummer; 
+    }
+}
+```
+:::
+
+:::tab{title="Quellcode mit Knoten"}
+```java
+public class PatientenWarteschlange<T>{
+    private Knoten vorne;
+    /*
+     * Konstruktor
+     * Erstellt leere Queue
+     */
+    public PatientenWarteschlange(){
+        vorne = null;
+    }
+    /*
+     * Gibt das erste Objekt der Queue zurück
+     */
+    public T gibErsten(){
+        return vorne.getZeigeAuf();
+    }
+    /*
+     * Ertfernt das erste Objekt aus der Queue
+     */
+    public void schickeErsten(){
+        if( vorne.getNachfolger()!= null){
+            vorne = vorne.getNachfolger();
+        }
+    }
+    /*
+     * Fügt ein neues Element am Ende der Queue hinzu
+     */
+    public void hintenAnstellen(T pPatient){
+        Knoten aktuellerPatient = vorne;
+        Knoten neuerPatient = new Knoten(pPatient);
+        neuerPatient.setNachfolger(null);
+        if (vorne == null){
+            vorne = neuerPatient;
+        }
+        else{
+            while(aktuellerPatient.getNachfolger() != null) {
+                aktuellerPatient = aktuellerPatient.getNachfolger(); 
+            }
+            aktuellerPatient.setNachfolger(neuerPatient);
+        }
+    }
+    
+    private class Knoten{
+        private T zeigeAuf;                             //Speichert das Objekt auf welches der Knoten zeigt
+        private Knoten nachfolger;                      //Speichert den nachfolgenden Knoten
         
-        //alle Kanten und Knoten werden deklariert und initialisiert
-        Vertex rueckertstr = new Vertex("Rückertstraße");
-        Vertex lz = new Vertex("LZ");
-        Edge rueckertstrLz = new Edge(rueckertstr, lz, 140);
-        Vertex sekretariat = new Vertex("Sekretariat");
-        Edge rueckSekr = new Edge(rueckertstr, sekretariat, 251);
-        Vertex stundenplanerin = new Vertex("Stundenplanerin");
-        Edge sekrStund = new Edge(sekretariat, stundenplanerin, 16);
-        Vertex hausmeister = new Vertex("Hausmeister");
-        Edge sekrHaus = new Edge(sekretariat, hausmeister, 44);
-        Vertex mensa = new Vertex("Mensa");
-        Edge hausMensa = new Edge(hausmeister, mensa, 103); 
-        Vertex oberstufenbuero = new Vertex("Oberstufenbüro");
-        Edge hausOber = new Edge(hausmeister, oberstufenbuero, 32);
-        Edge oberMensa = new Edge(oberstufenbuero, mensa, 65);
-        Vertex raum_1070 = new Vertex("Raum 1070");
-        Edge ober_1070 = new Edge(oberstufenbuero, raum_1070, 66);
-        Vertex schulleitung_rh = new Vertex("Schulleitung RH");
-        Edge stundenSchul = new Edge(stundenplanerin, schulleitung_rh, 8);
-        Vertex robotikraum = new Vertex("Robotikraum");
-        Vertex sporthalle = new Vertex("Sporthalle");
-        Edge roboSport = new Edge(robotikraum, sporthalle, 253);
-        Vertex raum__1029 = new Vertex("Raum -1029");
-        Edge sekr_1029 = new Edge(sekretariat, raum__1029, 174);
-        Edge sport_1029 = new Edge(sporthalle, raum__1029, 277);
-        Vertex schulleitung_pz = new Vertex("Schulleitung PZ");
-        Edge schul_1029 = new Edge(schulleitung_pz, raum__1029, 168);
-        Vertex sporthalle2 = new Vertex("Sporthalle 2");
-        Edge sport2_1029 = new Edge(sporthalle2, raum__1029, 211);
-        Vertex wasserspender = new Vertex("Wasserspender");
-        Edge wasserRH = new Edge(wasserspender, schulleitung_rh, 30);
-        Vertex koordinatoren = new Vertex("Koordinatoren Ober_ und Mittelstufe");
-        Edge wasserKoor = new Edge(wasserspender, koordinatoren, 50);
-        Vertex tischtennisplatte = new Vertex("Tischtennisplatte");
-        Edge wassertennis = new Edge(wasserspender, tischtennisplatte, 130);
-        Vertex klettergeruest = new Vertex("Klettergerüst");
-        Edge kletter_1029 = new Edge(klettergeruest, raum__1029, 207);
-        Edge robo_1029 = new Edge(robotikraum, raum__1029, 6);
-        Vertex franzstr = new Vertex("St. Frankziskus Str.");
-        Edge rueckertfranz = new Edge(rueckertstr, franzstr, 269);
-        Edge franzkletter = new Edge(klettergeruest, franzstr, 70);
-        Vertex bistro = new Vertex("Bistro");
-        Edge bistroMensa = new Edge(mensa, bistro, 6);
-        Edge bistro_1029 = new Edge(raum__1029, bistro, 140);
-        Vertex archiv = new Vertex("Archiv");
-        Vertex fahrradkeller = new Vertex("Fahrradkeller");
-        Vertex raum_1013 = new Vertex("Raum 1013");
-        Edge schulleitungen = new Edge(schulleitung_rh, schulleitung_pz, 18);
-        Edge schularchiv = new Edge(schulleitung_rh, archiv, 120);
-        Edge fahrradarchiv = new Edge(fahrradkeller, archiv, 7);
-        Edge fahrrad_1013 = new Edge(fahrradkeller, raum_1013, 130);
-
-        //die Knoten und Kanten werden dem Graphen hinzugefügt
-        g.addVertex(rueckertstr);
-        g.addVertex(lz);
-        g.addVertex(sekretariat);
-        g.addVertex(stundenplanerin);
-        g.addVertex(hausmeister);
-        g.addVertex(mensa);
-        g.addVertex(oberstufenbuero);
-        g.addVertex(raum_1070);
-        g.addVertex(schulleitung_rh);
-        g.addVertex(robotikraum);
-        g.addVertex(sporthalle);
-        g.addVertex(raum__1029);
-        g.addVertex(schulleitung_pz);
-        g.addVertex(sporthalle2);
-        g.addVertex(wasserspender);
-        g.addVertex(koordinatoren);
-        g.addVertex(tischtennisplatte);
-        g.addVertex(klettergeruest);
-        g.addVertex(franzstr);
-        g.addVertex(bistro);
-        g.addVertex(archiv);
-        g.addVertex(fahrradkeller);
-        g.addVertex(raum_1013);
-
-        g.addEdge(rueckertstrLz);
-        g.addEdge(rueckSekr);
-        g.addEdge(sekrStund);
-        g.addEdge(sekrHaus);
-        g.addEdge(hausMensa);
-        g.addEdge(hausOber);
-        g.addEdge(oberMensa);
-        g.addEdge(ober_1070);
-        g.addEdge(stundenSchul);
-        g.addEdge(roboSport);
-        g.addEdge(sekr_1029);
-        g.addEdge(sport_1029);
-        g.addEdge(schul_1029);
-        g.addEdge(sport2_1029);
-        g.addEdge(wasserRH);
-        g.addEdge(wasserKoor);
-        g.addEdge(wassertennis);
-        g.addEdge(kletter_1029);
-        g.addEdge(robo_1029);
-        g.addEdge(rueckertfranz);
-        g.addEdge(franzkletter);
-        g.addEdge(bistroMensa);
-        g.addEdge(bistro_1029);
-        g.addEdge(schulleitungen);
-        g.addEdge(schularchiv);
-        g.addEdge(fahrradarchiv);
-        g.addEdge(fahrrad_1013);
-    }
-
-```
-
-:::
-
-
-:::tab{title="Adjazensmatrix"}
-```java
-
-  public double[][] admatrixRueckgabe()
-    {
-        this.admatrix = new double[zaehleKnoten()][zaehleKnoten()];
-        List<Vertex> hilfe = new List<Vertex>();
-        hilfe = g.getVertices();
-        hilfe.toFirst();
-        int z = 0;
-        List<Edge> Knotenhelfer = new List<Edge>();
-        Knotenhelfer = g.getEdges(hilfe.getContent());
-        Knotenhelfer.toFirst();
-
-        List<Vertex> nachfolger = new List<Vertex>();
-        while(hilfe.hasAccess())
-        {
-            nachfolger.append(hilfe.getContent());
-            hilfe.next();
+        public Knoten(T pZeigeAuf){
+            zeigeAuf = pZeigeAuf;
         }
-        hilfe.toFirst();
-        nachfolger.toFirst();
-        Vertex aktueller = hilfe.getContent();
-        Vertex naechsterVertex = nachfolger.getContent(); 
-        for (int i = 0; i<zaehleKnoten(); i++)
-        {
-            for(int j = 0; j<zaehleKnoten(); j++)
-            {               
-                aktueller = hilfe.getContent();
-                naechsterVertex = nachfolger.getContent(); 
-                Edge kante =g.getEdge(aktueller, naechsterVertex);
-                if (kante!= null)
-                {
-                    admatrix [i][j] = kante.getWeight();
-                }
-                else 
-                {
-                    admatrix [i][j] = -1.0;
-                }
-                nachfolger.next();               
-            }
-            hilfe.next();
-            //hilfe.toFirst();
-            nachfolger.toFirst();
-            //int u = i;
-            //while(u<i)
-            //{
-            //nachfolger.next();
-            //}
-        }        
-        return admatrix;
-    }
-    ```
-:::
-
-:::tab{title="Breitensuche"}
-```java
-    public List<Vertex> breitensuche(String pStart)
-    {
-        Vertex gesuchterKnoten = g.getVertex(pStart);
-        return breitensucheIntern(gesuchterKnoten);
-    }
-    
-    private List<Vertex> breitensucheIntern(Vertex pStart) {       
-        List<Vertex> ergebnisListe = new List<Vertex>();  
-        Queue<Vertex> schlange = new Queue<Vertex>();
-        pStart.setMark(true);
-        schlange.enqueue(pStart);
-        while (!schlange.isEmpty()) {
-            Vertex aktuellerKnoten = (Vertex) schlange.front();
-            schlange.dequeue();
-            ergebnisListe.append(aktuellerKnoten);
-            List<Vertex> nachbarListe = g.getNeighbours(aktuellerKnoten);
-            nachbarListe.toFirst();
-            while (nachbarListe.hasAccess()) {
-                Vertex knoten = (Vertex) nachbarListe.getContent();
-                if (!knoten.isMarked()) {
-                    knoten.setMark(true);  
-                    schlange.enqueue(knoten);
-                }
-                nachbarListe.next();  
-            }
+        public Knoten getNachfolger(){
+            return nachfolger;
         }
-        return ergebnisListe;
-    }
-
-```
-:::
-
-:::tab{title="Tiefensuche"}
-```java
-    private List<Vertex> tiefendurchlaufIntern(Vertex pStart) {       
-        List<Vertex> ergebnisListe = new List<Vertex>();
-        if (!pStart.isMarked()) {
-            pStart.setMark(true);
-            ergebnisListe.append(pStart);
-            List<Vertex> nachbarliste = g.getNeighbours(pStart);
-            nachbarliste.toFirst();
-            while (nachbarliste.hasAccess()) {
-                Vertex nV = (Vertex) nachbarliste.getContent();
-                ergebnisListe.concat(tiefendurchlaufIntern(nV));
-                nachbarliste.next();
-            }
+        public void setNachfolger(Knoten pNachfolger){
+            this.nachfolger = pNachfolger;
         }
-        return ergebnisListe;
+        public T getZeigeAuf(){
+            return zeigeAuf;
+        }
     }
-    
-    public List<Vertex> tiefendurchlauf(String pStart)
-    {
-        Vertex gesuchterKnoten = g.getVertex(pStart);       
-        return tiefendurchlaufIntern(gesuchterKnoten);
+}
+
+public class Patient
+{
+    private String hatName;
+    private int hatKrknummer;
+
+    public Patient(String pName, int pKrknummer){
+        this.hatName = pName;
+        this.hatKrknummer = pKrknummer;
     }
+
+    public void setName(String pName){
+        hatName = pName;
+    } 
+
+    public String getName(){
+        return hatName; 
+    }
+
+    public void setKrknummer(int pKrknummer){
+        hatKrknummer= pKrknummer;
+    } 
+
+    public int getKrknummer(){
+        return hatKrknummer; 
+    }
+}
 ```
 :::
 ::::
+
 ## Klassendokumentation 
 
 ###  ohne Knoten
