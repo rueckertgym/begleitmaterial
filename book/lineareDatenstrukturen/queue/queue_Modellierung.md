@@ -10,25 +10,9 @@ toc: show
 :::tab{title="ULM Diagram"}
 ```mermaid
 classDiagram
-Patient -->  Patient : - nachfolger
-Warteschlange --> Patient : - vorne
-      class Warteschlange{
-          +patientenWarteschlange()
-          +Patient gibErsten()
-          +schickeErsten():void
-          +hintenAnstellen(Patient pPatient):void        
-        }
-        class Patient{
-        - String hatName
-        -int hatKrknummer
-          +Patient()
-          +setNachfolger(Patient pPatient):void
-          +getNachfolger()
-          +setName(String pName):void
-          +getName()
-          +setKrknummer(int pKrknummer):void
-          +getKrknummer():void
-          }
+Graph
+Vertex
+
  ```
 :::
 
