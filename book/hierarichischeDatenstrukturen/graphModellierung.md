@@ -10,8 +10,57 @@ toc: show
 :::tab{title="ULM Diagram"}
 ```mermaid
 classDiagram
-Graph
-Vertex
+
+Edge 
+Graph --> ListVertex~Vertex~ : -vertices
+Graph --> ListEdge~Edge~ : -edges
+
+
+class Graph {
+    -List<Vertex> vertices
+    -List<Edge> edges
+    +Graph()
+    +addVertex(Vertex pVertex) void
+    +addEdge(Edge pEdge) void
+    +removeVertex(Vertex pVertex) void
+    +removeEdge(Edge pEdge) void
+    +getVertex(String pID) Vertex
+    +getVertices() List~Vertex~
+    +getNeighbours(Vertex pVertex) List~Vertex~
+    +getEdges() List~Edge~
+    +getEdges(Vertex pVertex) List~Edge~
+    +getEdges(Vertex pVertex, Vertex pAnotherVertex) Edge
+    +setAllVertexMarks(boolean pMark) void
+    +allVerticesMarked() boolean
+    +setAllEdgeMarks(boolean pMark) void
+    +allEdgesMarked() boolean
+    +isEmpty() boolean
+
+}
+
+class Edge {
+    -int siegzahl
+    -int Summe
+    -Vertex[] vertices
+    -double weight
+    -boolean mark
+    +Edge(Vertex pVertex, Vertex pAnotherVertex, double pWeight)
+    +setWeight(double pWeight) void
+    +getWeight() double
+    +getVertices() Vertex[]
+    +setMark(boolean pMark) void
+    +setWeight(double pWeight) void
+    +isMarked() boolena
+}
+
+class Vertex {
+    -String id
+    -boolean mark
+    +Vertex(String pID)
+    +getID() String
+    +setMark(boolean pMark) void
+    + isMarked() boolean
+} 
 
  ```
 :::
