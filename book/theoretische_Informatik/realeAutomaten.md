@@ -66,26 +66,14 @@ Auf einem Parkplatz kostet das Parken ohne Zeitbegrenzung 2,00 €. Nach Einwurf
 
 Analyse: Der Parkscheinautomat hat
 
-eine Menge von Eingabeobjekten
-
-Geldstücke mit Wertigkeiten 0,5 €, 1 € und 2 €.	E= { 0,5 | 1 | 2}	
-
-eine Menge von Ausgabeobjekten
-
-Schranke öffnen, nichts (wenn z. B. zu wenig Geld eingeworfen wurde)	A = { „Schranke öffnen“ }	
-
-Zustände
-{„kein Geld“, „50 Cent“, „1 EUR“, „1,50 EUR“	Z = { 0 | 0,50 | 1,00| 1,50 }	
-
-einen Startzustand
-bereit zur Eingabe	Z = {0}	
-
-Endzustände
-Schranke öffnen		
-
-Funktionen, die die Zustandsübergänge und die Ausgabe regeln.
-
-### Graphische Darstellung (tabellarische Darstellung siehe nächste Seite)	
+|**eine Menge von Eingabeobjekten**     | Geldstücke mit Wertigkeiten 0,5 €, 1 € und 2 €.   |	E= { 0,5 | 1 | 2}	|
+|---                                    |---                                                |---                    |
+|**eine Menge von Ausgabeobjekten**     | Schranke öffnen, nichts (wenn z. B. zu wenig Geld eingeworfen wurde) |A = { „Schranke öffnen“ }	|
+|**Zustände**                           |{„kein Geld“, „50 Cent“, „1 EUR“, „1,50 EUR“	    |Z = { 0 | 0,50 | 1,00| 1,50 }	|
+|**einen Startzustand**                 |bereit zur Eingabe	                                |Z = {0}	|
+|**Endzustände**                        |Schranke öffnen	||	
+|**Funktionen, die die Zustandsübergänge und die Ausgabe regeln.**| Graphische Darstellung (siehe unten)||	
+![Parkscheinautomat](/Bilder/theoretischeInformatik/Parkscheinautomat.png)
 1.2	Darstellung von Automaten mit Hilfe von Tabellen
 + Darstellung der Überführungsfunktion u: X × Z --> Z 
 |    u	|    z0	|   z50	    |z100	|z150 |
@@ -95,8 +83,8 @@ Funktionen, die die Zustandsübergänge und die Ausgabe regeln.
 |E200	|z0	    |z0	        |z0	    |z0   |
 
 + Ausgabefunktion g: X × Z --> Y* 
-    g	    z0	    z50	    z100	z150
-| ---   | ---   | ---     | ---   | --- | 
+|   g	|   z0	|   z50 |  z100 |z150|
+| ---   | ---   | ---   | ---   | --- | 
 | E50	| yn	| yn	| yn	| ys| 
 | E100	| yn	| yn	| ys	| ys| 
 | E200	| ys	| ys	| ys	| ys| 
