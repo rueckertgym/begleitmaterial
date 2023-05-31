@@ -87,14 +87,14 @@ Funktionen, die die Zustandsübergänge und die Ausgabe regeln.
 
 ### Graphische Darstellung (tabellarische Darstellung siehe nächste Seite)	
 1.2	Darstellung von Automaten mit Hilfe von Tabellen
-+ Darstellung der Überführungsfunktion u: X × Z Z 
++ Darstellung der Überführungsfunktion u: X × Z --> Z 
 |    u	|    z0	|   z50	    |z100	|z150 |
 | ---   | ---   | ---       | ---   | --- | 
 |E50	|z50	|z100	    |z150	|z0   |
 |E100	|z100	|z150	    |z0	    |z0   |
 |E200	|z0	    |z0	        |z0	    |z0   |
 
-+ Ausgabefunktion g: X × ZY* 
++ Ausgabefunktion g: X × Z --> Y* 
     g	    z0	    z50	    z100	z150
 | ---   | ---   | ---     | ---   | --- | 
 | E50	| yn	| yn	| yn	| ys| 
@@ -104,18 +104,25 @@ Funktionen, die die Zustandsübergänge und die Ausgabe regeln.
 Die Darstellung in Form einer Tabelle in der der neue Zustand getrennt von einem Semikolon die Ausgabereaktion notiert wird ist ebenfalls gebräuchlich.
 
 | u	    | z0	| z50	| z100	| z150| 
+| ---   | ---   | ---       | ---   | --- | 
 | x50	| z50;yn| 	z100;yn	| z150;yn| 	z0;ys| 
 | x100  | z100;yn| 	z150;yn| 	z0;ys| 	z0;ys| 
 | x200	| z0;ys	| z0;ys| 	z0;ys	| z0;ys| 
 
-Zustandsübergangsfunktion
+**Zustandsübergangsfunktion**
+
 Die für den Automaten wichtige Frage lautet etwa:
+
 Wie ändert sich sein Zustand beim Betätigen einer Taste bzw. beim Einwurf einer Münze? 
-Da hierzu sowohl der aktuelle Zustand als auch die Eingabeaktion des Benutzers als Vorgaben nötig sind, werden einem Elementepaar (s;e) mit s  S und e  E ein neuer Folgezustand zugeordnet. Da der jeweilige Folgezustand s'  S eindeutig sein muss, liegt mathematisch gesehen eine Funktion vor, die so genannte Zustandsübergangsfunktion: (s;e) s'. 
+
+Da hierzu sowohl der aktuelle Zustand als auch die Eingabeaktion des Benutzers als Vorgaben nötig sind, werden einem Elementepaar (s;e) mit s \in S und e \in E ein neuer Folgezustand zugeordnet. Da der jeweilige Folgezustand s' \in S eindeutig sein muss, liegt mathematisch gesehen eine Funktion vor, die so genannte _Zustandsübergangsfunktion:_ (s;e)--> s'. 
+
 Zwei Eingangselementen wird demnach ein Ergebniselement zugeordnet, ähnlich etwa der Multiplikation, bei der zwei Zahlen ein Ergebnis zugeordnet wird. Eine übersichtliche Darstellung von Produkten bestimmter Zahlkombinationen erfolgt üblicherweise in einer Multiplikationstafel, die zweidimensional ist.
+
 Dabei werden die möglichen Elemente der ersten Menge in der Eingangsspalte der Tabelle notiert, die der zweiten Menge in der Eingangszeile. Die zugeordneten Elemente stehen an den zugehörigen Kreuzungsstellen im Innenbereich der Tabelle. 
-Ausgabefunktion
-Für den Anwender interessanter sind allerdings die Ausgaben des Automaten. Auch diese hängen sowohl vom aktuellen Zustand als auch von der erfolgten Eingabe ab. Daher liegt auch hier eine Funktion im oben beschriebenen Sinne vor, die so genannte Ausgabefunktion: (s;e) a mit a .
+
+_Ausgabefunktion_
+Für den Anwender interessanter sind allerdings die Ausgaben des Automaten. Auch diese hängen sowohl vom aktuellen Zustand als auch von der erfolgten Eingabe ab. Daher liegt auch hier eine Funktion im oben beschriebenen Sinne vor, die so genannte Ausgabefunktion: (s;e) --> a mit a \in.
 
 
  
