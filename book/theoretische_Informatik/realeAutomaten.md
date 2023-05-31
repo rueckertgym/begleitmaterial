@@ -46,33 +46,20 @@ Die Elemente von X nennt man Eingabezeichen, die von Y Ausgangszeichen, die von 
 | **Reale Automaten** | _Definition Endlicher Automat_ |
 | --- | --- |
 | Reale Automaten finden sich z. B. in Form von Geldautomaten, Parkscheinautomaten, Getränkeautomaten, usw.. | Die Erkenntnisse aus den realen Automaten sollen in einem informatischen Modell standardisiert vereinbart werden (als allgemeine Abstraktion eines realen Automaten), da dieses Modell das typische informatische EVA-Prinzip wiedergeben kann. |
-| Analysiert man reale Automaten so stellt man fest:Ein realer Automat hat | Der endlicherAutomatmit Ausgabe (Transduktor, Mealy-Automat) lässt sich aus der Verall­ge­mei­ne­rung der Analyse realer Automaten ableiten:Er besitzt: |
-| - Eine Menge an möglichen Eingaben in den Automaten:
-
-z. B.: Geldstücke mit bestimmter Wertigkeit, Tastendruck o. ä. | - Eine nichtleere, endliche Menge – das Eingabealphabet (genannt E)|
-| - Eine Menge an mögliche Ausgaben des Automaten:
-z. B.: Getränke, Fahrkarten, Rückgeld usw. | - Eine nichtleere, endliche Menge – das Ausgabealphabet (genannt A)|
-| - Zustände, die im Laufe seiner Arbeit durchlaufen werden
-
-z.B.: Schranke ist unten, 10 Cent eingeworfen, 20 Cent eingeworfen, ... | - Eine nichtleere, endliche Menge – die Zustandsmenge (genannt Z) |
-| - einen Startzustand
-
-z. B.: bereit zur Eingabe_ | - z0 --> Z ist der Anfangszustand |
-| - Endzustände
-
-z. B.: Geldausgabe, Getränkeausgabe, Störung_ | - Ausgezeichnete Zustände, die Endzustände|
-| - Funktionen, die Übergänge zwischen den Zuständen und die Ausgabe regeln.
-
-z.B.: Wird noch 1 EUR eingeworfen, so gib 50 Cent aus und wechsele in den Zustand „Schranke oben"| - u: E × Z --> Z ist die Überführungsfunktion, welche jedem Paar (Eingabezeichen, Zustand) einen Folgezustand zuordnet
-
-- g: A × Z --> Y ist die Ausgabefunktion, welche jedem Paar (Eingabezeichen, Zustand) eine Ausgabe zuordnet.|
+| Analysiert man reale Automaten so stellt man fest:Ein realer Automat hat | Der endlicher Automat mit Ausgabe (Transduktor, Mealy-Automat) lässt sich aus der Verall­ge­mei­ne­rung der Analyse realer Automaten ableiten:Er besitzt: |
+| - Eine Menge an möglichen Eingaben in den Automaten: z.B.: Geldstücke mit bestimmter Wertigkeit, Tastendruck o. ä. | - Eine nichtleere, endliche Menge – das Eingabealphabet (genannt E)|
+| - Eine Menge an mögliche Ausgaben des Automaten: z.B.: Getränke, Fahrkarten, Rückgeld usw. | - Eine nichtleere, endliche Menge – das Ausgabealphabet (genannt A)|
+| - Zustände, die im Laufe seiner Arbeit durchlaufen werden z.B.: Schranke ist unten, 10 Cent eingeworfen, 20 Cent eingeworfen, ... | - Eine nichtleere, endliche Menge – die Zustandsmenge (genannt Z) |
+| - einen Startzustand z.B.: bereit zur Eingabe_ | - z0 --> Z ist der Anfangszustand |
+| - Endzustände z.B.: Geldausgabe, Getränkeausgabe, Störung ...| - Ausgezeichnete Zustände, die Endzustände|
+| - Funktionen, die Übergänge zwischen den Zuständen und die Ausgabe regeln. z.B.: Wird noch 1 EUR eingeworfen, so gib 50 Cent aus und wechsele in den Zustand „Schranke oben"| - u: E × Z --> Z ist die Überführungsfunktion, welche jedem Paar (Eingabezeichen, Zustand) einen Folgezustand zuordnet - g: A × Z --> Y ist die Ausgabefunktion, welche jedem Paar (Eingabezeichen, Zustand) eine Ausgabe zuordnet.|
 
 
 1.1	Darstellung eines Automaten als Graph
 	
 Versucht man diese Übergangsfunktion grafisch darzustellen, erhält man einen Zustandsgraphen bzw. ein Zustandsdiagramm.
-Ein solcher Graph besitzt rechts stehende Elemente.
-
+Ein solcher Graph besitzt folgende stehende Elemente.
+![DEA Elemente](/Bilder/theoretischeInformatik/DEAElemente.png)
 ### Ein Beispiel – Parkscheinautomat
 Auf einem Parkplatz kostet das Parken ohne Zeitbegrenzung 2,00 €. Nach Einwurf der korrekten Geldsumme (0,50€, 1,00 € und 2,00 €) soll sich eine Schranke zeit- und lichtsensorgesteuert öffnen/schließen. Der Automat wechselt nicht, gibt zu viel gezahltes Geld nicht zurück und hat keine Möglichkeit des Abbruchs. 
 Analyse: Der Parkscheinautomat hat
