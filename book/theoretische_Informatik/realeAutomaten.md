@@ -16,7 +16,7 @@ z.B. ein Band bestimmter Länge, das die Eingaben einzeln (feldweise) enthält
 
 z.B. ein geschlossenes Band, dass die Ausgabeelemente feldweise erfasst 
 
-**3.	ZentraleinheitÜÜ
+**3.	Zentraleinheit**
 
 zur Steuerung des Automaten und zur Speicherung der inneren Zustände  
 
@@ -24,7 +24,7 @@ zur Steuerung des Automaten und zur Speicherung der inneren Zustände
 
 zum Lesen des Eingabebandes 
 
-**5.	Schreibkopf **
+**5.	Schreibkopf**
 
 zum Schreiben auf das Ausgabeband 
 
@@ -91,11 +91,11 @@ Analyse: Der Parkscheinautomat hat
 
 Die Darstellung in Form einer Tabelle in der der neue Zustand getrennt von einem Semikolon die Ausgabereaktion notiert wird ist ebenfalls gebräuchlich.
 
-| u	    | z0	| z50	| z100	| z150| 
-| ---   | ---   | ---       | ---   | --- | 
-| x50	| z50;yn| 	z100;yn	| z150;yn| 	z0;ys| 
-| x100  | z100;yn| 	z150;yn| 	z0;ys| 	z0;ys| 
-| x200	| z0;ys	| z0;ys| 	z0;ys	| z0;ys| 
+| u	    | z0	| z50	    | z100	    | z150| 
+| ---   | ---   | ---       | ---       | --- | 
+| x50	| z50;yn| z100;yn	| z150;yn   | z0;ys| 
+| x100  | z100;yn| z150;yn  | z0;ys     |z0;ys| 
+| x200	| z0;ys	| z0;ys     |z0;ys	    |z0;ys| 
 
 **Zustandsübergangsfunktion**
 
