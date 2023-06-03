@@ -12,9 +12,7 @@ Die Eisverkauf Datenbank und Tutorial ist mit Hilfe von Chat GPT erstanden.
 ::::tabs
 
 :::tab{title="Chat GPT Promt"}
-```
 Gib eine beispielhafte Datenbank sqllite an mit mindestens 7 Entitäten zum Themenbereich Eisverkauf an. Stelle die Datenbank als mermaid Diagramm dar und gib das Relationenschemata der Tabelle an. 
-```
 :::
 
 :::tab{title="mysqlite DB"}
@@ -263,6 +261,87 @@ JOIN Kunden ON Bestellungen.KundenID = Kunden.KundenID;
 Dies gibt die Bestellungs-ID, den Vornamen und den Nachnamen für alle Bestellungen zurück und verknüpft die Tabelle "Bestellungen" mit der Tabelle "Kunden" basierend auf der Kunden-ID.
 
 Das war eine Einführung in grundlegende SQL-Abfragen von einfachen Selektionen und Projektionen bis hin zu Joins. Du kannst dieses Tutorial als Ausgangspunkt verwenden und weitere fortgeschrittene SQL-Konzepte erkunden. Viel Spaß beim Arbeiten mit SQL!
+
+## Komplexere Abfragen mit Joins
+
+1. Abfrage: "Zeige den Namen der Eissorte und die Anzahl der Bestellungen für jede Eissorte an, sortiert nach der Anzahl der Bestellungen absteigend."
+   SQL-Statement:
+   ```sql
+   SELECT Eissorten.Name, COUNT(Bestellungen.SortenID) AS AnzahlBestellungen
+   FROM Eissorten
+   LEFT JOIN Bestellungen ON Eissorten.SortenID = Bestellungen.SortenID
+   GROUP BY Eissorten.SortenID
+   ORDER BY AnzahlBestellungen DESC;
+   ```
+   Musterlösung:
+   | Name       | AnzahlBestellungen |
+   |------------|--------------------|
+   | Schokolade | 2                  |
+   | Erdbeere   | 1                  |
+   | Vanille    | 0                  |
+
+2. Abfrage: "Zeige den Namen der Kunden und die Anzahl der Bestellungen für jeden Kunden an, nur für Kunden mit mindestens einer Bestellung."
+   SQL-Statement:
+   ```sql
+   SELECT Kunden.Vorname, Kunden.Nachname, COUNT(Bestellungen.KundenID) AS AnzahlBestellungen
+   FROM Kunden
+   LEFT JOIN Bestellungen ON Kunden.KundenID = Bestellungen.KundenID
+   WHERE Bestellungen.KundenID IS NOT NULL
+   GROUP BY Kunden.KundenID;
+   ```
+   Musterlösung:
+   | Vorname | Nachname   | AnzahlBestellungen |
+   |---------|------------|--------------------|
+   | Max     | Mustermann | 1                  |
+   | Maria   | Musterfrau | 1                  |
+   | Hans    | Beispiel   | 1                  |
+
+3. Abfrage: "Zeige den Namen der Eissorte und den Durchschnittspreis für Eissorten, deren Durchschnittspreis über 2.0 liegt."
+   SQL-Statement:
+   ```sql
+   SELECT Eissorten.Name, AVG(Eissorten.Preis) AS Durchschnittspreis
+   FROM Eissorten
+   GROUP BY Eissorten.SortenID
+   HAVING AVG(Eissorten.Preis) > 2.0;
+   ```
+   Musterlösung:
+   | Name       | Durchschnittspreis |
+   |------------|--------------------|
+   | Schokolade | 2.5                |
+   | Erdbeere   | 3.0                |
+
+4. Abfrage: "Zeige den Namen der Kunden und die Anzahl der Bestellungen für Kunden, die mindestens 2 Bestellungen getätigt haben."
+   SQL-Statement:
+   ```sql
+   SELECT Kunden.Vorname, Kunden.Nachname, COUNT(Bestellungen.KundenID) AS AnzahlBestellungen
+   FROM Kunden
+   LEFT JOIN Bestellungen ON Kunden.KundenID = Bestellungen.KundenID
+   GROUP BY Kunden.KundenID
+   HAVING COUNT(Bestellungen.KundenID) >= 2;
+   ```
+   Musterlösung:
+   | Vorname | Nachname   | AnzahlBestellungen |
+   |---------|------------|--------------------|
+   | Max     | Mustermann | 2                  |
+
+5. Abfrage: "Zeige den Namen der Eissorte und den Namen der Eisdiele, in der sie verkauft wird, für alle Eissorten."
+   SQL-Statement:
+   ```sql
+   SELECT Eissorten.Name, Eisdielen.Name AS Eisdiele
+   FROM Eissorten
+   LEFT JOIN
+
+ Verkaufsstellen ON Eissorten.SortenID = Verkaufsstellen.SortenID
+   LEFT JOIN Eisdielen ON Verkaufsstellen.EisdielenID = Eisdielen.EisdielenID;
+   ```
+   Musterlösung:
+   | Name       | Eisdiele     |
+   |------------|--------------|
+   | Schokolade | Eisparadies  |
+   | Vanille    | Eiszauber    |
+   | Erdbeere   | Eisparadies  |
+
+Das waren einige Beispiele für komplexere SQL-Abfragen. Du kannst die Musterlösungen als Referenz verwenden, um die Ergebnisse zu vergleichen und deine SQL-Fähigkeiten weiter auszubauen. Viel Erfolg beim Ausprobieren!
 
 :::sqlide{height=500}
 
