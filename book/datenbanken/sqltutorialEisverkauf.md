@@ -329,9 +329,7 @@ Das war eine Einführung in grundlegende SQL-Abfragen von einfachen Selektionen 
    ```sql
    SELECT Eissorten.Name, Eisdielen.Name AS Eisdiele
    FROM Eissorten
-   LEFT JOIN
-
- Verkaufsstellen ON Eissorten.SortenID = Verkaufsstellen.SortenID
+   LEFT JOIN Verkaufsstellen ON Eissorten.SortenID = Verkaufsstellen.SortenID
    LEFT JOIN Eisdielen ON Verkaufsstellen.EisdielenID = Eisdielen.EisdielenID;
    ```
    Musterlösung:
