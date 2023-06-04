@@ -341,11 +341,10 @@ Das war eine Einführung in grundlegende SQL-Abfragen von einfachen Selektionen 
 
 Das waren einige Beispiele für komplexere SQL-Abfragen. Du kannst die Musterlösungen als Referenz verwenden, um die Ergebnisse zu vergleichen und deine SQL-Fähigkeiten weiter auszubauen. Viel Erfolg beim Ausprobieren!
 
-:::sqlide{height=500}
-db: /datenbanken/chinook.sqLite
+:::sqlide{height=500, db=/datenbanken/chinook.sqLite}
 ```mysql Statements.sql
 
-SELECT * from fluss;
+SELECT * from bein;
 
 ```
 
