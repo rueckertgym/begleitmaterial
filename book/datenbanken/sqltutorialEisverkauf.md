@@ -341,11 +341,12 @@ Das war eine Einführung in grundlegende SQL-Abfragen von einfachen Selektionen 
 
 Das waren einige Beispiele für komplexere SQL-Abfragen. Du kannst die Musterlösungen als Referenz verwenden, um die Ergebnisse zu vergleichen und deine SQL-Fähigkeiten weiter auszubauen. Viel Erfolg beim Ausprobieren!
 
-:::sqlide{height=500 db="https://abitur-2024.edugit.io/begleitmaterial/datenbanken/eisverkaufdb.sqLite"}
+:::sqlide{height=500 db="public/datenbanken/eisverkaufdb.sqLite"}
 ```mysql Statements.sql
 
 SELECT * from fluss;
 
 ```
-
 :::
+public/datenbanken/eisverkaufdb.sqLite
+https://abitur-2024.edugit.io/begleitmaterial/datenbanken/eisverkaufdb.sqLite
