@@ -1,6 +1,5 @@
 ---
 name: Start
-toc: show
 index: 0
 ---
 
