@@ -211,40 +211,48 @@ Klasse String durchgeführt.
 
 **Konstruktor**
 
-**Tester() **Ein Objekt wird erzeugt und die beiden Attribute zEingabe
+**Tester()**
+
+Ein Objekt wird erzeugt und die beiden Attribute zEingabe
 und zAusgabe initialisiert.
 
 **Anfrage**
 
-**getZEingabe():String** Die Anfrage liefert den Wert von zEingabe
+**getZEingabe():String** 
+
+Die Anfrage liefert den Wert von zEingabe
 zurück
 
 **Anfrage**
 
-**getZAusgabe():String** Die Anfrage liefert den Wert von zAusgabe
+**getZAusgabe():String** 
+
+Die Anfrage liefert den Wert von zAusgabe
 zurück
 
 **Auftrag**
 
-**setZEingabe(pEingabe:String)** Der Auftrag setzt den Wert von zEingabe
-auf pEingabe.
+**setZEingabe(pEingabe:String)** 
+
+Der Auftrag setzt den Wert von zEingabe auf pEingabe.
 
 **Auftrag**
 
-**setZAusgabe(pEingabe:String)** Der Auftrag setzt den Wert von zAusgabe
-auf pEingabe.
+**setZAusgabe(pEingabe:String)** 
+
+Der Auftrag setzt den Wert von zAusgabe auf pEingabe.
 
 **Anfrage**
 
-**zeichenketteUmkehren():String** Die Anfrage kehrt die Zeichenabfolge
-von zEingabe herum, speichert die neue Zeichenkette in zAusgabe und gibt
-diesen Wert zurück.
+**zeichenketteUmkehren():String** 
+
+Die Anfrage kehrt die Zeichenabfolge von zEingabe herum, speichert die neue Zeichenkette in zAusgabe und gibt diesen Wert zurück.
 
 **Anfrage**
 
-**palimdromTest():boolean** Die Anfrage testet den Wert von zEingabe auf
-ein Palimdrom und gibt wahr zurück, wenn ein Palindrom gespeichert ist,
-sonst falsch.
+**palimdromTest():boolean** 
+
+Die Anfrage testet den Wert von zEingabe auf ein Palimdrom und gibt wahr zurück, wenn ein Palindrom gespeichert ist, sonst falsch.
 
 **Hilfe**
 
