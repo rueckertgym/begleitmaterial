@@ -5,7 +5,7 @@ index: 0
 
 :::onlineide
 
-````markdown A Hint
+
 ## Tip:
 
 Tipps werden in einer einfachen Markdown-Syntax
@@ -13,7 +13,6 @@ verfasst, die **Fettschrift** u.ä. ermöglicht, aber
 auch Syntax-Highlighting im Fließtext (`class Quadrat extends Rectangle { }`) und in ganzen Absätzen:
 
 ```
-
 double v = Math.random()\*8 + 2; // Amount of speed between 2 and 10
 
 double w = Math.random()*2*Math.PI; // angle between 0 and 2\*PI
@@ -23,9 +22,9 @@ vx = v \* Math.cos(w);
 vy = v \* Math.sin(w);
 
 ```
-````
 
-```java Feuerwerk.java
+
+```java 
 
 new Feuerwerk();
 

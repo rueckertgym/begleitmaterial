@@ -125,7 +125,7 @@ Methoden *palindromTest()* und *ZeichenkettenUmkehren().*
 
 :::onlineide
 
-```markdown Tipp
+````markdown Tipp
 ## Tip:
 
 Tipps werden in einer einfachen Markdown-Syntax
