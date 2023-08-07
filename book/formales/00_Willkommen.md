@@ -4,7 +4,7 @@ toc: show
 index: 1
 ---
 
-# Informatik LK Abitur 2024
+# Informatik LK Abitur
 
 Ich heiße euch herzlich in unserem Kurs Informatik LK am FRG (Abitur 2024) willkommen.
 In diesem begleitenden "workbook" werden wir unsere Ergebnisse zum Unterricht festhalten und ihr werdet im Laufe der Zeit eigene Kapitel zu unterschiedlichen Themen für die anderen und zur Vorbereitung des Abiturs festhalten.
