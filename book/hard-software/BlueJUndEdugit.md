@@ -3,6 +3,12 @@ name: Arbeiten mit BlueJ und edugit
 toc: show
 index: 2
 ---
+# Arbeiten mit de online-ide
+
+Wir werden einige Programmieraufgaben auch mit Hilfe einer onlie-ide, die im Browser läuft bearbeiten können.  
+Dies ist vor allen Dingen zum Schnellen ausprobieren und testen sehr hilfreich, wobei wir bei größeren Projekten auf BlueJ und Edugit umstiegen werden.
+Solltet ihr lieber mit einer anderen Entwicklungsumgebung arbeiten, könnt ihr diese gerne nutzen.
+
 # Arbeiten mit BlueJ und edugit
 
 

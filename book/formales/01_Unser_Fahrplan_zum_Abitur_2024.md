@@ -1,10 +1,10 @@
 ---
-name: Unser Fahrplan zum Abitur 2024
+name: Unser Fahrplan zum Abitur 2024/25
 toc: show
 index: 3
 ---
 
-# Unser Fahrplan bis zum Abitur 2024
+# Unser Fahrplan bis zum Abitur 2024/2025
 Das Schulministerium NRW stellt im [Bildungsportal für NRW](https://www.standardsicherung.schulministerium.nrw.de/cms/zentralabitur-gost/faecher/fach.php?fach=15) grundlegende Informationen für die Abiturprüfungen bzw. den Unterricht zur Verfügung.
 
 ## Zahlreiche Quellen für weitere Materialien sind
