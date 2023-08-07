@@ -34,9 +34,10 @@ classDiagram
 6. Bereite deine Ergebenisse so vor, dass sie als Übungsaufgabe von den anderen mit Hilfe der Online-IDE getestet werden können.
 :::
 
-:::onlineide{height=500 console=false url="http://nrw.onlineide.openpatch.org/"}
+:::onlineide
 
 ```java 
+
 uebung test = new uebung();
 System.out.println("Das gesuchte Element ist: " + test.wasTueIch());
 System.out.println("Der Durchschnitt des Arrays boeseZahlen lautet: " + test.berechneDurchschnitt());
@@ -119,7 +120,9 @@ public class uebung {
       //Dein Quellcode hier
       return neuesArray;
    } 
-
 }
 ```
+:::
+
+:::onlineide{height=500 console=false url="http://nrw.onlineide.openpatch.org/"}
 :::
