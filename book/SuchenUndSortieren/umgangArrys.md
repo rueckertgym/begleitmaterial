@@ -10,20 +10,17 @@ Die folgenden Aufgaben beziehen sich auf das unten stehende Implementationsdiagr
 
 ```mermaid
 classDiagram
+
     class uebung {
       -int [] zahlen
       -double [] boeseZahlen
-      -Random zZufallsgenerator
       +uebung()
       +uebung(int pGroesse)
-      +uebung(int pGroesse, int pMaxZahl)
       +bfms() void
-      +bfmsZufall() void
-      +bfmsZufallFlex(int pMaxZahl) void
       +findeMax() int
       +berechneDurchschnitt() double
       +dreheArrayUm() void
-      +dreheArrayUmUndGibNeuesArrayZurueck() int[] 
+      +dreheArrayUmUndGibNeuesArrayZurueck() int [] 
     }
 ```
 
@@ -44,7 +41,7 @@ uebung test = new uebung();
 System.out.println("Das gesuchte Element ist: " + test.wasTueIch());
 System.out.println("Der Durchschnitt des Arrays boeseZahlen lautet: " + test.berechneDurchschnitt());
 
-ublic class uebung {
+public class uebung {
    private int [] zahlen = { 5, 8, 2, 6, 3 };
    private double [] boeseZahlen;
    private int [] schleifenArray;
