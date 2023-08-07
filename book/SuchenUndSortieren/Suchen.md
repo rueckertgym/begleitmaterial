@@ -1,7 +1,7 @@
 ---
 name: Suchen
 toc: show
-index: 1
+index: 2
 ---
 # Suchen 
 In der Informatik versteht man unter **Suchen** ein Verfahren zur Untersuchung einer Datenstruktur (in unserem Fall momentan die Datenstruktur array) auf einen **bestimmten** Inhalt.

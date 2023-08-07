@@ -1,7 +1,7 @@
 ---
 name: Wdh. Arrays
 toc: show
-index: 0
+index: 1
 ---
 
 # Arrays oder Felder
@@ -11,7 +11,7 @@ Die folgenden Aufgaben beziehen sich auf das unten stehende Implementationsdiagr
 ```mermaid
 classDiagram
     class uebung {
-      -int [] zahlen = { 5, 8, 2, 6, 3 }
+      -int [] zahlen
       -double [] boeseZahlen
       -Random zZufallsgenerator
       +uebung()
