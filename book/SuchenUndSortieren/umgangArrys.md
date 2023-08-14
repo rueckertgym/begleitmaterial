@@ -124,5 +124,5 @@ public class uebung {
 ```
 :::
 
-:::onlineide{height=500 console=false url="http://nrw.onlineide.openpatch.org/"}
+:::onlineide{height=500 console=false url="https://nrw.onlineide.openpatch.org/"}
 :::

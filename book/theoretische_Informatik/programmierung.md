@@ -15,7 +15,18 @@ Wenn nicht bricht die Überprüfung mit einem Fehler ab, sonst wird die grammati
 classDiagram
 
 Scanner --> List~Token~ : -tokenliste
+Scanner --> Token : -aktuellesToken
 Parser --> List~Token~ : -tokenliste
+Parser --> Token : -aktuellesToken
+Analyse --> Scanner : -scanner
+Analyse --> Parser : -parser
+Analyse --> List~Token~ : -tokenliste
+
+class Analyse {
+    -eingabe String
+    +Analyse(String pEingabe)
+    +analysiere() void
+}
 
 class Token {
     -wert String
@@ -29,7 +40,6 @@ class Token {
 
 class Scanner {
     -fehler boolean
-    -aktuellesToken Token
     -eingabe String
     +Scanner(String pEingabe, List~Token~ pTokenliste)
     +scanne() void
@@ -38,9 +48,7 @@ class Scanner {
 }
 
 class Parser {
-    -fehler boolen
-    aktuellesToken Token
-
+    -fehler boolean
     +Parser(List~Token~ pTokenliste)
     +nextToken() Token
     +parse() boolean
