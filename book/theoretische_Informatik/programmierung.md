@@ -6,10 +6,11 @@ name: Programmierung
 
 # ÜBerprüfung eines Wortes mit Hilfe eines Programma
 
-Bei der PRogrammierung benötigen wir drei Klassen "Scanner", "Parser" und "Token", wobei der Scanner die lexigraphische 
-Überprüfung übernimmt d.h. es wird überprüft, ob die Zeichen des Eingabestrings den Zeichen des Eingabealphabets entsprechen. 
+Bei der Programmierung benötigen wir drei Klassen "Scanner", "Parser" und "Token", wobei der Scanner die lexigraphische Überprüfung übernimmt d.h. es wird überprüft, ob die Zeichen des Eingabestrings den Zeichen des Eingabealphabets entsprechen. 
 
 Wenn nicht bricht die Überprüfung mit einem Fehler ab, sonst wird die grammatikalische Überprüfung mit Hilfe der erzeugten Token, die in einer Tokenliste gespeichert werden, angestoßen.
+
+Der Einfachheithalber dient die Klasse Analyse dazu den Prozeß anzustoßen (ähnlich einer main Methode).
 
 ```mermaid
 classDiagram
@@ -55,8 +56,5 @@ class Parser {
     +pruefeS() boolena
     +pruefeA() boolean
     +pruefeb() boolean
-
 }
-
-
 ``` 
