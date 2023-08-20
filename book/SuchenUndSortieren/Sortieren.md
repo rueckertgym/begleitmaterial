@@ -60,10 +60,12 @@ classDiagram
       -merge_intern(int links, int mitte, int rechts) void
     }
 ```
-
+::::tabs{id="Arbeitsauftrag"}
+:::tab{title="edugit" id="edugit"}
 :::alert{info}
 ## Aufgabe(n)
-1. Erstelle eine Arbeitskopie des Projekts. Eine Arbeitskopie des Projekts kannst du unter https://edugit.org/abitur-2024/01-suchen-und-sortieren-abi-2024.git mit BlueJ auschecken. 
+0. Bearbeite die Aufgaben unter "Arbeiten mit BlueJ und edugit".
+1. Erstelle eine Arbeitskopie des Projekts. Eine Arbeitskopie kannst du unter https://edugit.org/abitur-2024/01-suchen-und-sortieren-abi-2024.git mit BlueJ auschecken. 
 2. Kopiere die Vorlagenklasse unter deinem Namen z.B.: Sortieren_Ulf in dasselbe Projekt.
 3. Implementiere zuerst die Methoden, die **kein** Sortier- oder Suchalgorithmus sind. Was die einzelnen Methoden leisten sollen, steht in den Methodenkommentaren!
 4. Teste deine Implementationen, indem du die erzeugten Objekte inspiziert. Ist das Array immer den Anforderungen entsprechend gefüllt?
@@ -73,9 +75,278 @@ classDiagram
 8. Commitet, pusht und aktualisiere deine Implementation. 
 9. Fahre nach demselben Vorgehen (6-8) mit den beiden Suchmethoden (lineare Suche und binäre Suche) fort. Hilfestellungen findest du wieder in den Methodendokumentationen.
 10. Fahre nach demselben Vorgehen (6-8) mit den beiden rekursiven Sortiermethoden (Quicksort und Mergesort) fort. Hilfestellungen findest du wieder in den Methodendokumentationen.
+11. Beginne zum Beginn einer Stunde mit einer frischen Arbeitskopie deiner Implementation.
+:::
+:::tab{title="online-IDE" id="Online-IDE"}
+1. Implementiere zuerst die Methoden, die **kein** Sortier- oder Suchalgorithmus sind. Was die einzelnen Methoden leisten sollen, steht in den Methodenkommentaren! Nutze hierfür die Vorlage in der Online-IDE. Hilfestellungen findest du im weiteren Kapitel. Informationen zur Klasse Mathe und den Umgagn mit dieser findest du hier https://www.learnj.de/doku.php?id=api:documentation:math:start und hier https://www.learnj.de/doku.php?id=einstieg:weiteredatentypen:start#die_klasse_math 
+2. Teste deine Implementationen, indem du die erzeugten Objekte inspiziert. Ist das Array immer den Anforderungen entsprechend gefüllt?
+3. Commitet, pusht und aktualisiere deine Implementation. 
+4. Fertigt mit dem Struktogrameditor der Uni Dresden Struktogramme zu den einfachen Sortieralgorithmen: Bubble-, Insertion- und Selectionsort an und speichere sowohl eine Bilddatei als auch eine .json Datei deines Struktograms.
+5. Nutze den Quellcodeexport und **teste** deine Exporte in **deiner** Klasse. Sollte etwas nicht funktionieren, verbessere es und passe auch deine Struktogramme dementsprechend an.
+6. Commitet, pusht und aktualisiere deine Implementation. 
+7. Fahre nach demselben Vorgehen (6-8) mit den beiden Suchmethoden (lineare Suche und binäre Suche) fort. Hilfestellungen findest du wieder in den Methodendokumentationen.
+8. Fahre nach demselben Vorgehen (6-8) mit den beiden rekursiven Sortiermethoden (Quicksort und Mergesort) fort. Hilfestellungen findest du wieder in den Methodendokumentationen.
 9. Beginne zum Beginn einer Stunde mit einer frischen Arbeitskopie deiner Implementation.
 :::
+::::
 
+:::onlineide{height=500 console=false url="https://nrw.onlineide.openpatch.org/"}
+```java 
+Sortieren hase = new Sortieren();
+
+/**
+ * Mit Hilfe von Objekten der Klasse Sortierer koennen Zahlenwerte, die in einem Array gespeichert sind,
+ * der groesse nach von klein nach groß sortiert werden.
+ * Hierfuer stehen drei unterschiedliche Verfahren zur Verfuegung: Bubblesort, Selectionsort und Insertionsort
+ * Fuer die Erzeugung von Zufallszahlen steht die Klasse Random zur Verfügung, die zuvor siehe 1. Zeile importiert 
+ * werden muss.
+ * 
+ * @author Sebastian Horn
+ * @version 0.3
+ */
+
+public class Sortieren
+{            
+    
+    //Deklaration der globalen Variablen/Zustandvariablen
+    private int zZahlenarray[];
+            
+    //Methoden/ Eigenschaften von Objekten der klasse Sortieren 
+    
+    /**
+     * Konstruktor der Klasse Sortieren. Im Konstruktor werden die zuvor deklarieten Zustandsvariablen
+     * erzeugt. Nach dem Aufruf des Konstruktors ist ein Objekt der Klasse Sortieren erzeugt worden. Ein Array 
+     * mit dem Namen zZahlenarray und der Grösse 30 wurde erzeugt. 
+     * Es kann mehrer Konstruktoren geben, diese unterscheiden sich in den/ dem Parameter(n).
+     */
+    public Sortieren()
+    {  
+        //Zustandvariablen werden initialisiert
+        zZahlenarray = new int [30]; 
+    }
+    
+    /**
+     * 2. Konstruktor der Klasse Sortieren. Im Konstruktor werden die zuvor deklarieten Zustandsvariablen
+     * erzeugt. Nach dem Aufruf des Konstruktors ist ein Objekt der Klasse Sortieren erzeugt worden. Ein Array 
+     * mit dem Namen zZahlenarray und einer variablen Groesse wurde erzeugt. 
+     * Es kann mehrer Konstruktoren geben, diese unterscheiden sich in den/ dem Parameter(n).
+     */
+    public Sortieren(int pGroesse)
+    {  
+        //Zustandvariablen werden initialisiert
+        zZahlenarray = new int [pGroesse];
+    }
+    
+    /**
+     * 3. Konstruktor der Klasse Sortieren. Im Konstruktor werden die zuvor deklarieten Zustandsvariablen
+     * erzeugt. Nach dem Aufruf des Konstruktors ist ein Objekt der Klasse Sortieren erzeugt worden. Ein Array 
+     * mit dem Namen zZahlenarray und einer variablen Groesse wurde erzeugt. Das Array mit Zufallszahlen ist im Zahlenspektrum von 0 - 
+     * pMaxZahl befuellt. Nutze hierfür randint Methode der Klasse Random, die mit Hilfe von Random.randint(untereGrenze, obereGrenze) aufgerufen werden kann. Hilfe 
+     * findest du unter https://www.learnj.de/doku.php?id=einstieg:weiteredatentypen:start#die_klasse_math
+     * Es kann mehrer Konstruktoren geben, diese unterscheiden sich in den/ dem Parameter(n).
+     * 
+     * @param int pGroesse gibt die Groesse des Arrays an
+     * @param int pMaxZahl gibt die groesste moegliche zu erzeugenden Zufallszahl an
+     */
+    public Sortieren(int pGroesse, int pMaxZahl)
+    {  
+        //Zustandvariablen werden initialisiert
+        //Dein Quellcode hier
+    }
+    
+    /**
+     * Methode bfmsZufall
+     * Auftrag: Nach dem Aufruf dieser Methode ist das Array zZahlenarray mit zufälligen Zahlen im Spektrum 
+     * von 0 - 1000 befüllt
+     */
+    public void bfmsZufall()
+    {         
+        //Hilfe siehe 3. Konstruktor
+        
+    }
+    
+    /**
+     * Methode bfmsZufallflex
+     * Auftrag: Nach dem Aufruf dieser Methode ist das Array zZahlenarray mit zufälligen Zahlen im Spektrum 
+     * von 0 - pMaxZahl befüllt.
+     */
+    public void bfmsZufallflex(int pMaxZahl)
+    {
+       // Dein Quellcode hier
+    }
+
+
+    /**
+     * Method bfms
+     * Auftrag: Nach dem Aufruf der Methode ist das Array zZahlenarray mit aufsteigenden Zahlenwerten 
+     * beginnend bei 1 und einer Schrittweite von 1 gefuellt.
+     *
+     */
+    public void bfms()
+    { 
+        for(int i = 0; i < 30; i++)
+        {
+            zZahlenarray[i]= i +1;
+        }
+    }
+    
+    
+    /**
+     * Method bubblesort
+     * Auftrag: Nach Aufruf der Methode ist das Array zZahlenarray nach dem Prinzip Bubblesort sortiert worden.
+     * 
+     * Eine ausführliche Beschreibung muss hier eurerseits erfolgen!!!!!! Hilfe zum Prinzip findest du unter:
+     * https://www.youtube.com/watch?v=lyZQPjUT5B4 und im Buch!!!!!
+     * 
+     * Hierfür muss das Array vorher mit Zahlenwerten gefüllt worden sein d.h. eine der Methoden zum Befüllen des Arrays
+     * muss aufgerufen worden sein.
+     * Wenn nicht bricht BlueJ mit einer Fehlermedung ab.
+     */
+    public void bubblesort()
+    {   
+       //Dein Quellcode
+    }
+    
+    /**
+     * Method insertionsort
+     * Auftrag: Nach Aufruf der Methode ist das Array zZahlenarray nach dem Prinzip Insertionsort sortiert worden.
+     * 
+     * Eine ausführliche Beschreibung muss hier eurerseits erfolgen!!!!!!!!!Hilfe findest du hier:
+     * https://www.youtube.com/watch?v=ROalU379l3U und im Buch.
+     * 
+     * Hierfür muss das Array vorher mit Zahlenwerten gefüllt worden sein d.h. eine der Methoden zum Befüllen des Arrays
+     * muss aufgerufen worden sein.
+     * Wenn nicht bricht BlueJ mit einer Fehlermedung ab.
+     */
+    public void insertionsort()
+    {   
+        //Tipp: i = 1
+        for (int i=1; i<=zZahlenarray.length-1; i++)
+        {   
+            
+        }    
+    }
+    
+    /**
+     * Method selectionsort
+     * Auftrag: Nach Aufruf der Methode ist das Array zZahlenarray nach dem Prinzip Insertionsort sortiert worden.
+     * 
+     * Eine ausführliche Beschreibung muss hier eurerseits erfolgen!!!!!!!!! Hilfe findest du hier:
+     * https://www.youtube.com/watch?v=Ns4TPTC8whw und im Buch!!!
+     * 
+     * Hierfür muss das Array vorher mit Zahlenwerten gefüllt worden sein d.h. eine der Methoden zum Befüllen des Arrays
+     * muss aufgerufen worden sein.
+     * Wenn nicht bricht BlueJ mit einer Fehlermedung ab.
+     */
+    public void selectionSort()
+    {
+        //Tipp: Auch hier werden 2 Schleifen benötigt
+    }    
+    
+    
+    /**
+     * Methode lineareSuche
+     *
+     * @param pZahl Angabe der zu suchenden zahl
+     * @return true wenn die Zahl gefunden wurde, sonst false
+     */
+    public boolean lineareSuche(int pZahl)
+    {      
+       //
+       return false;
+    } 
+    
+    /**
+     * Initiale Sortiermethode fuer den Quicksort-Algorithmus
+     */
+    public void quickSort()
+    {
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println("Beginne neuen Sortiervorgang mit Quicksort");
+        //zeigeElementenfolge();
+        quicksort_intern(0, zZahlenarray.length-1);        
+        //zeigeElementenfolge();
+        //System.out.println("--------------------------------------------------------------------");        
+    } 
+    
+    private void quicksort_intern(int pL, int pR)
+    {
+        int hLinks = pL;  // Hilfszeiger f¸r links
+        int hRechts = pR; // Hilfszeiger f¸r rechts
+        int hPivot = (int) (Math.random()*(pR-pL+1))+pL; // Stelle des Pivot
+        //dein Quellcode hier
+    }
+    
+    /**
+    * Analysiere die Methode
+    */
+    public void mergeSort()
+    {
+       mergesort(0, zZahlenarray.length-1); 
+    }
+    
+    private void mergesort(int pLo, int pHi)
+    {
+        int hMitte = (pLo + pHi)/2;
+        if (pHi > pLo)
+        {
+            mergesort(pLo, hMitte);
+            mergesort(hMitte+1, pHi);
+            merge_intern(pLo, hMitte, pHi);
+        }
+    }
+    
+    private void merge_intern(int links, int mitte, int rechts)
+    {
+        int i,j,k;
+        i = 0;
+        j = links;
+        int []b = new int [mitte - links +1];
+        while (j <= mitte)
+        {
+            b[i] = zZahlenarray[j];
+            i++;
+            j++;
+        }
+        i = 0;
+        k= links;
+        while(k<j && j>= rechts)
+        {
+            if(b[i] <=zZahlenarray[j])
+            {
+                zZahlenarray[k] = b[i];
+                k++;
+                i++;
+            }
+            else
+            {
+                zZahlenarray[k] = zZahlenarray[j];
+                k++;
+                j++;
+            }
+        }
+        while(k<j)
+        {
+            zZahlenarray[k] = b[i];
+            k++;
+            i++;
+        }
+    }
+    
+    public boolean binaereSuche(int pGesuchteZahl)
+    {
+        boolean gefunden = binaereSuche_intern(pGesuchteZahl,0, zZahlenarray.length -1);
+        return gefunden;        
+    }
+    
+    private boolean binaereSuche_intern(int pZahl, int pBeginn, int pEnde)
+    {
+        //Dein Quellcode hier
+      return true;  
+    }
+}
+```
+:::
 
 # Einfache Sortieralgorithmen
 ## Bubblesort und optimierter Bubblesort
