@@ -60,8 +60,8 @@ classDiagram
       -merge_intern(int links, int mitte, int rechts) void
     }
 ```
-::::tabs{id="Arbeitsauftrag"}
-:::tab{title="edugit" id="edugit"}
+:::::tabs{id="Arbeitsauftrag"}
+::::tab{title="edugit" id="edugit"}
 :::alert{info}
 ## Aufgabe(n)
 0. Bearbeite die Aufgaben unter "Arbeiten mit BlueJ und edugit".
@@ -77,7 +77,8 @@ classDiagram
 10. Fahre nach demselben Vorgehen (6-8) mit den beiden rekursiven Sortiermethoden (Quicksort und Mergesort) fort. Hilfestellungen findest du wieder in den Methodendokumentationen.
 11. Beginne zum Beginn einer Stunde mit einer frischen Arbeitskopie deiner Implementation.
 :::
-:::tab{title="online-IDE" id="Online-IDE"}
+::::
+::::tab{title="online-IDE" id="Online-IDE"}
 1. Implementiere zuerst die Methoden, die **kein** Sortier- oder Suchalgorithmus sind. Was die einzelnen Methoden leisten sollen, steht in den Methodenkommentaren! Nutze hierfür die Vorlage in der Online-IDE. Hilfestellungen findest du im weiteren Kapitel. Informationen zur Klasse Mathe und den Umgagn mit dieser findest du hier https://www.learnj.de/doku.php?id=api:documentation:math:start und hier https://www.learnj.de/doku.php?id=einstieg:weiteredatentypen:start#die_klasse_math 
 2. Teste deine Implementationen, indem du die erzeugten Objekte inspiziert. Ist das Array immer den Anforderungen entsprechend gefüllt?
 3. Commitet, pusht und aktualisiere deine Implementation. 
@@ -87,8 +88,8 @@ classDiagram
 7. Fahre nach demselben Vorgehen (6-8) mit den beiden Suchmethoden (lineare Suche und binäre Suche) fort. Hilfestellungen findest du wieder in den Methodendokumentationen.
 8. Fahre nach demselben Vorgehen (6-8) mit den beiden rekursiven Sortiermethoden (Quicksort und Mergesort) fort. Hilfestellungen findest du wieder in den Methodendokumentationen.
 9. Beginne zum Beginn einer Stunde mit einer frischen Arbeitskopie deiner Implementation.
-:::
 ::::
+:::::
 
 :::onlineide{height=500 console=false url="https://nrw.onlineide.openpatch.org/"}
 ```java 
