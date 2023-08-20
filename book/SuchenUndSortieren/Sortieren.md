@@ -77,7 +77,7 @@ classDiagram
 11. Beginne zum Beginn einer Stunde mit einer frischen Arbeitskopie deiner Implementation.
 :::
 
-::alert{info}
+:::alert{info}
 ## Aufgabe(n) zur Lösung mit der online-IDE
 1. Implementiere zuerst die Methoden, die **kein** Sortier- oder Suchalgorithmus sind. Was die einzelnen Methoden leisten sollen, steht in den Methodenkommentaren! Nutze hierfür die Vorlage in der Online-IDE. Hilfestellungen findest du im weiteren Kapitel. Informationen zur Klasse Mathe und den Umgagn mit dieser findest du hier https://www.learnj.de/doku.php?id=api:documentation:math:start und hier https://www.learnj.de/doku.php?id=einstieg:weiteredatentypen:start#die_klasse_math 
 2. Teste deine Implementationen, indem du die erzeugten Objekte inspiziert. Ist das Array immer den Anforderungen entsprechend gefüllt?
