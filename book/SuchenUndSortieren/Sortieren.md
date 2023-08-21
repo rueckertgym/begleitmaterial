@@ -94,8 +94,7 @@ Sortieren hase = new Sortieren();
  * Mit Hilfe von Objekten der Klasse Sortierer koennen Zahlenwerte, die in einem Array gespeichert sind,
  * der groesse nach von klein nach groß sortiert werden.
  * Hierfuer stehen drei unterschiedliche Verfahren zur Verfuegung: Bubblesort, Selectionsort und Insertionsort
- * Fuer die Erzeugung von Zufallszahlen steht die Klasse Random zur Verfügung, die zuvor siehe 1. Zeile importiert 
- * werden muss.
+ * Fuer die Erzeugung von Zufallszahlen steht die Klasse Random zur Verfügung.
  * 
  * @author Sebastian Horn
  * @version 0.3
